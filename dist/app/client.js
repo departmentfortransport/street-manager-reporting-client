@@ -10,8 +10,11 @@ class StreetManagerReportingClient {
             timeout: this.config.timeout
         });
     }
-    async status() {
+    status() {
         return this.httpHandler(() => this.axios.get('/status'));
+    }
+    getWorks(request) {
+        return this.httpHandler(() => this.axios.get('/works', this.generateRequestConfig(request)));
     }
     async httpHandler(request) {
         try {
@@ -27,6 +30,13 @@ class StreetManagerReportingClient {
     handleError(err) {
         err.status = err.response ? err.response.status : http_status_codes_1.INTERNAL_SERVER_ERROR;
         return Promise.reject(err);
+    }
+    generateRequestConfig(request) {
+        let headers = {
+            token: request.token,
+            'x-request-id': request.request_id
+        };
+        return { headers: headers, params: {} };
     }
 }
 exports.StreetManagerReportingClient = StreetManagerReportingClient;
