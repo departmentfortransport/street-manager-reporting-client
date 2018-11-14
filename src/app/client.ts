@@ -52,7 +52,7 @@ export class StreetManagerReportingClient {
       }
     }
 
-    if (request) {
+    if (!request) {
       requestConfig.params = {}
     } else {
       requestConfig.params = request

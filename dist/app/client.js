@@ -39,7 +39,7 @@ class StreetManagerReportingClient {
                 'x-request-id': config.request_id
             }
         };
-        if (request) {
+        if (!request) {
             requestConfig.params = {};
         }
         else {
