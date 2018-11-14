@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const qs = require("qs");
 const axios_1 = require("axios");
 const http_status_codes_1 = require("http-status-codes");
 class StreetManagerReportingClient {
@@ -13,8 +14,8 @@ class StreetManagerReportingClient {
     status() {
         return this.httpHandler(() => this.axios.get('/status'));
     }
-    getWorks(request) {
-        return this.httpHandler(() => this.axios.get('/works', this.generateRequestConfig(request)));
+    getWorks(config, request) {
+        return this.httpHandler(() => this.axios.get('/works', this.generateRequestConfig(config, request)));
     }
     async httpHandler(request) {
         try {
@@ -31,12 +32,23 @@ class StreetManagerReportingClient {
         err.status = err.response ? err.response.status : http_status_codes_1.INTERNAL_SERVER_ERROR;
         return Promise.reject(err);
     }
-    generateRequestConfig(request) {
-        let headers = {
-            token: request.token,
-            'x-request-id': request.request_id
+    generateRequestConfig(config, request) {
+        let requestConfig = {
+            headers: {
+                token: config.token,
+                'x-request-id': config.request_id
+            }
         };
-        return { headers: headers, params: {} };
+        if (request) {
+            requestConfig.params = {};
+        }
+        else {
+            requestConfig.params = request;
+            requestConfig.paramsSerializer = (params) => {
+                return qs.stringify(params, { arrayFormat: 'repeat' });
+            };
+        }
+        return requestConfig;
     }
 }
 exports.StreetManagerReportingClient = StreetManagerReportingClient;
