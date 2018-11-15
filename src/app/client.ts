@@ -48,7 +48,7 @@ export class StreetManagerReportingClient {
     let requestConfig: AxiosRequestConfig = {
       headers: {
         token: config.token,
-        'x-request-id': config.request_id
+        'x-request-id': config.requestId
       }
     }
 

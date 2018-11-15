@@ -36,7 +36,7 @@ class StreetManagerReportingClient {
         let requestConfig = {
             headers: {
                 token: config.token,
-                'x-request-id': config.request_id
+                'x-request-id': config.requestId
             }
         };
         if (!request) {
