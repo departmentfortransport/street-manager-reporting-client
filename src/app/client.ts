@@ -1,7 +1,9 @@
+import * as qs from 'qs'
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
 import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
-import { AuthenticatedRequest } from '../interfaces/request'
+import { RequestConfig } from '../interfaces/requestConfig'
 import { WorkSummaryResponse } from '../interfaces/workSummaryResponse'
+import { GetWorksRequest } from '../interfaces/getWorksRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -22,8 +24,8 @@ export class StreetManagerReportingClient {
     return this.httpHandler<void>(() => this.axios.get('/status'))
   }
 
-  public getWorks(request: AuthenticatedRequest): Promise<WorkSummaryResponse[]> {
-    return this.httpHandler<WorkSummaryResponse[]>(() => this.axios.get('/works', this.generateRequestConfig(request)))
+  public getWorks(config: RequestConfig, request: GetWorksRequest): Promise<WorkSummaryResponse[]> {
+    return this.httpHandler<WorkSummaryResponse[]>(() => this.axios.get('/works', this.generateRequestConfig(config, request)))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
@@ -42,12 +44,23 @@ export class StreetManagerReportingClient {
     return Promise.reject(err)
   }
 
-  private generateRequestConfig(request: AuthenticatedRequest): AxiosRequestConfig {
-    let headers: any = {
-      token: request.token,
-      'x-request-id': request.request_id
+  private generateRequestConfig(config: RequestConfig, request?: any): AxiosRequestConfig {
+    let requestConfig: AxiosRequestConfig = {
+      headers: {
+        token: config.token,
+        'x-request-id': config.requestId
+      }
     }
 
-    return { headers: headers, params: {} }
+    if (!request) {
+      requestConfig.params = {}
+    } else {
+      requestConfig.params = request
+      requestConfig.paramsSerializer = (params) => {
+        return qs.stringify(params, { arrayFormat: 'repeat' })
+      }
+    }
+
+    return requestConfig
   }
 }
