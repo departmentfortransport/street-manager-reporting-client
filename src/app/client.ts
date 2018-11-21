@@ -4,6 +4,8 @@ import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
 import { WorkSummaryResponse } from '../interfaces/workSummaryResponse'
 import { GetWorksRequest } from '../interfaces/getWorksRequest'
+import { GetSitesRequest } from '../interfaces/getSitesRequest'
+import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -26,6 +28,10 @@ export class StreetManagerReportingClient {
 
   public getWorks(config: RequestConfig, request: GetWorksRequest): Promise<WorkSummaryResponse[]> {
     return this.httpHandler<WorkSummaryResponse[]>(() => this.axios.get('/works', this.generateRequestConfig(config, request)))
+  }
+
+  public getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]> {
+    return this.httpHandler<SiteSummaryResponse[]>(() => this.axios.get('/sites', this.generateRequestConfig(config, request)))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {

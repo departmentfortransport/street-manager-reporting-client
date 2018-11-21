@@ -11,3 +11,7 @@ export declare enum PermitStatus {
     deemed_proposed = "deemed_proposed",
     deemed_in_progress = "deemed_in_progress"
 }
+export declare enum ReinstatementStatus {
+    interim = "interim",
+    permanent = "permanent"
+}
