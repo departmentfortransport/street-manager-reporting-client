@@ -14,3 +14,8 @@ var PermitStatus;
     PermitStatus["deemed_proposed"] = "deemed_proposed";
     PermitStatus["deemed_in_progress"] = "deemed_in_progress";
 })(PermitStatus = exports.PermitStatus || (exports.PermitStatus = {}));
+var ReinstatementStatus;
+(function (ReinstatementStatus) {
+    ReinstatementStatus["interim"] = "interim";
+    ReinstatementStatus["permanent"] = "permanent";
+})(ReinstatementStatus = exports.ReinstatementStatus || (exports.ReinstatementStatus = {}));
