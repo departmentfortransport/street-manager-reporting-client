@@ -15,7 +15,10 @@ class StreetManagerReportingClient {
         return this.httpHandler(() => this.axios.get('/status'));
     }
     getPermits(config, request) {
-        return this.httpHandler(() => this.axios.get('/Permits', this.generateRequestConfig(config, request)));
+        return this.httpHandler(() => this.axios.get('/permits', this.generateRequestConfig(config, request)));
+    }
+    getPermitCounts(config) {
+        return this.httpHandler(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)));
     }
     getSites(config, request) {
         return this.httpHandler(() => this.axios.get('/sites', this.generateRequestConfig(config, request)));
