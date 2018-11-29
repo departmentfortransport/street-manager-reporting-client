@@ -31,8 +31,8 @@ export class StreetManagerReportingClient {
     return this.httpHandler<PermitSummaryResponse[]>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
   }
 
-  public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse[]> {
-    return this.httpHandler<PermitCountsResponse[]>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
+  public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse> {
+    return this.httpHandler<PermitCountsResponse>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
   }
 
   public getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]> {

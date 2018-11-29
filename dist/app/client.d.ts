@@ -14,7 +14,7 @@ export declare class StreetManagerReportingClient {
     constructor(config: StreetManagerReportingClientConfig);
     status(): Promise<void>;
     getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitSummaryResponse[]>;
-    getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse[]>;
+    getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     private httpHandler;
     private handleError;
