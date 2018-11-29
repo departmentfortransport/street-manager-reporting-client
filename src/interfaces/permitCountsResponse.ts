@@ -1,4 +1,4 @@
-export interface GetPermitCountsResponse {
+export interface PermitCountsResponse {
   applications: ApplicationCounts
   permits: PermitCounts
 }

@@ -6,7 +6,7 @@ import { PermitSummaryResponse } from '../interfaces/permitSummaryResponse'
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest'
 import { GetSitesRequest } from '../interfaces/getSitesRequest'
 import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
-import { GetPermitCountsResponse } from '../interfaces/getPermitCountsResponse'
+import { PermitCountsResponse } from '../interfaces/permitCountsResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -31,8 +31,8 @@ export class StreetManagerReportingClient {
     return this.httpHandler<PermitSummaryResponse[]>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
   }
 
-  public getPermitCounts(config: RequestConfig): Promise<GetPermitCountsResponse[]> {
-    return this.httpHandler<GetPermitCountsResponse[]>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
+  public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse[]> {
+    return this.httpHandler<PermitCountsResponse[]>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
   }
 
   public getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]> {
