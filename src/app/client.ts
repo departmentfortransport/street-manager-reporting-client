@@ -2,10 +2,11 @@ import * as qs from 'qs'
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
 import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
-import { WorkSummaryResponse } from '../interfaces/workSummaryResponse'
-import { GetWorksRequest } from '../interfaces/getWorksRequest'
+import { PermitSummaryResponse } from '../interfaces/permitSummaryResponse'
+import { GetPermitsRequest } from '../interfaces/getPermitsRequest'
 import { GetSitesRequest } from '../interfaces/getSitesRequest'
 import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
+import { PermitCountsResponse } from '../interfaces/permitCountsResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -26,8 +27,12 @@ export class StreetManagerReportingClient {
     return this.httpHandler<void>(() => this.axios.get('/status'))
   }
 
-  public getWorks(config: RequestConfig, request: GetWorksRequest): Promise<WorkSummaryResponse[]> {
-    return this.httpHandler<WorkSummaryResponse[]>(() => this.axios.get('/works', this.generateRequestConfig(config, request)))
+  public getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitSummaryResponse[]> {
+    return this.httpHandler<PermitSummaryResponse[]>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
+  }
+
+  public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse> {
+    return this.httpHandler<PermitCountsResponse>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
   }
 
   public getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]> {

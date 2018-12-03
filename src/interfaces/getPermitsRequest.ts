@@ -1,5 +1,5 @@
 import { PermitStatus } from './referenceTypes'
 
-export interface GetWorksRequest {
+export interface GetPermitsRequest {
   status?: PermitStatus[]
 }
