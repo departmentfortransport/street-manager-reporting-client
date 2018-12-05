@@ -2,7 +2,7 @@ import { ReinstatementStatus } from './referenceTypes'
 
 export interface SiteSummaryResponse {
   site_id: number,
-  reference_number: string,
+  work_reference_number: string,
   swa_organisation_name: string,
   location_description: string,
   street_name: string,

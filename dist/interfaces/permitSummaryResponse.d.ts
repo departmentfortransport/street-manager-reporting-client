@@ -1,6 +1,6 @@
 import { PermitStatus } from './referenceTypes';
 export interface PermitSummaryResponse {
-    reference_number: string;
+    work_reference_number: string;
     location_description: string;
     street: string;
     area: string;
