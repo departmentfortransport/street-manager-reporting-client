@@ -1,5 +1,4 @@
 import { PaginationResponse } from './paginationResponse';
-export interface ReportingResponse<T> {
+export interface ReportingResponse {
     pagination: PaginationResponse;
-    rows: T[];
 }
