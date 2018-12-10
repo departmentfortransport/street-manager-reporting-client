@@ -1,4 +1,5 @@
 import { PermitStatus } from './referenceTypes';
-export interface GetPermitsRequest {
+import { ReportingRequest } from './reportingRequest';
+export interface GetPermitsRequest extends ReportingRequest {
     status?: PermitStatus[];
 }

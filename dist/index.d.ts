@@ -5,6 +5,7 @@ export * from './interfaces/paginationResponse';
 export * from './interfaces/permitCountsResponse';
 export * from './interfaces/permitReportingResponse';
 export * from './interfaces/reportingResponse';
+export * from './interfaces/reportingRequest';
 export * from './interfaces/getSitesRequest';
 export * from './interfaces/siteSummaryResponse';
 export * from './app/client';
