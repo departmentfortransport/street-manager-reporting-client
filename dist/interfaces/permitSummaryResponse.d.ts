@@ -9,4 +9,5 @@ export interface PermitSummaryResponse {
     actual_start_date?: Date;
     actual_end_date?: Date;
     status: PermitStatus;
+    cursor: number;
 }
