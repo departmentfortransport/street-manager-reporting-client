@@ -1,5 +1,5 @@
 import { RequestConfig } from '../interfaces/requestConfig';
-import { PermitReportingResponse } from '../interfaces/permitReportingResponse';
+import { PermitSummaryResponse } from '../interfaces/permitSummaryResponse';
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest';
 import { GetSitesRequest } from '../interfaces/getSitesRequest';
 import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse';
@@ -13,7 +13,7 @@ export declare class StreetManagerReportingClient {
     private axios;
     constructor(config: StreetManagerReportingClientConfig);
     status(): Promise<void>;
-    getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse>;
+    getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitSummaryResponse[]>;
     getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     private httpHandler;
