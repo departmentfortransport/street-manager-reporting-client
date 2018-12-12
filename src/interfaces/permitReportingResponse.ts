@@ -1,6 +1,11 @@
 import { PermitStatus } from './referenceTypes'
+import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse'
 
-export interface PermitSummaryResponse {
+export interface PermitReportingResponse extends ReportingResponse {
+  rows: PermitSummaryResponse[]
+}
+
+export interface PermitSummaryResponse extends ReportingSummaryResponse {
   work_reference_number: string
   location_description: string
   street: string
