@@ -2,7 +2,7 @@ import * as qs from 'qs'
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
 import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
-import { PermitReportingResponse } from '../interfaces/permitReportingResponse'
+import { PermitSummaryResponse } from '../interfaces/permitSummaryResponse'
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest'
 import { GetSitesRequest } from '../interfaces/getSitesRequest'
 import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
@@ -27,8 +27,8 @@ export class StreetManagerReportingClient {
     return this.httpHandler<void>(() => this.axios.get('/status'))
   }
 
-  public getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse> {
-    return this.httpHandler<PermitReportingResponse>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
+  public getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitSummaryResponse[]> {
+    return this.httpHandler<PermitSummaryResponse[]>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
   }
 
   public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse> {
