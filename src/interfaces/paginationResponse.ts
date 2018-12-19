@@ -1,4 +1,4 @@
 export interface PaginationResponse {
-  row_index: number
+  page_start: number
   total_rows: number
 }
