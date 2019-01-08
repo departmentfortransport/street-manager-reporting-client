@@ -15,3 +15,17 @@ export declare enum ReinstatementStatus {
     interim = "interim",
     permanent = "permanent"
 }
+export declare enum FPNStatus {
+    issued = "issued",
+    accepted = "accepted",
+    paid = "paid",
+    paid_discounted = "paid_discounted",
+    disputed = "disputed",
+    withdrawn = "withdrawn"
+}
+export declare enum OffenceCode {
+    offence_code_05 = "offence_code_05",
+    offence_code_06 = "offence_code_06",
+    offence_code_08 = "offence_code_08",
+    offence_code_09 = "offence_code_09"
+}

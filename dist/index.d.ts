@@ -8,4 +8,6 @@ export * from './interfaces/reportingResponse';
 export * from './interfaces/reportingRequest';
 export * from './interfaces/getSitesRequest';
 export * from './interfaces/siteSummaryResponse';
+export * from './interfaces/getFPNsRequest';
+export * from './interfaces/fpnReportingResponse';
 export * from './app/client';

@@ -23,6 +23,9 @@ class StreetManagerReportingClient {
     getSites(config, request) {
         return this.httpHandler(() => this.axios.get('/sites', this.generateRequestConfig(config, request)));
     }
+    getFPNs(config, request) {
+        return this.httpHandler(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)));
+    }
     async httpHandler(request) {
         try {
             let response = await request();
