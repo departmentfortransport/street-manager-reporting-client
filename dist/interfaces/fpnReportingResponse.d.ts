@@ -5,6 +5,7 @@ export interface FPNReportingResponse extends ReportingResponse {
 }
 export interface FPNSummaryResponse extends ReportingSummaryResponse {
     fpn_reference_number: string;
+    work_reference_number: string;
     promoter: string;
     highway_authority: string;
     offence_code: OffenceCode;
