@@ -9,6 +9,8 @@ import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
 import { PermitCountsResponse } from '../interfaces/permitCountsResponse'
 import { GetFPNsRequest } from '../interfaces/getFPNsRequest'
 import { FPNReportingResponse } from '../interfaces/fpnReportingResponse'
+import { CommentReportingResponse } from '../interfaces/commentReportingResponse'
+import { GetCommentsRequest } from '../interfaces/getCommentsRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -43,6 +45,10 @@ export class StreetManagerReportingClient {
 
   public getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse> {
     return this.httpHandler<FPNReportingResponse>(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)))
+  }
+
+  public getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse> {
+    return this.httpHandler<CommentReportingResponse>(() => this.axios.get('/comments', this.generateRequestConfig(config, request)))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
