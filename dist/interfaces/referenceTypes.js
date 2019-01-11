@@ -42,3 +42,8 @@ var CommentTopic;
     CommentTopic["INSPECTION"] = "INSPECTION";
     CommentTopic["FPN"] = "FPN";
 })(CommentTopic = exports.CommentTopic || (exports.CommentTopic = {}));
+var SortDirection;
+(function (SortDirection) {
+    SortDirection["asc"] = "asc";
+    SortDirection["desc"] = "desc";
+})(SortDirection = exports.SortDirection || (exports.SortDirection = {}));
