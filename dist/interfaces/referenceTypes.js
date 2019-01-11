@@ -19,3 +19,19 @@ var ReinstatementStatus;
     ReinstatementStatus["interim"] = "interim";
     ReinstatementStatus["permanent"] = "permanent";
 })(ReinstatementStatus = exports.ReinstatementStatus || (exports.ReinstatementStatus = {}));
+var FPNStatus;
+(function (FPNStatus) {
+    FPNStatus["issued"] = "issued";
+    FPNStatus["accepted"] = "accepted";
+    FPNStatus["paid"] = "paid";
+    FPNStatus["paid_discounted"] = "paid_discounted";
+    FPNStatus["disputed"] = "disputed";
+    FPNStatus["withdrawn"] = "withdrawn";
+})(FPNStatus = exports.FPNStatus || (exports.FPNStatus = {}));
+var OffenceCode;
+(function (OffenceCode) {
+    OffenceCode["offence_code_05"] = "offence_code_05";
+    OffenceCode["offence_code_06"] = "offence_code_06";
+    OffenceCode["offence_code_08"] = "offence_code_08";
+    OffenceCode["offence_code_09"] = "offence_code_09";
+})(OffenceCode = exports.OffenceCode || (exports.OffenceCode = {}));
