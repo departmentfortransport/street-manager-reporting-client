@@ -10,4 +10,6 @@ export * from './interfaces/getSitesRequest';
 export * from './interfaces/siteSummaryResponse';
 export * from './interfaces/getFPNsRequest';
 export * from './interfaces/fpnReportingResponse';
+export * from './interfaces/commentReportingResponse';
+export * from './interfaces/getCommentsRequest';
 export * from './app/client';
