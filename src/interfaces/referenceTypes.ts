@@ -12,23 +12,6 @@ export enum PermitStatus {
   deemed_in_progress = 'deemed_in_progress'
 }
 
-export enum PermitSortColumn {
-  date_created = 'date_created',
-  deadline_date = 'deadline_date'
-}
-
-export enum FPNSortColumn {
-  issue_date_time = 'issue_date_time'
-}
-
-export enum CommentSortColumn {
-  date_created = 'date_created'
-}
-
-export enum SiteSortColumn {
-  date_created = 'date_created'
-}
-
 export enum ReinstatementStatus {
   interim = 'interim',
   permanent = 'permanent'
@@ -60,4 +43,21 @@ export enum CommentTopic {
 export enum SortDirection {
   asc = 'asc',
   desc = 'desc'
+}
+
+export enum PermitSortColumn {
+  date_created = 'date_created',
+  deadline_date = 'deadline_date'
+}
+
+export enum FPNSortColumn {
+  issue_date_time = 'issue_date_time'
+}
+
+export enum CommentSortColumn {
+  date_created = 'date_created'
+}
+
+export enum SiteSortColumn {
+  date_created = 'date_created'
 }
