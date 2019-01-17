@@ -14,6 +14,23 @@ var PermitStatus;
     PermitStatus["deemed_proposed"] = "deemed_proposed";
     PermitStatus["deemed_in_progress"] = "deemed_in_progress";
 })(PermitStatus = exports.PermitStatus || (exports.PermitStatus = {}));
+var PermitSortColumn;
+(function (PermitSortColumn) {
+    PermitSortColumn["date_created"] = "date_created";
+    PermitSortColumn["deadline_date"] = "deadline_date";
+})(PermitSortColumn = exports.PermitSortColumn || (exports.PermitSortColumn = {}));
+var FPNSortColumn;
+(function (FPNSortColumn) {
+    FPNSortColumn["issue_date_time"] = "issue_date_time";
+})(FPNSortColumn = exports.FPNSortColumn || (exports.FPNSortColumn = {}));
+var CommentSortColumn;
+(function (CommentSortColumn) {
+    CommentSortColumn["date_created"] = "date_created";
+})(CommentSortColumn = exports.CommentSortColumn || (exports.CommentSortColumn = {}));
+var SiteSortColumn;
+(function (SiteSortColumn) {
+    SiteSortColumn["date_created"] = "date_created";
+})(SiteSortColumn = exports.SiteSortColumn || (exports.SiteSortColumn = {}));
 var ReinstatementStatus;
 (function (ReinstatementStatus) {
     ReinstatementStatus["interim"] = "interim";
