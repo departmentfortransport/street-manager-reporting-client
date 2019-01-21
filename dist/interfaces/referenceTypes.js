@@ -42,3 +42,25 @@ var CommentTopic;
     CommentTopic["INSPECTION"] = "INSPECTION";
     CommentTopic["FPN"] = "FPN";
 })(CommentTopic = exports.CommentTopic || (exports.CommentTopic = {}));
+var SortDirection;
+(function (SortDirection) {
+    SortDirection["asc"] = "asc";
+    SortDirection["desc"] = "desc";
+})(SortDirection = exports.SortDirection || (exports.SortDirection = {}));
+var PermitSortColumn;
+(function (PermitSortColumn) {
+    PermitSortColumn["date_created"] = "date_created";
+    PermitSortColumn["deadline_date"] = "deadline_date";
+})(PermitSortColumn = exports.PermitSortColumn || (exports.PermitSortColumn = {}));
+var FPNSortColumn;
+(function (FPNSortColumn) {
+    FPNSortColumn["issue_date_time"] = "issue_date_time";
+})(FPNSortColumn = exports.FPNSortColumn || (exports.FPNSortColumn = {}));
+var CommentSortColumn;
+(function (CommentSortColumn) {
+    CommentSortColumn["date_created"] = "date_created";
+})(CommentSortColumn = exports.CommentSortColumn || (exports.CommentSortColumn = {}));
+var SiteSortColumn;
+(function (SiteSortColumn) {
+    SiteSortColumn["date_created"] = "date_created";
+})(SiteSortColumn = exports.SiteSortColumn || (exports.SiteSortColumn = {}));

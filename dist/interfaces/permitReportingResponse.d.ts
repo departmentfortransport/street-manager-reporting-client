@@ -13,4 +13,5 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
     actual_start_date?: Date;
     actual_end_date?: Date;
     status: PermitStatus;
+    deadline_date: Date;
 }

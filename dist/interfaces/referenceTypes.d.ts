@@ -35,3 +35,20 @@ export declare enum CommentTopic {
     INSPECTION = "INSPECTION",
     FPN = "FPN"
 }
+export declare enum SortDirection {
+    asc = "asc",
+    desc = "desc"
+}
+export declare enum PermitSortColumn {
+    date_created = "date_created",
+    deadline_date = "deadline_date"
+}
+export declare enum FPNSortColumn {
+    issue_date_time = "issue_date_time"
+}
+export declare enum CommentSortColumn {
+    date_created = "date_created"
+}
+export declare enum SiteSortColumn {
+    date_created = "date_created"
+}
