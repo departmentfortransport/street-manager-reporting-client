@@ -1,3 +1,4 @@
+import { AxiosResponse } from 'axios';
 import { RequestConfig } from '../interfaces/requestConfig';
 import { PermitReportingResponse } from '../interfaces/permitReportingResponse';
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest';
@@ -19,7 +20,7 @@ export declare class StreetManagerReportingClient {
     status(): Promise<void>;
     getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse>;
     getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse>;
-    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<string>;
+    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
