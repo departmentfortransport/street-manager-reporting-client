@@ -6,6 +6,10 @@ export interface InspectionReportingResponse extends ReportingResponse {
 export interface InspectionSummaryResponse extends ReportingSummaryResponse {
     inspection_date: Date;
     inspection_response_type: InspectionResponseType;
+    work_reference_number: string;
+    location_description: string;
+    street: string;
+    area: string;
     inspection_reference_number?: string;
     inspection_type?: InspectionType;
     inspection_category?: InspectionCategory;

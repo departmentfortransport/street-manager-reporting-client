@@ -74,3 +74,6 @@ export declare enum InspectionOutcome {
     failed_2_hour = "failed_2_hour",
     failed_4_hour = "failed_4_hour"
 }
+export declare enum InspectionSortColumn {
+    inspection_date = "inspection_date"
+}

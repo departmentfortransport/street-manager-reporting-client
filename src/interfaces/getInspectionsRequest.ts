@@ -1,6 +1,8 @@
-import { InspectionResponseType } from './referenceTypes'
+import { InspectionResponseType, InspectionSortColumn } from './referenceTypes'
 import { ReportingRequest } from './reportingRequest'
 
 export interface GetInspectionsRequest extends ReportingRequest {
   inspection_response_type?: InspectionResponseType[]
+  sort_column?: InspectionSortColumn
+
 }

@@ -90,3 +90,7 @@ var InspectionOutcome;
     InspectionOutcome["failed_2_hour"] = "failed_2_hour";
     InspectionOutcome["failed_4_hour"] = "failed_4_hour";
 })(InspectionOutcome = exports.InspectionOutcome || (exports.InspectionOutcome = {}));
+var InspectionSortColumn;
+(function (InspectionSortColumn) {
+    InspectionSortColumn["inspection_date"] = "inspection_date";
+})(InspectionSortColumn = exports.InspectionSortColumn || (exports.InspectionSortColumn = {}));
