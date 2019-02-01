@@ -1,8 +1,8 @@
 import { SortDirection } from './referenceTypes'
 
 export interface ReportingRequest {
-  before?: number
-  after?: number
+  before?: string
+  after?: string
   query?: string
   sort_direction?: SortDirection
 }
