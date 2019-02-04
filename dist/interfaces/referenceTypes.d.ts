@@ -52,3 +52,28 @@ export declare enum CommentSortColumn {
 export declare enum SiteSortColumn {
     date_created = "date_created"
 }
+export declare enum InspectionType {
+    slg = "slg",
+    reinstatement = "reinstatement"
+}
+export declare enum InspectionResponseType {
+    inspection = "inspection",
+    reinspection = "reinspection"
+}
+export declare enum InspectionCategory {
+    a = "a",
+    b = "b",
+    c = "c",
+    third_party = "third_party",
+    routine = "routine"
+}
+export declare enum InspectionOutcome {
+    passed = "passed",
+    unable_to_complete = "unable_to_complete",
+    failed_standard = "failed_standard",
+    failed_2_hour = "failed_2_hour",
+    failed_4_hour = "failed_4_hour"
+}
+export declare enum InspectionSortColumn {
+    inspection_date = "inspection_date"
+}

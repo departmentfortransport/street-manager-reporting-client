@@ -64,3 +64,33 @@ var SiteSortColumn;
 (function (SiteSortColumn) {
     SiteSortColumn["date_created"] = "date_created";
 })(SiteSortColumn = exports.SiteSortColumn || (exports.SiteSortColumn = {}));
+var InspectionType;
+(function (InspectionType) {
+    InspectionType["slg"] = "slg";
+    InspectionType["reinstatement"] = "reinstatement";
+})(InspectionType = exports.InspectionType || (exports.InspectionType = {}));
+var InspectionResponseType;
+(function (InspectionResponseType) {
+    InspectionResponseType["inspection"] = "inspection";
+    InspectionResponseType["reinspection"] = "reinspection";
+})(InspectionResponseType = exports.InspectionResponseType || (exports.InspectionResponseType = {}));
+var InspectionCategory;
+(function (InspectionCategory) {
+    InspectionCategory["a"] = "a";
+    InspectionCategory["b"] = "b";
+    InspectionCategory["c"] = "c";
+    InspectionCategory["third_party"] = "third_party";
+    InspectionCategory["routine"] = "routine";
+})(InspectionCategory = exports.InspectionCategory || (exports.InspectionCategory = {}));
+var InspectionOutcome;
+(function (InspectionOutcome) {
+    InspectionOutcome["passed"] = "passed";
+    InspectionOutcome["unable_to_complete"] = "unable_to_complete";
+    InspectionOutcome["failed_standard"] = "failed_standard";
+    InspectionOutcome["failed_2_hour"] = "failed_2_hour";
+    InspectionOutcome["failed_4_hour"] = "failed_4_hour";
+})(InspectionOutcome = exports.InspectionOutcome || (exports.InspectionOutcome = {}));
+var InspectionSortColumn;
+(function (InspectionSortColumn) {
+    InspectionSortColumn["inspection_date"] = "inspection_date";
+})(InspectionSortColumn = exports.InspectionSortColumn || (exports.InspectionSortColumn = {}));

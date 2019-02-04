@@ -11,6 +11,8 @@ import { GetFPNsRequest } from '../interfaces/getFPNsRequest'
 import { FPNReportingResponse } from '../interfaces/fpnReportingResponse'
 import { CommentReportingResponse } from '../interfaces/commentReportingResponse'
 import { GetCommentsRequest } from '../interfaces/getCommentsRequest'
+import { InspectionReportingResponse } from '../interfaces/inspectionReportingResponse'
+import { GetInspectionsRequest } from '../interfaces/getInspectionsRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -37,6 +39,10 @@ export class StreetManagerReportingClient {
 
   public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse> {
     return this.httpHandler<PermitCountsResponse>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
+  }
+
+  public getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse> {
+    return this.httpHandler<InspectionReportingResponse>(() => this.axios.get('/inspections', this.generateRequestConfig(config, request)))
   }
 
   public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>> {

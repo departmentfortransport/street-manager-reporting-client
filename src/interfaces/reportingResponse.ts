@@ -5,5 +5,5 @@ export interface ReportingResponse {
 }
 
 export interface ReportingSummaryResponse {
-  cursor: number
+  cursor: string
 }
