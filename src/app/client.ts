@@ -45,6 +45,14 @@ export class StreetManagerReportingClient {
     return this.httpHandler<InspectionReportingResponse>(() => this.axios.get('/inspections', this.generateRequestConfig(config, request)))
   }
 
+  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>> {
+    try {
+      return await this.axios.get('/inspections/csv', this.generateRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
   public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>> {
     try {
       return await this.axios.get('/permits/csv', this.generateRequestConfig(config, request))
