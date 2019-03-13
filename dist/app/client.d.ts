@@ -25,6 +25,7 @@ export declare class StreetManagerReportingClient {
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
     getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
     getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>>;
+    getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
