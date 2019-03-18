@@ -39,6 +39,14 @@ class StreetManagerReportingClient {
             return this.handleError(err);
         }
     }
+    async getFPNsAsCSV(config, request) {
+        try {
+            return await this.axios.get('/fixed-penalty-notices/csv', this.generateRequestConfig(config, request));
+        }
+        catch (err) {
+            return this.handleError(err);
+        }
+    }
     getSites(config, request) {
         return this.httpHandler(() => this.axios.get('/sites', this.generateRequestConfig(config, request)));
     }
