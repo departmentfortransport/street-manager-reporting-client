@@ -13,6 +13,8 @@ import { CommentReportingResponse } from '../interfaces/commentReportingResponse
 import { GetCommentsRequest } from '../interfaces/getCommentsRequest'
 import { InspectionReportingResponse } from '../interfaces/inspectionReportingResponse'
 import { GetInspectionsRequest } from '../interfaces/getInspectionsRequest'
+import { GetWorksUpdatesRequest } from '../interfaces/getWorksUpdatesRequest'
+import { WorkUpdateResponse } from '../interfaces/workUpdateResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -79,6 +81,10 @@ export class StreetManagerReportingClient {
 
   public getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse> {
     return this.httpHandler<CommentReportingResponse>(() => this.axios.get('/comments', this.generateRequestConfig(config, request)))
+  }
+
+  public getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]> {
+    return this.httpHandler<WorkUpdateResponse[]>(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {

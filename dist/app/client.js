@@ -56,6 +56,9 @@ class StreetManagerReportingClient {
     getComments(config, request) {
         return this.httpHandler(() => this.axios.get('/comments', this.generateRequestConfig(config, request)));
     }
+    getWorksUpdates(config, request) {
+        return this.httpHandler(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)));
+    }
     async httpHandler(request) {
         try {
             let response = await request();

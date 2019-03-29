@@ -11,6 +11,8 @@ import { CommentReportingResponse } from '../interfaces/commentReportingResponse
 import { GetCommentsRequest } from '../interfaces/getCommentsRequest';
 import { InspectionReportingResponse } from '../interfaces/inspectionReportingResponse';
 import { GetInspectionsRequest } from '../interfaces/getInspectionsRequest';
+import { GetWorksUpdatesRequest } from '../interfaces/getWorksUpdatesRequest';
+import { WorkUpdateResponse } from '../interfaces/workUpdateResponse';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -29,6 +31,7 @@ export declare class StreetManagerReportingClient {
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
+    getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;
