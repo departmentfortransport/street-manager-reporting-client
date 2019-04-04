@@ -53,6 +53,9 @@ class StreetManagerReportingClient {
     getFPNs(config, request) {
         return this.httpHandler(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)));
     }
+    getWorkstreams(config, request) {
+        return this.httpHandler(() => this.axios.get('/workstreams', this.generateRequestConfig(config, request)));
+    }
     getComments(config, request) {
         return this.httpHandler(() => this.axios.get('/comments', this.generateRequestConfig(config, request)));
     }

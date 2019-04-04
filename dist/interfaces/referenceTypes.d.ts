@@ -28,6 +28,10 @@ export declare enum FPNStatus {
     disputed = "disputed",
     withdrawn = "withdrawn"
 }
+export declare enum WorkstreamStatus {
+    active = "active",
+    deactivated = "deactivated"
+}
 export declare enum OffenceCode {
     offence_code_05 = "offence_code_05",
     offence_code_06 = "offence_code_06",
@@ -51,6 +55,9 @@ export declare enum PermitSortColumn {
 }
 export declare enum FPNSortColumn {
     issue_date_time = "issue_date_time"
+}
+export declare enum WorkstreamSortColumn {
+    status = "status"
 }
 export declare enum CommentSortColumn {
     date_created = "date_created"

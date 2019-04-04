@@ -15,6 +15,8 @@ import { InspectionReportingResponse } from '../interfaces/inspectionReportingRe
 import { GetInspectionsRequest } from '../interfaces/getInspectionsRequest'
 import { GetWorksUpdatesRequest } from '../interfaces/getWorksUpdatesRequest'
 import { WorkUpdateResponse } from '../interfaces/workUpdateResponse'
+import { WorkstreamReportingResponse } from '../interfaces/workstreamReportingResponse'
+import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -77,6 +79,10 @@ export class StreetManagerReportingClient {
 
   public getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse> {
     return this.httpHandler<FPNReportingResponse>(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)))
+  }
+
+  public getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse> {
+    return this.httpHandler<WorkstreamReportingResponse>(() => this.axios.get('/workstreams', this.generateRequestConfig(config, request)))
   }
 
   public getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse> {
