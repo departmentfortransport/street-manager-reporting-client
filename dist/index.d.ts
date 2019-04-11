@@ -16,4 +16,6 @@ export * from './interfaces/inspectionReportingResponse';
 export * from './interfaces/getInspectionsRequest';
 export * from './interfaces/getWorksUpdatesRequest';
 export * from './interfaces/workUpdateResponse';
+export * from './interfaces/workstreamReportingResponse';
+export * from './interfaces/getWorkstreamsRequest';
 export * from './app/client';

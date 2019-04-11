@@ -31,6 +31,11 @@ export enum FPNStatus {
   withdrawn = 'withdrawn'
 }
 
+export enum WorkstreamStatus {
+  active = 'active',
+  deactivated = 'deactivated'
+}
+
 export enum OffenceCode {
   offence_code_05 = 'offence_code_05',
   offence_code_06 = 'offence_code_06',
@@ -58,6 +63,10 @@ export enum PermitSortColumn {
 
 export enum FPNSortColumn {
   issue_date_time = 'issue_date_time'
+}
+
+export enum WorkstreamSortColumn {
+  status = 'status'
 }
 
 export enum CommentSortColumn {

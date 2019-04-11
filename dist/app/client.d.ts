@@ -13,6 +13,8 @@ import { InspectionReportingResponse } from '../interfaces/inspectionReportingRe
 import { GetInspectionsRequest } from '../interfaces/getInspectionsRequest';
 import { GetWorksUpdatesRequest } from '../interfaces/getWorksUpdatesRequest';
 import { WorkUpdateResponse } from '../interfaces/workUpdateResponse';
+import { WorkstreamReportingResponse } from '../interfaces/workstreamReportingResponse';
+import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -30,6 +32,7 @@ export declare class StreetManagerReportingClient {
     getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
+    getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse>;
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
     private httpHandler;
