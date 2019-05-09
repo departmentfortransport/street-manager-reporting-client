@@ -2,7 +2,7 @@ import * as qs from 'qs'
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
 import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
-import { PermitReportingResponse } from '../interfaces/permitReportingResponse'
+import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse'
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest'
 import { GetSitesRequest } from '../interfaces/getSitesRequest'
 import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
@@ -17,6 +17,7 @@ import { GetWorksUpdatesRequest } from '../interfaces/getWorksUpdatesRequest'
 import { WorkUpdateResponse } from '../interfaces/workUpdateResponse'
 import { WorkstreamReportingResponse } from '../interfaces/workstreamReportingResponse'
 import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest'
+import { PermitSearchRequest } from '../interfaces/permitSearchRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -43,6 +44,10 @@ export class StreetManagerReportingClient {
 
   public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse> {
     return this.httpHandler<PermitCountsResponse>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
+  }
+
+  public getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]> {
+    return this.httpHandler<PermitSummaryResponse[]>(() => this.axios.post('/permits/search', request, this.generateRequestConfig(config)))
   }
 
   public getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse> {

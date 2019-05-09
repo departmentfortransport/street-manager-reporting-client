@@ -114,3 +114,26 @@ var InspectionSortColumn;
 (function (InspectionSortColumn) {
     InspectionSortColumn["inspection_date"] = "inspection_date";
 })(InspectionSortColumn = exports.InspectionSortColumn || (exports.InspectionSortColumn = {}));
+var WorkCategory;
+(function (WorkCategory) {
+    WorkCategory["minor"] = "minor";
+    WorkCategory["standard"] = "standard";
+    WorkCategory["major"] = "major";
+    WorkCategory["immediate_urgent"] = "immediate_urgent";
+    WorkCategory["immediate_emergency"] = "immediate_emergency";
+    WorkCategory["paa"] = "paa";
+})(WorkCategory = exports.WorkCategory || (exports.WorkCategory = {}));
+var TrafficManagementType;
+(function (TrafficManagementType) {
+    TrafficManagementType["road_closure"] = "road_closure";
+    TrafficManagementType["contra_flow"] = "contra_flow";
+    TrafficManagementType["lane_closure"] = "lane_closure";
+    TrafficManagementType["multi_way_signals"] = "multi_way_signals";
+    TrafficManagementType["two_way_signals"] = "two_way_signals";
+    TrafficManagementType["convoy_workings"] = "convoy_workings";
+    TrafficManagementType["stop_go_boards"] = "stop_go_boards";
+    TrafficManagementType["priority_working"] = "priority_working";
+    TrafficManagementType["give_and_take"] = "give_and_take";
+    TrafficManagementType["some_carriageway_incursion"] = "some_carriageway_incursion";
+    TrafficManagementType["no_carriageway_incursion"] = "no_carriageway_incursion";
+})(TrafficManagementType = exports.TrafficManagementType || (exports.TrafficManagementType = {}));
