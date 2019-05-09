@@ -18,4 +18,5 @@ export * from './interfaces/getWorksUpdatesRequest';
 export * from './interfaces/workUpdateResponse';
 export * from './interfaces/workstreamReportingResponse';
 export * from './interfaces/getWorkstreamsRequest';
+export * from './interfaces/permitSearchRequest';
 export * from './app/client';

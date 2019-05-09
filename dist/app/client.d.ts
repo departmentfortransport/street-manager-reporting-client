@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios';
 import { RequestConfig } from '../interfaces/requestConfig';
-import { PermitReportingResponse } from '../interfaces/permitReportingResponse';
+import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse';
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest';
 import { GetSitesRequest } from '../interfaces/getSitesRequest';
 import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse';
@@ -15,6 +15,7 @@ import { GetWorksUpdatesRequest } from '../interfaces/getWorksUpdatesRequest';
 import { WorkUpdateResponse } from '../interfaces/workUpdateResponse';
 import { WorkstreamReportingResponse } from '../interfaces/workstreamReportingResponse';
 import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest';
+import { PermitSearchRequest } from '../interfaces/permitSearchRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -26,6 +27,7 @@ export declare class StreetManagerReportingClient {
     status(): Promise<void>;
     getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse>;
     getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse>;
+    getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]>;
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
     getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
     getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>>;
