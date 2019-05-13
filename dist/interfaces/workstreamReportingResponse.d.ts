@@ -5,9 +5,10 @@ export interface WorkstreamReportingResponse extends ReportingResponse {
 }
 export interface WorkstreamSummaryResponse extends ReportingSummaryResponse {
     workstream_id: number;
-    organisation_id: string;
+    organisation_id: number;
     prefix: string;
     name: string;
     description?: string;
     status: WorkstreamStatus;
+    swa_code: string;
 }
