@@ -18,6 +18,8 @@ import { WorkUpdateResponse } from '../interfaces/workUpdateResponse'
 import { WorkstreamReportingResponse } from '../interfaces/workstreamReportingResponse'
 import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest'
 import { PermitSearchRequest } from '../interfaces/permitSearchRequest'
+import { ReinstatementReportingResponse } from '../interfaces/reinstatementReportingResponse'
+import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -96,6 +98,10 @@ export class StreetManagerReportingClient {
 
   public getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]> {
     return this.httpHandler<WorkUpdateResponse[]>(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)))
+  }
+
+  public getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse> {
+    return this.httpHandler<ReinstatementReportingResponse>(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)))
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {

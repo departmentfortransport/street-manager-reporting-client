@@ -68,6 +68,9 @@ export declare enum CommentSortColumn {
 export declare enum SiteSortColumn {
     date_created = "date_created"
 }
+export declare enum ReinstatementSortColumn {
+    end_date = "end_date"
+}
 export declare enum InspectionType {
     slg = "slg",
     reinstatement = "reinstatement",

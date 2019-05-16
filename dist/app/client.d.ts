@@ -16,6 +16,8 @@ import { WorkUpdateResponse } from '../interfaces/workUpdateResponse';
 import { WorkstreamReportingResponse } from '../interfaces/workstreamReportingResponse';
 import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest';
 import { PermitSearchRequest } from '../interfaces/permitSearchRequest';
+import { ReinstatementReportingResponse } from '../interfaces/reinstatementReportingResponse';
+import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -37,6 +39,7 @@ export declare class StreetManagerReportingClient {
     getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse>;
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
+    getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;
