@@ -17,4 +17,6 @@ export interface InspectionSummaryResponse extends ReportingSummaryResponse {
   inspection_category?: InspectionCategory
   inspection_outcome?: InspectionOutcome
   reinspection_date_time?: Date
+  highway_authority: string
+  promoter_organisation: string
 }
