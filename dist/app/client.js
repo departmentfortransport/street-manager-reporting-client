@@ -65,6 +65,9 @@ class StreetManagerReportingClient {
     getWorksUpdates(config, request) {
         return this.httpHandler(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)));
     }
+    getReinstatements(config, request) {
+        return this.httpHandler(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)));
+    }
     async httpHandler(request) {
         try {
             let response = await request();

@@ -82,6 +82,10 @@ var SiteSortColumn;
 (function (SiteSortColumn) {
     SiteSortColumn["date_created"] = "date_created";
 })(SiteSortColumn = exports.SiteSortColumn || (exports.SiteSortColumn = {}));
+var ReinstatementSortColumn;
+(function (ReinstatementSortColumn) {
+    ReinstatementSortColumn["end_date"] = "end_date";
+})(ReinstatementSortColumn = exports.ReinstatementSortColumn || (exports.ReinstatementSortColumn = {}));
 var InspectionType;
 (function (InspectionType) {
     InspectionType["slg"] = "slg";

@@ -80,6 +80,10 @@ export enum SiteSortColumn {
   date_created = 'date_created'
 }
 
+export enum ReinstatementSortColumn {
+  end_date = 'end_date'
+}
+
 export enum InspectionType {
   slg = 'slg',
   reinstatement = 'reinstatement',
