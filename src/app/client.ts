@@ -1,5 +1,6 @@
 import * as qs from 'qs'
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
+import { httpAdapter } from 'axios/lib/adapters/http'
 import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
 import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse'
@@ -64,7 +65,10 @@ export class StreetManagerReportingClient {
 
   public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>> {
     try {
-      return await this.axios.get('/permits/csv', this.generateRequestConfig(config, request))
+      let aConfig: AxiosRequestConfig = this.generateRequestConfig(config, request)
+      aConfig.responseType = 'stream'
+      aConfig.adapter = httpAdapter
+      return this.axios.get('/permits/csv', aConfig)
     } catch (err) {
       return this.handleError(err)
     }
