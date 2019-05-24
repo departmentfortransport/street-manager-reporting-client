@@ -99,6 +99,9 @@ class StreetManagerReportingClient {
                 return qs.stringify(params, { arrayFormat: 'repeat' });
             };
         }
+        if (config.timeout) {
+            requestConfig.timeout = config.timeout;
+        }
         return requestConfig;
     }
 }
