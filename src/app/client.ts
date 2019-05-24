@@ -137,6 +137,10 @@ export class StreetManagerReportingClient {
       }
     }
 
+    if (config.timeout) {
+      requestConfig.timeout = config.timeout
+    }
+
     return requestConfig
   }
 }
