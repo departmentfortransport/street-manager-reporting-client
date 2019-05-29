@@ -13,8 +13,8 @@ export interface AlterationSummaryResponse extends ReportingSummaryResponse {
     highway_authority: string;
     promoter: string;
     work_status: WorkStatus;
-    start_date: Date;
-    end_date: Date;
+    proposed_start_date: Date;
+    proposed_end_date: Date;
     work_category: WorkCategory;
     alteration_status: AlterationStatus;
     date_created: Date;

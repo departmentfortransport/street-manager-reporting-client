@@ -132,12 +132,7 @@ export declare enum AlterationStatus {
     revoked = "revoked"
 }
 export declare enum AlterationSortColumn {
-    highway_authority = "highway_authority",
-    work_status = "work_status",
-    start_date = "start_date",
-    end_date = "end_date",
-    work_category = "work_category",
-    deadline_date = "deadline_date"
+    date_created = "date_created"
 }
 export declare enum WorkStatus {
     planned = "planned",

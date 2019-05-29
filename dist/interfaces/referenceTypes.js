@@ -156,12 +156,7 @@ var AlterationStatus;
 })(AlterationStatus = exports.AlterationStatus || (exports.AlterationStatus = {}));
 var AlterationSortColumn;
 (function (AlterationSortColumn) {
-    AlterationSortColumn["highway_authority"] = "highway_authority";
-    AlterationSortColumn["work_status"] = "work_status";
-    AlterationSortColumn["start_date"] = "start_date";
-    AlterationSortColumn["end_date"] = "end_date";
-    AlterationSortColumn["work_category"] = "work_category";
-    AlterationSortColumn["deadline_date"] = "deadline_date";
+    AlterationSortColumn["date_created"] = "date_created";
 })(AlterationSortColumn = exports.AlterationSortColumn || (exports.AlterationSortColumn = {}));
 var WorkStatus;
 (function (WorkStatus) {
