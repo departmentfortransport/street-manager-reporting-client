@@ -1,0 +1,22 @@
+import { AlterationStatus, WorkCategory, WorkStatus } from './referenceTypes';
+import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+export interface AlterationReportingResponse extends ReportingResponse {
+    rows: AlterationSummaryResponse[];
+}
+export interface AlterationSummaryResponse extends ReportingSummaryResponse {
+    work_reference_number: string;
+    permit_reference_number: string;
+    alteration_reference_number: string;
+    street: string;
+    area: string;
+    location_description: string;
+    highway_authority: string;
+    promoter: string;
+    work_status: WorkStatus;
+    start_date: Date;
+    end_date: Date;
+    work_category: WorkCategory;
+    alteration_status: AlterationStatus;
+    date_created: Date;
+    deadline_date: Date;
+}

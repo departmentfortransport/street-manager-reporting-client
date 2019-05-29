@@ -20,6 +20,8 @@ import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest'
 import { PermitSearchRequest } from '../interfaces/permitSearchRequest'
 import { ReinstatementReportingResponse } from '../interfaces/reinstatementReportingResponse'
 import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest'
+import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse'
+import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -54,6 +56,10 @@ export class StreetManagerReportingClient {
 
   public getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse> {
     return this.httpHandler<InspectionReportingResponse>(() => this.axios.get('/inspections', this.generateRequestConfig(config, request)))
+  }
+
+  public getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse> {
+    return this.httpHandler<AlterationReportingResponse>(() => this.axios.get('/alterations', this.generateRequestConfig(config, request)))
   }
 
   public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>> {

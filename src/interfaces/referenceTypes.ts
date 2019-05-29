@@ -141,3 +141,29 @@ export enum TrafficManagementType {
   some_carriageway_incursion = 'some_carriageway_incursion',
   no_carriageway_incursion = 'no_carriageway_incursion'
 }
+
+export enum AlterationStatus {
+  submitted = 'submitted',
+  granted = 'granted',
+  granted_with_duration_challenge = 'granted_with_duration_challenge',
+  refused = 'refused',
+  deemed = 'deemed',
+  cancelled = 'cancelled',
+  revoked = 'revoked'
+}
+
+export enum AlterationSortColumn {
+  highway_authority = 'highway_authority',
+  work_status = 'work_status',
+  start_date = 'start_date',
+  end_date = 'end_date',
+  work_category = 'work_category',
+  deadline_date = 'deadline_date'
+}
+
+export enum WorkStatus {
+  planned = 'planned',
+  in_progress = 'in_progress',
+  completed = 'completed',
+  cancelled = 'cancelled'
+}
