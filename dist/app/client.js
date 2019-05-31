@@ -71,7 +71,7 @@ class StreetManagerReportingClient {
     getReinstatements(config, request) {
         return this.httpHandler(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)));
     }
-    async getChargeableItemsAsCSV(config, request) {
+    async getFeesAsCSV(config, request) {
         try {
             return await this.axios.get('/fees/csv', this.generateRequestConfig(config, request));
         }

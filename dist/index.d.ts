@@ -23,5 +23,5 @@ export * from './interfaces/getReinstatementsRequest';
 export * from './interfaces/reinstatementReportingResponse';
 export * from './interfaces/getAlterationsRequest';
 export * from './interfaces/alterationReportingResponse';
-export * from './interfaces/getChargeableItemsRequest';
+export * from './interfaces/getFeesRequest';
 export * from './app/client';

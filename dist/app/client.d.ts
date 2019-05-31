@@ -20,7 +20,7 @@ import { ReinstatementReportingResponse } from '../interfaces/reinstatementRepor
 import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest';
 import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse';
 import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest';
-import { GetChargeableItemsRequest } from '../interfaces/getChargeableItemsRequest';
+import { GetFeesRequest } from '../interfaces/getFeesRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -44,7 +44,7 @@ export declare class StreetManagerReportingClient {
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
     getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse>;
-    getChargeableItemsAsCSV(config: RequestConfig, request: GetChargeableItemsRequest): Promise<AxiosResponse<string>>;
+    getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<string>>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;
