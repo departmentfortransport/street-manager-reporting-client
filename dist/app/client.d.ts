@@ -18,6 +18,8 @@ import { GetWorkstreamsRequest } from '../interfaces/getWorkstreamsRequest';
 import { PermitSearchRequest } from '../interfaces/permitSearchRequest';
 import { ReinstatementReportingResponse } from '../interfaces/reinstatementReportingResponse';
 import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest';
+import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse';
+import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -31,6 +33,7 @@ export declare class StreetManagerReportingClient {
     getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse>;
     getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]>;
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
+    getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse>;
     getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
     getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>>;
     getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;

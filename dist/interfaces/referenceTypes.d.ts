@@ -122,3 +122,21 @@ export declare enum TrafficManagementType {
     some_carriageway_incursion = "some_carriageway_incursion",
     no_carriageway_incursion = "no_carriageway_incursion"
 }
+export declare enum AlterationStatus {
+    submitted = "submitted",
+    granted = "granted",
+    granted_with_duration_challenge = "granted_with_duration_challenge",
+    refused = "refused",
+    deemed = "deemed",
+    cancelled = "cancelled",
+    revoked = "revoked"
+}
+export declare enum AlterationSortColumn {
+    date_created = "date_created"
+}
+export declare enum WorkStatus {
+    planned = "planned",
+    in_progress = "in_progress",
+    completed = "completed",
+    cancelled = "cancelled"
+}

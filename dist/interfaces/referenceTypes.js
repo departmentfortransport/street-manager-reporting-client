@@ -144,3 +144,24 @@ var TrafficManagementType;
     TrafficManagementType["some_carriageway_incursion"] = "some_carriageway_incursion";
     TrafficManagementType["no_carriageway_incursion"] = "no_carriageway_incursion";
 })(TrafficManagementType = exports.TrafficManagementType || (exports.TrafficManagementType = {}));
+var AlterationStatus;
+(function (AlterationStatus) {
+    AlterationStatus["submitted"] = "submitted";
+    AlterationStatus["granted"] = "granted";
+    AlterationStatus["granted_with_duration_challenge"] = "granted_with_duration_challenge";
+    AlterationStatus["refused"] = "refused";
+    AlterationStatus["deemed"] = "deemed";
+    AlterationStatus["cancelled"] = "cancelled";
+    AlterationStatus["revoked"] = "revoked";
+})(AlterationStatus = exports.AlterationStatus || (exports.AlterationStatus = {}));
+var AlterationSortColumn;
+(function (AlterationSortColumn) {
+    AlterationSortColumn["date_created"] = "date_created";
+})(AlterationSortColumn = exports.AlterationSortColumn || (exports.AlterationSortColumn = {}));
+var WorkStatus;
+(function (WorkStatus) {
+    WorkStatus["planned"] = "planned";
+    WorkStatus["in_progress"] = "in_progress";
+    WorkStatus["completed"] = "completed";
+    WorkStatus["cancelled"] = "cancelled";
+})(WorkStatus = exports.WorkStatus || (exports.WorkStatus = {}));

@@ -21,4 +21,6 @@ export * from './interfaces/getWorkstreamsRequest';
 export * from './interfaces/permitSearchRequest';
 export * from './interfaces/getReinstatementsRequest';
 export * from './interfaces/reinstatementReportingResponse';
+export * from './interfaces/getAlterationsRequest';
+export * from './interfaces/alterationReportingResponse';
 export * from './app/client';
