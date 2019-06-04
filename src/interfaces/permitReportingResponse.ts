@@ -1,4 +1,4 @@
-import { PermitStatus, WorkCategory, TrafficManagementType } from './referenceTypes'
+import { PermitStatus, WorkCategory, TrafficManagementType, WorkStatus } from './referenceTypes'
 import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse'
 
 export interface PermitReportingResponse extends ReportingResponse {
@@ -24,6 +24,7 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
   actual_start_date?: Date
   actual_end_date?: Date
   status: PermitStatus,
+  work_status: WorkStatus,
   deadline_date: Date,
   date_created: Date
 }
