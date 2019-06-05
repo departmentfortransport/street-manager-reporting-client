@@ -22,6 +22,7 @@ import { ReinstatementReportingResponse } from '../interfaces/reinstatementRepor
 import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest'
 import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse'
 import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
+import { GetFeesRequest } from '../interfaces/getFeesRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -108,6 +109,14 @@ export class StreetManagerReportingClient {
 
   public getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse> {
     return this.httpHandler<ReinstatementReportingResponse>(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)))
+  }
+
+  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<string>> {
+    try {
+      return await this.axios.get('/fees/csv', this.generateRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
