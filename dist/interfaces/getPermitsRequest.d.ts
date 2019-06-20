@@ -8,4 +8,5 @@ export interface GetPermitsRequest extends ReportingRequest {
     end_date_created?: Date;
     active_permit_only?: boolean;
     sort_column?: PermitSortColumn;
+    csv_export_name_prefix?: string;
 }
