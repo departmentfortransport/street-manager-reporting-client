@@ -1,4 +1,4 @@
-import { PermitStatus, PermitSortColumn } from './referenceTypes';
+import { PermitStatus, PermitSortColumn, PermitCsvExportPrefix } from './referenceTypes';
 import { ReportingRequest } from './reportingRequest';
 export interface GetPermitsRequest extends ReportingRequest {
     status?: PermitStatus[];
@@ -8,5 +8,5 @@ export interface GetPermitsRequest extends ReportingRequest {
     end_date_created?: Date;
     active_permit_only?: boolean;
     sort_column?: PermitSortColumn;
-    csv_export_name_prefix?: string;
+    csv_export_prefix?: PermitCsvExportPrefix;
 }
