@@ -113,6 +113,9 @@ class StreetManagerReportingClient {
         if (config.timeout) {
             requestConfig.timeout = config.timeout;
         }
+        if (config.responseType) {
+            requestConfig.responseType = config.responseType;
+        }
         return requestConfig;
     }
 }
