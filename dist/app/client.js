@@ -37,9 +37,12 @@ class StreetManagerReportingClient {
             return this.handleError(err);
         }
     }
-    async getPermitsAsCSV(config, request) {
+    async getPermitsAsCSV(requestConfig, request) {
         try {
-            return await this.axios.get('/permits/csv', this.generateRequestConfig(config, request));
+            let config = this.generateRequestConfig(requestConfig);
+            config.responseType = 'arraybuffer';
+            config.transformResponse = (data) => data;
+            return await this.axios.get('/permits/csv', config);
         }
         catch (err) {
             return this.handleError(err);
