@@ -71,7 +71,7 @@ export class StreetManagerReportingClient {
     }
   }
 
-  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<WritableStream>> {
+  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<ReadableStream>> {
     try {
       return await this.axios.get('/permits/csv', this.generateRequestConfig(config, request))
     } catch (err) {
