@@ -1,7 +1,8 @@
-import { PermitStatus, WorkCategory, PermitSortColumn, PermitCsvExportPrefix } from './referenceTypes';
+import { PermitStatus, WorkStatus, WorkCategory, PermitSortColumn, PermitCsvExportPrefix } from './referenceTypes';
 import { ReportingRequest } from './reportingRequest';
 export interface GetPermitsRequest extends ReportingRequest {
     status?: PermitStatus[];
+    work_status?: WorkStatus[];
     work_category?: WorkCategory[];
     start_date?: Date;
     end_date?: Date;
