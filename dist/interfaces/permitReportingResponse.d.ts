@@ -25,4 +25,5 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
     work_status: WorkStatus;
     deadline_date: Date;
     date_created: Date;
+    status_changed_date: Date;
 }

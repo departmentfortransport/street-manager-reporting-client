@@ -19,4 +19,5 @@ export interface AlterationSummaryResponse extends ReportingSummaryResponse {
     alteration_status: AlterationStatus;
     date_created: Date;
     deadline_date: Date;
+    status_changed_date: Date;
 }
