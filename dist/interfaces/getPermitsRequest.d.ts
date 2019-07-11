@@ -16,4 +16,5 @@ export interface GetPermitsRequest extends ReportingRequest {
     has_no_final_registration?: boolean;
     has_excavation?: boolean;
     is_early_start?: boolean;
+    is_deemed?: boolean;
 }

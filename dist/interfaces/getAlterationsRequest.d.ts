@@ -11,4 +11,5 @@ export interface GetAlterationsRequest extends ReportingRequest {
     is_high_impact_traffic_management?: boolean;
     is_duration_extension?: boolean;
     is_early_start?: boolean;
+    is_deemed?: boolean;
 }
