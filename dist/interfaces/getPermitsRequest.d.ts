@@ -13,7 +13,7 @@ export interface GetPermitsRequest extends ReportingRequest {
     csv_export_prefix?: PermitCsvExportPrefix;
     is_traffic_sensitive?: boolean;
     is_high_impact_traffic_management?: boolean;
-    has_final_registration?: boolean;
+    has_no_final_registration?: boolean;
     has_excavation?: boolean;
     is_early_start?: boolean;
 }
