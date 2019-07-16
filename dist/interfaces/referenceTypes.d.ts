@@ -139,6 +139,13 @@ export declare enum AlterationStatus {
 export declare enum AlterationSortColumn {
     date_created = "date_created"
 }
+export declare enum AlterationType {
+    PROMOTER_CHANGE_REQUEST = "PROMOTER_CHANGE_REQUEST",
+    HA_CHANGE_REQUEST = "HA_CHANGE_REQUEST",
+    HA_IMPOSED_CHANGE = "HA_IMPOSED_CHANGE",
+    WORK_EXTENSION = "WORK_EXTENSION",
+    DURATION_CHALLENGE = "DURATION_CHALLENGE"
+}
 export declare enum WorkStatus {
     planned = "planned",
     in_progress = "in_progress",
