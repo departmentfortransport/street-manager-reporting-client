@@ -164,6 +164,13 @@ var AlterationSortColumn;
 (function (AlterationSortColumn) {
     AlterationSortColumn["date_created"] = "date_created";
 })(AlterationSortColumn = exports.AlterationSortColumn || (exports.AlterationSortColumn = {}));
+var AlterationType;
+(function (AlterationType) {
+    AlterationType["PROMOTER_CHANGE_REQUEST"] = "PROMOTER_CHANGE_REQUEST";
+    AlterationType["HA_CHANGE_REQUEST"] = "HA_CHANGE_REQUEST";
+    AlterationType["HA_IMPOSED_CHANGE"] = "HA_IMPOSED_CHANGE";
+    AlterationType["WORK_EXTENSION"] = "WORK_EXTENSION";
+})(AlterationType = exports.AlterationType || (exports.AlterationType = {}));
 var WorkStatus;
 (function (WorkStatus) {
     WorkStatus["planned"] = "planned";

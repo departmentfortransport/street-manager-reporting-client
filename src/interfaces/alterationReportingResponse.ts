@@ -1,4 +1,4 @@
-import { AlterationStatus, WorkCategory, WorkStatus } from './referenceTypes'
+import { AlterationStatus, WorkCategory, WorkStatus, AlterationType } from './referenceTypes'
 import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse'
 
 export interface AlterationReportingResponse extends ReportingResponse {
@@ -19,6 +19,7 @@ export interface AlterationSummaryResponse extends ReportingSummaryResponse {
   proposed_end_date: Date
   work_category: WorkCategory
   alteration_status: AlterationStatus
+  alteration_type: AlterationType
   date_created: Date
   deadline_date: Date
   status_changed_date: Date
