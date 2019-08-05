@@ -5,4 +5,5 @@ export interface ReportingRequest {
   after?: string
   query?: string
   sort_direction?: SortDirection
+  swa_code?: string
 }
