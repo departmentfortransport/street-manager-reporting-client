@@ -21,6 +21,8 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
   assessment_status?: PermitStatus
   proposed_start_date: Date
   proposed_end_date: Date
+  proposed_start_time?: Date
+  proposed_end_time?: Date
   actual_start_date?: Date
   actual_end_date?: Date
   status: PermitStatus
