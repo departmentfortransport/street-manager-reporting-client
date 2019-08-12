@@ -23,20 +23,30 @@ import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest
 import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse'
 import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
 import { GetFeesRequest } from '../interfaces/getFeesRequest'
+import { Agent } from 'https'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
-  timeout?: number
+  timeout?: number,
+  disableCertificateVerification?: boolean
 }
 
 export class StreetManagerReportingClient {
   private axios: AxiosInstance
 
   public constructor(private config: StreetManagerReportingClientConfig) {
-    this.axios = axios.create({
+    let axiosRequestConfig: AxiosRequestConfig = {
       baseURL: this.config.baseURL,
       timeout: this.config.timeout
-    })
+    }
+
+    if (this.config.disableCertificateVerification) {
+      axiosRequestConfig.httpsAgent = new Agent({
+        rejectUnauthorized: false
+      })
+    }
+
+    this.axios = axios.create(axiosRequestConfig)
   }
 
   public status(): Promise<void> {

@@ -24,6 +24,7 @@ import { GetFeesRequest } from '../interfaces/getFeesRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
+    disableCertificateVerification?: boolean;
 }
 export declare class StreetManagerReportingClient {
     private config;
