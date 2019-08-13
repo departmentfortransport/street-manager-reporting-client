@@ -19,6 +19,8 @@ export interface AlterationSummaryResponse extends ReportingSummaryResponse {
   proposed_end_date: Date
   proposed_start_time?: Date
   proposed_end_time?: Date
+  actual_start_date?: Date
+  actual_end_date?: Date
   work_category: WorkCategory
   alteration_status: AlterationStatus
   alteration_type: AlterationType
