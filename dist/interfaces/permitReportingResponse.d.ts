@@ -30,15 +30,14 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
     date_created: Date;
     status_changed_date: Date;
     usrn: number;
-    is_active_permit: Boolean;
+    is_active_permit: boolean;
     permit_conditions?: PermitCondition[];
     road_category: number;
-    is_traffic_sensitive: Boolean;
+    is_traffic_sensitive: boolean;
     has_final_reinstatement: boolean;
-    is_deemed: Boolean;
+    is_deemed: boolean;
     excavation_carried_out: boolean;
     is_early_start: boolean;
-    is_high_impact_traffic_management: Boolean;
+    is_high_impact_traffic_management: boolean;
     is_lane_rental: boolean;
-    workstream_prefix: string;
 }
