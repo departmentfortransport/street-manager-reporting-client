@@ -14,5 +14,5 @@ export interface ForwardPlanSummaryResponse extends ReportingSummaryResponse {
   area: string
   proposed_start_date: Date
   proposed_end_date: Date
-  foward_plan_status: ForwardPlanStatus
+  forward_plan_status: ForwardPlanStatus
 }
