@@ -53,6 +53,17 @@ class StreetManagerReportingClient {
             return this.handleError(err);
         }
     }
+    async getForwardPlansAsCSV(config, request) {
+        try {
+            return await this.axios.get('/forward-plans/csv', this.generateRequestConfig(config, request));
+        }
+        catch (err) {
+            return this.handleError(err);
+        }
+    }
+    getForwardPlans(config, request) {
+        return this.httpHandler(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)));
+    }
     getSites(config, request) {
         return this.httpHandler(() => this.axios.get('/sites', this.generateRequestConfig(config, request)));
     }

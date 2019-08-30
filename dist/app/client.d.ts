@@ -21,6 +21,8 @@ import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest
 import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse';
 import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest';
 import { GetFeesRequest } from '../interfaces/getFeesRequest';
+import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest';
+import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -38,6 +40,8 @@ export declare class StreetManagerReportingClient {
     getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
     getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>>;
     getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;
+    getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>>;
+    getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
     getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse>;

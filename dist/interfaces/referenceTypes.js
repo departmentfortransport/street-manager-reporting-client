@@ -179,3 +179,15 @@ var WorkStatus;
     WorkStatus["completed"] = "completed";
     WorkStatus["cancelled"] = "cancelled";
 })(WorkStatus = exports.WorkStatus || (exports.WorkStatus = {}));
+var ForwardPlanStatus;
+(function (ForwardPlanStatus) {
+    ForwardPlanStatus["raised"] = "raised";
+    ForwardPlanStatus["cancelled"] = "cancelled";
+    ForwardPlanStatus["closed"] = "closed";
+})(ForwardPlanStatus = exports.ForwardPlanStatus || (exports.ForwardPlanStatus = {}));
+var ForwardPlanSortColumn;
+(function (ForwardPlanSortColumn) {
+    ForwardPlanSortColumn["start_date"] = "start_date";
+    ForwardPlanSortColumn["end_date"] = "end_date";
+    ForwardPlanSortColumn["forward_plan_status"] = "forward_plan_status";
+})(ForwardPlanSortColumn = exports.ForwardPlanSortColumn || (exports.ForwardPlanSortColumn = {}));

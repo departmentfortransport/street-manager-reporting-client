@@ -152,3 +152,13 @@ export declare enum WorkStatus {
     completed = "completed",
     cancelled = "cancelled"
 }
+export declare enum ForwardPlanStatus {
+    raised = "raised",
+    cancelled = "cancelled",
+    closed = "closed"
+}
+export declare enum ForwardPlanSortColumn {
+    start_date = "start_date",
+    end_date = "end_date",
+    forward_plan_status = "forward_plan_status"
+}
