@@ -40,4 +40,5 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
     is_early_start: boolean;
     is_high_impact_traffic_management: Boolean;
     is_lane_rental: boolean;
+    workstream_prefix: string;
 }
