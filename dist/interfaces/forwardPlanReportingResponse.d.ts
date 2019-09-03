@@ -4,6 +4,7 @@ export interface ForwardPlanReportingResponse extends ReportingResponse {
     rows: ForwardPlanSummaryResponse[];
 }
 export interface ForwardPlanSummaryResponse extends ReportingSummaryResponse {
+    works_reference_number: string;
     forward_plan_reference_number: string;
     promoter_organisation: string;
     highway_authority: string;
