@@ -26,4 +26,5 @@ export * from './interfaces/alterationReportingResponse';
 export * from './interfaces/getFeesRequest';
 export * from './interfaces/getForwardPlansRequest';
 export * from './interfaces/forwardPlanReportingResponse';
+export * from './interfaces/permitCondition';
 export * from './app/client';

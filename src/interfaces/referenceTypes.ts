@@ -188,3 +188,24 @@ export enum ForwardPlanSortColumn {
   end_date = 'end_date',
   forward_plan_status = 'forward_plan_status'
 }
+
+export enum PermitConditionType {
+  NCT01a = 'NCT01a',
+  NCT01b = 'NCT01b',
+  NCT02a = 'NCT02a',
+  NCT02b = 'NCT02b',
+  NCT04a = 'NCT04a',
+  NCT04b = 'NCT04b',
+  NCT05a = 'NCT05a',
+  NCT06a = 'NCT06a',
+  NCT07a = 'NCT07a',
+  NCT08a = 'NCT08a',
+  NCT08b = 'NCT08b',
+  NCT09a = 'NCT09a',
+  NCT09b = 'NCT09b',
+  NCT09c = 'NCT09c',
+  NCT10a = 'NCT10a',
+  NCT11a = 'NCT11a',
+  NCT11b = 'NCT11b',
+  NCT12a = 'NCT12a'
+}
