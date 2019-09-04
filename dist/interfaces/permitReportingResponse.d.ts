@@ -34,7 +34,7 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
     permit_conditions?: PermitCondition[];
     road_category: number;
     is_traffic_sensitive: boolean;
-    has_final_reinstatement: boolean;
+    has_no_final_reinstatement: boolean;
     is_deemed: boolean;
     excavation_carried_out: boolean;
     is_early_start: boolean;
