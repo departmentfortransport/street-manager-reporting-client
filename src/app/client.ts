@@ -23,6 +23,8 @@ import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest
 import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse'
 import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
 import { GetFeesRequest } from '../interfaces/getFeesRequest'
+import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest'
+import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -85,6 +87,18 @@ export class StreetManagerReportingClient {
     } catch (err) {
       return this.handleError(err)
     }
+  }
+
+  public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>> {
+    try {
+      return await this.axios.get('/forward-plans/csv', this.generateRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
+  public getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse> {
+    return this.httpHandler<ForwardPlanReportingResponse>(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)))
   }
 
   public getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]> {
