@@ -182,3 +182,10 @@ export declare enum PermitConditionType {
     NCT11b = "NCT11b",
     NCT12a = "NCT12a"
 }
+export declare enum LaneRentalAssessmentOutcome {
+    chargeable = "chargeable",
+    potentially_chargeable = "potentially_chargeable",
+    charges_waived = "charges_waived",
+    exempt = "exempt",
+    charges_not_applicable = "charges_not_applicable"
+}

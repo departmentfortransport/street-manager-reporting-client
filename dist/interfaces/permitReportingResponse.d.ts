@@ -1,4 +1,4 @@
-import { PermitStatus, WorkCategory, TrafficManagementType, WorkStatus } from './referenceTypes';
+import { PermitStatus, WorkCategory, TrafficManagementType, WorkStatus, LaneRentalAssessmentOutcome } from './referenceTypes';
 import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
 import { PermitCondition } from './permitCondition';
 export interface PermitReportingResponse extends ReportingResponse {
@@ -40,4 +40,7 @@ export interface PermitSummaryResponse extends ReportingSummaryResponse {
     is_early_start: boolean;
     is_high_impact_traffic_management: boolean;
     is_lane_rental: boolean;
+    lane_rental_assessment_outcome?: LaneRentalAssessmentOutcome[];
+    lane_rental_charges_not_agreed: boolean;
+    lane_rental_charges_potentially_apply: boolean;
 }
