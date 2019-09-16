@@ -23,7 +23,7 @@ export interface AlterationSummaryResponse extends ReportingSummaryResponse {
     date_created: Date;
     deadline_date: Date;
     status_changed_date: Date;
-    lane_rental_assessment_outcome?: LaneRentalAssessmentOutcome[];
+    lane_rental_assessment_outcome?: LaneRentalAssessmentOutcome;
     lane_rental_charges_not_agreed: boolean;
     lane_rental_charges_potentially_apply: boolean;
 }
