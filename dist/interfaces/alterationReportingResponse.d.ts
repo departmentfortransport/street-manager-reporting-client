@@ -1,4 +1,4 @@
-import { AlterationStatus, WorkCategory, WorkStatus, AlterationType } from './referenceTypes';
+import { AlterationStatus, WorkCategory, WorkStatus, AlterationType, LaneRentalAssessmentOutcome } from './referenceTypes';
 import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
 export interface AlterationReportingResponse extends ReportingResponse {
     rows: AlterationSummaryResponse[];
@@ -23,4 +23,7 @@ export interface AlterationSummaryResponse extends ReportingSummaryResponse {
     date_created: Date;
     deadline_date: Date;
     status_changed_date: Date;
+    lane_rental_assessment_outcome?: LaneRentalAssessmentOutcome;
+    lane_rental_charges_not_agreed: boolean;
+    lane_rental_charges_potentially_apply: boolean;
 }

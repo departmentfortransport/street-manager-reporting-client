@@ -212,3 +212,11 @@ var PermitConditionType;
     PermitConditionType["NCT11b"] = "NCT11b";
     PermitConditionType["NCT12a"] = "NCT12a";
 })(PermitConditionType = exports.PermitConditionType || (exports.PermitConditionType = {}));
+var LaneRentalAssessmentOutcome;
+(function (LaneRentalAssessmentOutcome) {
+    LaneRentalAssessmentOutcome["chargeable"] = "chargeable";
+    LaneRentalAssessmentOutcome["potentially_chargeable"] = "potentially_chargeable";
+    LaneRentalAssessmentOutcome["charges_waived"] = "charges_waived";
+    LaneRentalAssessmentOutcome["exempt"] = "exempt";
+    LaneRentalAssessmentOutcome["charges_not_applicable"] = "charges_not_applicable";
+})(LaneRentalAssessmentOutcome = exports.LaneRentalAssessmentOutcome || (exports.LaneRentalAssessmentOutcome = {}));
