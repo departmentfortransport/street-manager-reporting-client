@@ -1,6 +1,5 @@
 import * as qs from 'qs'
 import axios, { AxiosInstance, AxiosResponse, AxiosPromise, AxiosRequestConfig } from 'axios'
-import { Response } from 'express'
 import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
 import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse'
@@ -26,6 +25,7 @@ import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
 import { GetFeesRequest } from '../interfaces/getFeesRequest'
 import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest'
 import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse'
+import { Stream } from 'stream'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -74,12 +74,12 @@ export class StreetManagerReportingClient {
     }
   }
 
-  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest, response: Response): Promise<AxiosResponse<void>> {
-    config.responseType = 'stream'
-
+  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      await this.axios.get('/permits/csv', this.generateRequestConfig(config, request))
-        .then((res) => response.write(res))
+      let requestConfig: AxiosRequestConfig = this.generateRequestConfig(config, request)
+      requestConfig.responseType = 'stream'
+      requestConfig.transformResponse = (data) => data
+      return await this.axios.get('/permits/csv', requestConfig)
     } catch (err) {
       return this.handleError(err)
     }

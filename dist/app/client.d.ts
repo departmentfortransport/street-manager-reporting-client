@@ -1,5 +1,4 @@
 import { AxiosResponse } from 'axios';
-import { Response } from 'express';
 import { RequestConfig } from '../interfaces/requestConfig';
 import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse';
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest';
@@ -24,6 +23,7 @@ import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest';
 import { GetFeesRequest } from '../interfaces/getFeesRequest';
 import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest';
 import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse';
+import { Stream } from 'stream';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -39,7 +39,7 @@ export declare class StreetManagerReportingClient {
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
     getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse>;
     getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
-    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest, response: Response): Promise<AxiosResponse<void>>;
+    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>>;
     getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;
     getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>>;
     getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse>;
