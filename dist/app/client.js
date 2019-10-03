@@ -112,6 +112,9 @@ class StreetManagerReportingClient {
                 'x-request-id': config.requestId
             }
         };
+        if (config.responseType) {
+            request.responseType = config.responseType;
+        }
         if (config.frontendToken) {
             requestConfig.headers.frontendToken = config.frontendToken;
         }

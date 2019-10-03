@@ -154,8 +154,11 @@ export class StreetManagerReportingClient {
       headers: {
         token: config.token,
         'x-request-id': config.requestId
-      },
-      responseType: 'stream'
+      }
+    }
+
+    if (config.responseType) {
+      request.responseType = config.responseType
     }
 
     if (config.frontendToken) {
