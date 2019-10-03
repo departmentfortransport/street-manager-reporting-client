@@ -41,7 +41,7 @@ class StreetManagerReportingClient {
         config.responseType = 'stream';
         try {
             await this.axios.get('/permits/csv', this.generateRequestConfig(config, request))
-                .then((res) => res.data.pipe(response));
+                .then((res) => response.write(res));
         }
         catch (err) {
             return this.handleError(err);
