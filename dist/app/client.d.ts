@@ -39,7 +39,7 @@ export declare class StreetManagerReportingClient {
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
     getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse>;
     getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
-    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest, response: Response): Promise<void>;
+    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest, response: Response): Promise<AxiosResponse<void>>;
     getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;
     getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>>;
     getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse>;
