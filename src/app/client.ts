@@ -66,7 +66,7 @@ export class StreetManagerReportingClient {
     return this.httpHandler<AlterationReportingResponse>(() => this.axios.get('/alterations', this.generateRequestConfig(config, request)))
   }
 
-  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>> {
+  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>> {
     try {
       return await this.axios.get('/inspections/csv', this.generateRequestConfig(config, request))
     } catch (err) {
@@ -85,7 +85,7 @@ export class StreetManagerReportingClient {
     }
   }
 
-  public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>> {
+  public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>> {
     try {
       return await this.axios.get('/fixed-penalty-notices/csv', this.generateRequestConfig(config, request))
     } catch (err) {
@@ -93,7 +93,7 @@ export class StreetManagerReportingClient {
     }
   }
 
-  public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>> {
+  public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>> {
     try {
       return await this.axios.get('/forward-plans/csv', this.generateRequestConfig(config, request))
     } catch (err) {
@@ -129,7 +129,7 @@ export class StreetManagerReportingClient {
     return this.httpHandler<ReinstatementReportingResponse>(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)))
   }
 
-  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<string>> {
+  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>> {
     try {
       return await this.axios.get('/fees/csv', this.generateRequestConfig(config, request))
     } catch (err) {
