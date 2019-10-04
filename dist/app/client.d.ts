@@ -53,4 +53,5 @@ export declare class StreetManagerReportingClient {
     private httpHandler;
     private handleError;
     private generateRequestConfig;
+    private generateStreamRequestConfig;
 }

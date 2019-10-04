@@ -68,7 +68,7 @@ export class StreetManagerReportingClient {
 
   public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/inspections/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -76,10 +76,7 @@ export class StreetManagerReportingClient {
 
   public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      let requestConfig: AxiosRequestConfig = this.generateRequestConfig(config, request)
-      requestConfig.responseType = 'stream'
-      requestConfig.transformResponse = (data) => data
-      return await this.axios.get('/permits/csv', requestConfig)
+      return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -87,7 +84,7 @@ export class StreetManagerReportingClient {
 
   public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/fixed-penalty-notices/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/fixed-penalty-notices/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -95,7 +92,7 @@ export class StreetManagerReportingClient {
 
   public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/forward-plans/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/forward-plans/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -131,7 +128,7 @@ export class StreetManagerReportingClient {
 
   public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/fees/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -139,7 +136,7 @@ export class StreetManagerReportingClient {
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
     try {
-      let response: AxiosResponse<T> = await request()
+      const response: AxiosResponse<T> = await request()
       if (response.data) {
         return response.data
       }
@@ -154,7 +151,7 @@ export class StreetManagerReportingClient {
   }
 
   private generateRequestConfig(config: RequestConfig, request?: any): AxiosRequestConfig {
-    let requestConfig: AxiosRequestConfig = {
+    const requestConfig: AxiosRequestConfig = {
       headers: {
         token: config.token,
         'x-request-id': config.requestId
@@ -179,5 +176,13 @@ export class StreetManagerReportingClient {
     }
 
     return requestConfig
+  }
+
+  private generateStreamRequestConfig(config: RequestConfig, request?: any): AxiosRequestConfig {
+    return {
+      ...this.generateRequestConfig(config, request),
+      responseType: 'stream',
+      transformResponse: data => data
+    }
   }
 }
