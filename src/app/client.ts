@@ -25,6 +25,7 @@ import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
 import { GetFeesRequest } from '../interfaces/getFeesRequest'
 import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest'
 import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse'
+import { Stream } from 'stream'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -65,33 +66,33 @@ export class StreetManagerReportingClient {
     return this.httpHandler<AlterationReportingResponse>(() => this.axios.get('/alterations', this.generateRequestConfig(config, request)))
   }
 
-  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>> {
+  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/inspections/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
   }
 
-  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>> {
+  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/permits/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
   }
 
-  public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>> {
+  public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/fixed-penalty-notices/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/fixed-penalty-notices/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
   }
 
-  public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>> {
+  public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/forward-plans/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/forward-plans/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -125,9 +126,9 @@ export class StreetManagerReportingClient {
     return this.httpHandler<ReinstatementReportingResponse>(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)))
   }
 
-  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<string>> {
+  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/fees/csv', this.generateRequestConfig(config, request))
+      return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
@@ -135,7 +136,7 @@ export class StreetManagerReportingClient {
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
     try {
-      let response: AxiosResponse<T> = await request()
+      const response: AxiosResponse<T> = await request()
       if (response.data) {
         return response.data
       }
@@ -150,7 +151,7 @@ export class StreetManagerReportingClient {
   }
 
   private generateRequestConfig(config: RequestConfig, request?: any): AxiosRequestConfig {
-    let requestConfig: AxiosRequestConfig = {
+    const requestConfig: AxiosRequestConfig = {
       headers: {
         token: config.token,
         'x-request-id': config.requestId
@@ -175,5 +176,13 @@ export class StreetManagerReportingClient {
     }
 
     return requestConfig
+  }
+
+  private generateStreamRequestConfig(config: RequestConfig, request?: any): AxiosRequestConfig {
+    return {
+      ...this.generateRequestConfig(config, request),
+      responseType: 'stream',
+      transformResponse: data => data
+    }
   }
 }

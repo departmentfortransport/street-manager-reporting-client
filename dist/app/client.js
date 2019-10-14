@@ -31,7 +31,7 @@ class StreetManagerReportingClient {
     }
     async getInspectionsAsCSV(config, request) {
         try {
-            return await this.axios.get('/inspections/csv', this.generateRequestConfig(config, request));
+            return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
@@ -39,7 +39,7 @@ class StreetManagerReportingClient {
     }
     async getPermitsAsCSV(config, request) {
         try {
-            return await this.axios.get('/permits/csv', this.generateRequestConfig(config, request));
+            return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
@@ -47,7 +47,7 @@ class StreetManagerReportingClient {
     }
     async getFPNsAsCSV(config, request) {
         try {
-            return await this.axios.get('/fixed-penalty-notices/csv', this.generateRequestConfig(config, request));
+            return await this.axios.get('/fixed-penalty-notices/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
@@ -55,7 +55,7 @@ class StreetManagerReportingClient {
     }
     async getForwardPlansAsCSV(config, request) {
         try {
-            return await this.axios.get('/forward-plans/csv', this.generateRequestConfig(config, request));
+            return await this.axios.get('/forward-plans/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
@@ -84,7 +84,7 @@ class StreetManagerReportingClient {
     }
     async getFeesAsCSV(config, request) {
         try {
-            return await this.axios.get('/fees/csv', this.generateRequestConfig(config, request));
+            return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
@@ -92,7 +92,7 @@ class StreetManagerReportingClient {
     }
     async httpHandler(request) {
         try {
-            let response = await request();
+            const response = await request();
             if (response.data) {
                 return response.data;
             }
@@ -106,7 +106,7 @@ class StreetManagerReportingClient {
         return Promise.reject(err);
     }
     generateRequestConfig(config, request) {
-        let requestConfig = {
+        const requestConfig = {
             headers: {
                 token: config.token,
                 'x-request-id': config.requestId
@@ -128,6 +128,9 @@ class StreetManagerReportingClient {
             requestConfig.timeout = config.timeout;
         }
         return requestConfig;
+    }
+    generateStreamRequestConfig(config, request) {
+        return Object.assign({}, this.generateRequestConfig(config, request), { responseType: 'stream', transformResponse: data => data });
     }
 }
 exports.StreetManagerReportingClient = StreetManagerReportingClient;

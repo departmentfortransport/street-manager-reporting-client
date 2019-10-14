@@ -23,6 +23,7 @@ import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest';
 import { GetFeesRequest } from '../interfaces/getFeesRequest';
 import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest';
 import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse';
+import { Stream } from 'stream';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -37,10 +38,10 @@ export declare class StreetManagerReportingClient {
     getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]>;
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
     getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse>;
-    getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<string>>;
-    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<string>>;
-    getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<string>>;
-    getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<string>>;
+    getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>>;
+    getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>>;
+    getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>>;
+    getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>>;
     getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse>;
     getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
@@ -48,8 +49,9 @@ export declare class StreetManagerReportingClient {
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
     getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse>;
-    getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<string>>;
+    getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;
+    private generateStreamRequestConfig;
 }
