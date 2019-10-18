@@ -4,9 +4,6 @@ import { INTERNAL_SERVER_ERROR } from 'http-status-codes'
 import { RequestConfig } from '../interfaces/requestConfig'
 import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse'
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest'
-import { GetSitesRequest } from '../interfaces/getSitesRequest'
-import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse'
-import { PermitCountsResponse } from '../interfaces/permitCountsResponse'
 import { GetFPNsRequest } from '../interfaces/getFPNsRequest'
 import { FPNReportingResponse } from '../interfaces/fpnReportingResponse'
 import { CommentReportingResponse } from '../interfaces/commentReportingResponse'
@@ -48,10 +45,6 @@ export class StreetManagerReportingClient {
 
   public getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse> {
     return this.httpHandler<PermitReportingResponse>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
-  }
-
-  public getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse> {
-    return this.httpHandler<PermitCountsResponse>(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)))
   }
 
   public getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]> {
@@ -100,10 +93,6 @@ export class StreetManagerReportingClient {
 
   public getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse> {
     return this.httpHandler<ForwardPlanReportingResponse>(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)))
-  }
-
-  public getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]> {
-    return this.httpHandler<SiteSummaryResponse[]>(() => this.axios.get('/sites', this.generateRequestConfig(config, request)))
   }
 
   public getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse> {
