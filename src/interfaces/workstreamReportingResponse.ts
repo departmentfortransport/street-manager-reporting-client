@@ -1,11 +1,11 @@
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse'
+import { ReportingResponse } from './reportingResponse'
 import { WorkstreamStatus } from './referenceTypes'
 
 export interface WorkstreamReportingResponse extends ReportingResponse {
   rows: WorkstreamSummaryResponse[]
 }
 
-export interface WorkstreamSummaryResponse extends ReportingSummaryResponse {
+export interface WorkstreamSummaryResponse {
   workstream_id: number
   organisation_id: number
   prefix: string

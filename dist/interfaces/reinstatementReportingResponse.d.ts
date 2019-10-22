@@ -1,9 +1,9 @@
 import { ReinstatementStatus } from './referenceTypes';
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+import { ReportingResponse } from './reportingResponse';
 export interface ReinstatementReportingResponse extends ReportingResponse {
     rows: ReinstatementSummaryResponse[];
 }
-export interface ReinstatementSummaryResponse extends ReportingSummaryResponse {
+export interface ReinstatementSummaryResponse {
     site_id: number;
     work_reference_number: string;
     swa_organisation_name: string;
