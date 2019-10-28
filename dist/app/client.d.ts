@@ -2,9 +2,6 @@ import { AxiosResponse } from 'axios';
 import { RequestConfig } from '../interfaces/requestConfig';
 import { PermitReportingResponse, PermitSummaryResponse } from '../interfaces/permitReportingResponse';
 import { GetPermitsRequest } from '../interfaces/getPermitsRequest';
-import { GetSitesRequest } from '../interfaces/getSitesRequest';
-import { SiteSummaryResponse } from '../interfaces/siteSummaryResponse';
-import { PermitCountsResponse } from '../interfaces/permitCountsResponse';
 import { GetFPNsRequest } from '../interfaces/getFPNsRequest';
 import { FPNReportingResponse } from '../interfaces/fpnReportingResponse';
 import { CommentReportingResponse } from '../interfaces/commentReportingResponse';
@@ -34,7 +31,6 @@ export declare class StreetManagerReportingClient {
     constructor(config: StreetManagerReportingClientConfig);
     status(): Promise<void>;
     getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse>;
-    getPermitCounts(config: RequestConfig): Promise<PermitCountsResponse>;
     getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]>;
     getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse>;
     getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse>;
@@ -43,7 +39,6 @@ export declare class StreetManagerReportingClient {
     getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>>;
     getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>>;
     getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse>;
-    getSites(config: RequestConfig, request: GetSitesRequest): Promise<SiteSummaryResponse[]>;
     getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse>;
     getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse>;
     getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse>;
