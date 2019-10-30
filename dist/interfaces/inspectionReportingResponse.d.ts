@@ -1,9 +1,9 @@
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+import { ReportingResponse } from './reportingResponse';
 import { InspectionResponseType, InspectionType, InspectionCategory, InspectionOutcome } from './referenceTypes';
 export interface InspectionReportingResponse extends ReportingResponse {
     rows: InspectionSummaryResponse[];
 }
-export interface InspectionSummaryResponse extends ReportingSummaryResponse {
+export interface InspectionSummaryResponse {
     inspection_date: Date;
     inspection_response_type: InspectionResponseType;
     work_reference_number: string;

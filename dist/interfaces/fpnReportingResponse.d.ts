@@ -1,9 +1,9 @@
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+import { ReportingResponse } from './reportingResponse';
 import { FPNStatus, OffenceCode } from './referenceTypes';
 export interface FPNReportingResponse extends ReportingResponse {
     rows: FPNSummaryResponse[];
 }
-export interface FPNSummaryResponse extends ReportingSummaryResponse {
+export interface FPNSummaryResponse {
     fpn_reference_number: string;
     work_reference_number: string;
     promoter: string;

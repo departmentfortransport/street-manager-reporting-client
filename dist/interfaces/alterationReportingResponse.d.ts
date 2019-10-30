@@ -1,9 +1,9 @@
 import { AlterationStatus, WorkCategory, WorkStatus, AlterationType, LaneRentalAssessmentOutcome } from './referenceTypes';
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+import { ReportingResponse } from './reportingResponse';
 export interface AlterationReportingResponse extends ReportingResponse {
     rows: AlterationSummaryResponse[];
 }
-export interface AlterationSummaryResponse extends ReportingSummaryResponse {
+export interface AlterationSummaryResponse {
     work_reference_number: string;
     permit_reference_number: string;
     alteration_reference_number: string;

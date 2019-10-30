@@ -1,9 +1,9 @@
 import { CommentTopic } from './referenceTypes';
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+import { ReportingResponse } from './reportingResponse';
 export interface CommentReportingResponse extends ReportingResponse {
     rows: CommentSummaryResponse[];
 }
-export interface CommentSummaryResponse extends ReportingSummaryResponse {
+export interface CommentSummaryResponse {
     work_reference_number: string;
     topic: CommentTopic;
     author_email_address: string;
