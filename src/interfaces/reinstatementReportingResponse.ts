@@ -8,7 +8,8 @@ export interface ReinstatementReportingResponse extends ReportingResponse {
 export interface ReinstatementSummaryResponse extends ReportingSummaryResponse {
   site_id: number,
   work_reference_number: string,
-  swa_organisation_name: string,
+  promoter_organisation: string,
+  highway_authority: string,
   location_description: string,
   street_name: string,
   area_name: string,
