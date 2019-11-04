@@ -76,10 +76,6 @@ var FPNSortColumn;
 (function (FPNSortColumn) {
     FPNSortColumn["issue_date_time"] = "issue_date_time";
 })(FPNSortColumn = exports.FPNSortColumn || (exports.FPNSortColumn = {}));
-var WorkstreamSortColumn;
-(function (WorkstreamSortColumn) {
-    WorkstreamSortColumn["status"] = "status";
-})(WorkstreamSortColumn = exports.WorkstreamSortColumn || (exports.WorkstreamSortColumn = {}));
 var CommentSortColumn;
 (function (CommentSortColumn) {
     CommentSortColumn["date_created"] = "date_created";

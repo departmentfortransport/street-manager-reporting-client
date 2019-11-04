@@ -64,9 +64,6 @@ export declare enum PermitCsvExportPrefix {
 export declare enum FPNSortColumn {
     issue_date_time = "issue_date_time"
 }
-export declare enum WorkstreamSortColumn {
-    status = "status"
-}
 export declare enum CommentSortColumn {
     date_created = "date_created"
 }

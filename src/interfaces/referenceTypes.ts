@@ -74,10 +74,6 @@ export enum FPNSortColumn {
   issue_date_time = 'issue_date_time'
 }
 
-export enum WorkstreamSortColumn {
-  status = 'status'
-}
-
 export enum CommentSortColumn {
   date_created = 'date_created'
 }
