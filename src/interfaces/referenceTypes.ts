@@ -61,7 +61,6 @@ export enum PermitSortColumn {
   date_created = 'date_created',
   deadline_date = 'deadline_date',
   end_date = 'end_date',
-  permit_status = 'permit_status',
   start_date = 'start_date'
 }
 
@@ -193,7 +192,6 @@ export enum ForwardPlanStatus {
 export enum ForwardPlanSortColumn {
   start_date = 'start_date',
   end_date = 'end_date',
-  forward_plan_status = 'forward_plan_status'
 }
 
 export enum PermitConditionType {

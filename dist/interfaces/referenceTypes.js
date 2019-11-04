@@ -64,7 +64,6 @@ var PermitSortColumn;
     PermitSortColumn["date_created"] = "date_created";
     PermitSortColumn["deadline_date"] = "deadline_date";
     PermitSortColumn["end_date"] = "end_date";
-    PermitSortColumn["permit_status"] = "permit_status";
     PermitSortColumn["start_date"] = "start_date";
 })(PermitSortColumn = exports.PermitSortColumn || (exports.PermitSortColumn = {}));
 var PermitCsvExportPrefix;
@@ -196,7 +195,6 @@ var ForwardPlanSortColumn;
 (function (ForwardPlanSortColumn) {
     ForwardPlanSortColumn["start_date"] = "start_date";
     ForwardPlanSortColumn["end_date"] = "end_date";
-    ForwardPlanSortColumn["forward_plan_status"] = "forward_plan_status";
 })(ForwardPlanSortColumn = exports.ForwardPlanSortColumn || (exports.ForwardPlanSortColumn = {}));
 var PermitConditionType;
 (function (PermitConditionType) {
