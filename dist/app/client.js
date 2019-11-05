@@ -17,9 +17,6 @@ class StreetManagerReportingClient {
     getPermits(config, request) {
         return this.httpHandler(() => this.axios.get('/permits', this.generateRequestConfig(config, request)));
     }
-    getPermitCounts(config) {
-        return this.httpHandler(() => this.axios.get('/permits/counts', this.generateRequestConfig(config)));
-    }
     getPermitSummaries(config, request) {
         return this.httpHandler(() => this.axios.post('/permits/search', request, this.generateRequestConfig(config)));
     }
@@ -63,9 +60,6 @@ class StreetManagerReportingClient {
     }
     getForwardPlans(config, request) {
         return this.httpHandler(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)));
-    }
-    getSites(config, request) {
-        return this.httpHandler(() => this.axios.get('/sites', this.generateRequestConfig(config, request)));
     }
     getFPNs(config, request) {
         return this.httpHandler(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)));

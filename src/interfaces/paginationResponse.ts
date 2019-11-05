@@ -1,4 +1,4 @@
 export interface PaginationResponse {
-  page_start: number
   total_rows: number
+  has_next_page: boolean
 }

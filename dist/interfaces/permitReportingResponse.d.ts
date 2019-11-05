@@ -1,10 +1,10 @@
 import { PermitStatus, WorkCategory, TrafficManagementType, WorkStatus, LaneRentalAssessmentOutcome } from './referenceTypes';
-import { ReportingResponse, ReportingSummaryResponse } from './reportingResponse';
+import { ReportingResponse } from './reportingResponse';
 import { PermitCondition } from './permitCondition';
 export interface PermitReportingResponse extends ReportingResponse {
     rows: PermitSummaryResponse[];
 }
-export interface PermitSummaryResponse extends ReportingSummaryResponse {
+export interface PermitSummaryResponse {
     work_reference_number: string;
     permit_reference_number: string;
     promoter_swa_code: string;
