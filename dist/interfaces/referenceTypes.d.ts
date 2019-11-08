@@ -153,7 +153,11 @@ export declare enum WorkStatus {
     planned = "planned",
     in_progress = "in_progress",
     completed = "completed",
-    cancelled = "cancelled"
+    cancelled = "cancelled",
+    unattributable = "unattributable",
+    historical = "historical",
+    non_notifiable = "non_notifiable",
+    section_81 = "section_81"
 }
 export declare enum ForwardPlanStatus {
     raised = "raised",
