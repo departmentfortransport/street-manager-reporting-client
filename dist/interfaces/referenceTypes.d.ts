@@ -54,7 +54,6 @@ export declare enum PermitSortColumn {
     date_created = "date_created",
     deadline_date = "deadline_date",
     end_date = "end_date",
-    permit_status = "permit_status",
     start_date = "start_date"
 }
 export declare enum PermitCsvExportPrefix {
@@ -64,9 +63,6 @@ export declare enum PermitCsvExportPrefix {
 }
 export declare enum FPNSortColumn {
     issue_date_time = "issue_date_time"
-}
-export declare enum WorkstreamSortColumn {
-    status = "status"
 }
 export declare enum CommentSortColumn {
     date_created = "date_created"
@@ -166,8 +162,7 @@ export declare enum ForwardPlanStatus {
 }
 export declare enum ForwardPlanSortColumn {
     start_date = "start_date",
-    end_date = "end_date",
-    forward_plan_status = "forward_plan_status"
+    end_date = "end_date"
 }
 export declare enum PermitConditionType {
     NCT01a = "NCT01a",
