@@ -158,7 +158,8 @@ export enum AlterationStatus {
   refused = 'refused',
   deemed = 'deemed',
   cancelled = 'cancelled',
-  revoked = 'revoked'
+  revoked = 'revoked',
+  auto_applied = 'auto_applied'
 }
 
 export enum AlterationSortColumn {
@@ -166,6 +167,7 @@ export enum AlterationSortColumn {
 }
 
 export enum AlterationType {
+  PROMOTER_IMPOSED_REQUEST = 'PROMOTER_IMPOSED_CHANGE',
   PROMOTER_CHANGE_REQUEST = 'PROMOTER_CHANGE_REQUEST',
   HA_CHANGE_REQUEST = 'HA_CHANGE_REQUEST',
   HA_IMPOSED_CHANGE = 'HA_IMPOSED_CHANGE',
