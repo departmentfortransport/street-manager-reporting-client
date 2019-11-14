@@ -17,4 +17,5 @@ export interface InspectionSummaryResponse {
     reinspection_date_time?: Date;
     highway_authority: string;
     promoter_organisation: string;
+    madeSafeByHa?: boolean;
 }
