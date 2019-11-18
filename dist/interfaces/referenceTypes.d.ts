@@ -146,7 +146,7 @@ export declare enum AlterationSortColumn {
     date_created = "date_created"
 }
 export declare enum AlterationType {
-    PROMOTER_IMPOSED_REQUEST = "PROMOTER_IMPOSED_CHANGE",
+    PROMOTER_IMPOSED_CHANGE = "PROMOTER_IMPOSED_CHANGE",
     PROMOTER_CHANGE_REQUEST = "PROMOTER_CHANGE_REQUEST",
     HA_CHANGE_REQUEST = "HA_CHANGE_REQUEST",
     HA_IMPOSED_CHANGE = "HA_IMPOSED_CHANGE",
