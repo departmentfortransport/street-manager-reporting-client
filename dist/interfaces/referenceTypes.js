@@ -102,6 +102,7 @@ var InspectionType;
     InspectionType["live_site"] = "live_site";
     InspectionType["reinstatement"] = "reinstatement";
     InspectionType["non_compliance_follow_up"] = "non_compliance_follow_up";
+    InspectionType["section_81"] = "section_81";
 })(InspectionType = exports.InspectionType || (exports.InspectionType = {}));
 var InspectionResponseType;
 (function (InspectionResponseType) {
@@ -179,7 +180,7 @@ var AlterationSortColumn;
 })(AlterationSortColumn = exports.AlterationSortColumn || (exports.AlterationSortColumn = {}));
 var AlterationType;
 (function (AlterationType) {
-    AlterationType["PROMOTER_IMPOSED_REQUEST"] = "PROMOTER_IMPOSED_CHANGE";
+    AlterationType["PROMOTER_IMPOSED_CHANGE"] = "PROMOTER_IMPOSED_CHANGE";
     AlterationType["PROMOTER_CHANGE_REQUEST"] = "PROMOTER_CHANGE_REQUEST";
     AlterationType["HA_CHANGE_REQUEST"] = "HA_CHANGE_REQUEST";
     AlterationType["HA_IMPOSED_CHANGE"] = "HA_IMPOSED_CHANGE";
