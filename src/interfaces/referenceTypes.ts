@@ -18,6 +18,15 @@ export enum PermitStatus {
   deemed_closed = 'deemed_closed'
 }
 
+export enum AssessmentStatus {
+  granted = 'granted',
+  granted_auto = 'granted_auto',
+  refused = 'refused',
+  refused_auto = 'refused_auto',
+  permit_modification_request = 'permit_modification_request',
+  revoked = 'revoked'
+}
+
 export enum ReinstatementStatus {
   interim = 'interim',
   permanent = 'permanent'

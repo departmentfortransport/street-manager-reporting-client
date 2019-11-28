@@ -1,4 +1,4 @@
-import { PermitStatus, WorkCategory, TrafficManagementType, WorkStatus, LaneRentalAssessmentOutcome } from './referenceTypes'
+import { PermitStatus, WorkCategory, TrafficManagementType, WorkStatus, LaneRentalAssessmentOutcome, AssessmentStatus } from './referenceTypes'
 import { ReportingResponse } from './reportingResponse'
 import { PermitCondition } from './permitCondition'
 
@@ -19,7 +19,7 @@ export interface PermitSummaryResponse {
   work_category: WorkCategory
   description_of_work: string
   traffic_management_type: TrafficManagementType
-  assessment_status?: PermitStatus
+  assessment_status?: AssessmentStatus
   proposed_start_date: Date
   proposed_end_date: Date
   proposed_start_time?: Date
