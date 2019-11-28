@@ -237,3 +237,10 @@ var LaneRentalAssessmentOutcome;
     LaneRentalAssessmentOutcome["exempt"] = "exempt";
     LaneRentalAssessmentOutcome["charges_not_applicable"] = "charges_not_applicable";
 })(LaneRentalAssessmentOutcome = exports.LaneRentalAssessmentOutcome || (exports.LaneRentalAssessmentOutcome = {}));
+var ReinstatementType;
+(function (ReinstatementType) {
+    ReinstatementType["excavation"] = "excavation";
+    ReinstatementType["bar_holes"] = "bar_holes";
+    ReinstatementType["core_holes"] = "core_holes";
+    ReinstatementType["pole_testing"] = "pole_testing";
+})(ReinstatementType = exports.ReinstatementType || (exports.ReinstatementType = {}));
