@@ -6,16 +6,16 @@ export interface ReinstatementReportingResponse extends ReportingResponse {
 }
 
 export interface ReinstatementSummaryResponse {
-  registration_date: Date,
-  reinstatement_date: Date,
-  site_number: number,
-  reinstatement_type: ReinstatementType,
-  street_name: string,
-  area_name: string,
+  site_number: number
+  work_reference_number: string
+  promoter_organisation: string
+  highway_authority: string
+  street_name: string
+  area_name: string
+  location_description: string
+  registration_date: Date
+  reinstatement_date: Date
+  reinstatement_type: ReinstatementType
   reinstatement_status: ReinstatementStatus
-  work_reference_number: string,
-  promoter_organisation: string,
-  highway_authority: string,
-  location_description: string,
   end_date: Date
 }

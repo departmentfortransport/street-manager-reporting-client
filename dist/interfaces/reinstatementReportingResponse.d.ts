@@ -4,16 +4,16 @@ export interface ReinstatementReportingResponse extends ReportingResponse {
     rows: ReinstatementSummaryResponse[];
 }
 export interface ReinstatementSummaryResponse {
-    registration_date: Date;
-    reinstatement_date: Date;
     site_number: number;
-    reinstatement_type: ReinstatementType;
-    street_name: string;
-    area_name: string;
-    reinstatement_status: ReinstatementStatus;
     work_reference_number: string;
     promoter_organisation: string;
     highway_authority: string;
+    street_name: string;
+    area_name: string;
     location_description: string;
+    registration_date: Date;
+    reinstatement_date: Date;
+    reinstatement_type: ReinstatementType;
+    reinstatement_status: ReinstatementStatus;
     end_date: Date;
 }
