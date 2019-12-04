@@ -6,7 +6,7 @@ export interface ReinstatementReportingResponse extends ReportingResponse {
 }
 
 export interface ReinstatementSummaryResponse {
-  site_id: number,
+  site_number: number,
   work_reference_number: string,
   promoter_organisation: string,
   highway_authority: string,
