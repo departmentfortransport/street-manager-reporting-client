@@ -3,4 +3,5 @@ import { ReportingRequest } from './reportingRequest';
 export interface GetReinstatementsRequest extends ReportingRequest {
     status?: ReinstatementStatus[];
     sort_column?: ReinstatementSortColumn;
+    latest_reinstatements_only?: boolean;
 }

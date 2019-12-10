@@ -1,4 +1,4 @@
-import { ReinstatementStatus } from './referenceTypes';
+import { ReinstatementStatus, ReinstatementType } from './referenceTypes';
 import { ReportingResponse } from './reportingResponse';
 export interface ReinstatementReportingResponse extends ReportingResponse {
     rows: ReinstatementSummaryResponse[];
@@ -8,9 +8,12 @@ export interface ReinstatementSummaryResponse {
     work_reference_number: string;
     promoter_organisation: string;
     highway_authority: string;
-    location_description: string;
     street_name: string;
     area_name: string;
-    end_date: Date;
+    location_description: string;
+    registration_date: Date;
+    reinstatement_date: Date;
+    reinstatement_type: ReinstatementType;
     reinstatement_status: ReinstatementStatus;
+    end_date: Date;
 }
