@@ -3,22 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var PermitStatus;
 (function (PermitStatus) {
     PermitStatus["submitted"] = "submitted";
-    PermitStatus["granted_proposed"] = "granted_proposed";
+    PermitStatus["granted"] = "granted";
     PermitStatus["permit_modification_request"] = "permit_modification_request";
     PermitStatus["refused"] = "refused";
-    PermitStatus["granted_in_progress"] = "granted_in_progress";
     PermitStatus["closed"] = "closed";
     PermitStatus["cancelled"] = "cancelled";
-    PermitStatus["revoked_proposed"] = "revoked_proposed";
-    PermitStatus["revoked_in_progress"] = "revoked_in_progress";
-    PermitStatus["deemed_proposed"] = "deemed_proposed";
-    PermitStatus["deemed_in_progress"] = "deemed_in_progress";
-    PermitStatus["granted_auto"] = "granted_auto";
-    PermitStatus["refused_auto"] = "refused_auto";
-    PermitStatus["cancelled_auto"] = "cancelled_auto";
-    PermitStatus["awaiting_assessment_in_progress"] = "awaiting_assessment_in_progress";
-    PermitStatus["revoked_closed"] = "revoked_closed";
-    PermitStatus["deemed_closed"] = "deemed_closed";
+    PermitStatus["revoked"] = "revoked";
+    PermitStatus["progressed"] = "progressed";
 })(PermitStatus = exports.PermitStatus || (exports.PermitStatus = {}));
 var AssessmentStatus;
 (function (AssessmentStatus) {
@@ -201,7 +192,7 @@ var ForwardPlanStatus;
 (function (ForwardPlanStatus) {
     ForwardPlanStatus["raised"] = "raised";
     ForwardPlanStatus["cancelled"] = "cancelled";
-    ForwardPlanStatus["closed"] = "closed";
+    ForwardPlanStatus["progressed"] = "progressed";
 })(ForwardPlanStatus = exports.ForwardPlanStatus || (exports.ForwardPlanStatus = {}));
 var ForwardPlanSortColumn;
 (function (ForwardPlanSortColumn) {
