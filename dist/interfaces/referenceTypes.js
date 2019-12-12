@@ -262,3 +262,22 @@ var AdditionalSpecialDesignationCode;
     AdditionalSpecialDesignationCode[AdditionalSpecialDesignationCode["hgv_approved_routes"] = 29] = "hgv_approved_routes";
     AdditionalSpecialDesignationCode[AdditionalSpecialDesignationCode["emergency_services_routes"] = 30] = "emergency_services_routes";
 })(AdditionalSpecialDesignationCode = exports.AdditionalSpecialDesignationCode || (exports.AdditionalSpecialDesignationCode = {}));
+var Section81Severity;
+(function (Section81Severity) {
+    Section81Severity["HIGH"] = "HIGH";
+    Section81Severity["LOW"] = "LOW";
+})(Section81Severity = exports.Section81Severity || (exports.Section81Severity = {}));
+var Section81Status;
+(function (Section81Status) {
+    Section81Status["issued"] = "issued";
+    Section81Status["acknowledged"] = "acknowledged";
+    Section81Status["accepted"] = "accepted";
+    Section81Status["accepted_fixed"] = "accepted_fixed";
+    Section81Status["rejected"] = "rejected";
+    Section81Status["resolved_by_ha"] = "resolved_by_ha";
+    Section81Status["cancelled"] = "cancelled";
+})(Section81Status = exports.Section81Status || (exports.Section81Status = {}));
+var Section81SortColumn;
+(function (Section81SortColumn) {
+    Section81SortColumn["status_changed_date"] = "status_changed_date";
+})(Section81SortColumn = exports.Section81SortColumn || (exports.Section81SortColumn = {}));

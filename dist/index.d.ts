@@ -1,3 +1,4 @@
+export * from './app/client';
 export * from './interfaces/requestConfig';
 export * from './interfaces/referenceTypes';
 export * from './interfaces/getPermitsRequest';
@@ -25,4 +26,5 @@ export * from './interfaces/getFeesRequest';
 export * from './interfaces/getForwardPlansRequest';
 export * from './interfaces/forwardPlanReportingResponse';
 export * from './interfaces/permitCondition';
-export * from './app/client';
+export * from './interfaces/section81ReportingResponse';
+export * from './interfaces/getSection81sRequest';
