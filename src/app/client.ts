@@ -23,6 +23,8 @@ import { GetFeesRequest } from '../interfaces/getFeesRequest'
 import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest'
 import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse'
 import { Stream } from 'stream'
+import { GetSection81sRequest } from '../interfaces/getSection81sRequest'
+import { Section81ReportingResponse } from '../interfaces/section81ReportingResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -39,40 +41,30 @@ export class StreetManagerReportingClient {
     })
   }
 
-  public status(): Promise<void> {
-    return this.httpHandler<void>(() => this.axios.get('/status'))
-  }
-
-  public getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse> {
-    return this.httpHandler<PermitReportingResponse>(() => this.axios.get('/permits', this.generateRequestConfig(config, request)))
-  }
-
-  public getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]> {
-    return this.httpHandler<PermitSummaryResponse[]>(() => this.axios.post('/permits/search', request, this.generateRequestConfig(config)))
-  }
-
-  public getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse> {
-    return this.httpHandler<InspectionReportingResponse>(() => this.axios.get('/inspections', this.generateRequestConfig(config, request)))
-  }
-
   public getAlterations(config: RequestConfig, request: GetAlterationsRequest): Promise<AlterationReportingResponse> {
-    return this.httpHandler<AlterationReportingResponse>(() => this.axios.get('/alterations', this.generateRequestConfig(config, request)))
+    return this.httpHandler<AlterationReportingResponse>(
+      () => this.axios.get('/alterations', this.generateRequestConfig(config, request))
+    )
   }
 
-  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>> {
+  public getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse> {
+    return this.httpHandler<CommentReportingResponse>(
+      () => this.axios.get('/comments', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request))
+      return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
   }
 
-  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>> {
-    try {
-      return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request))
-    } catch (err) {
-      return this.handleError(err)
-    }
+  public getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse> {
+    return this.httpHandler<FPNReportingResponse>(
+      () => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request))
+    )
   }
 
   public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>> {
@@ -83,6 +75,12 @@ export class StreetManagerReportingClient {
     }
   }
 
+  public getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse> {
+    return this.httpHandler<ForwardPlanReportingResponse>(
+      () => this.axios.get('/forward-plans', this.generateRequestConfig(config, request))
+    )
+  }
+
   public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>> {
     try {
       return await this.axios.get('/forward-plans/csv', this.generateStreamRequestConfig(config, request))
@@ -91,36 +89,66 @@ export class StreetManagerReportingClient {
     }
   }
 
-  public getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse> {
-    return this.httpHandler<ForwardPlanReportingResponse>(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)))
+  public getInspections(config: RequestConfig, request: GetInspectionsRequest): Promise<InspectionReportingResponse> {
+    return this.httpHandler<InspectionReportingResponse>(
+      () => this.axios.get('/inspections', this.generateRequestConfig(config, request))
+    )
   }
 
-  public getFPNs(config: RequestConfig, request: GetFPNsRequest): Promise<FPNReportingResponse> {
-    return this.httpHandler<FPNReportingResponse>(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)))
-  }
-
-  public getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse> {
-    return this.httpHandler<WorkstreamReportingResponse>(() => this.axios.get('/workstreams', this.generateRequestConfig(config, request)))
-  }
-
-  public getComments(config: RequestConfig, request: GetCommentsRequest): Promise<CommentReportingResponse> {
-    return this.httpHandler<CommentReportingResponse>(() => this.axios.get('/comments', this.generateRequestConfig(config, request)))
-  }
-
-  public getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]> {
-    return this.httpHandler<WorkUpdateResponse[]>(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)))
-  }
-
-  public getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse> {
-    return this.httpHandler<ReinstatementReportingResponse>(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)))
-  }
-
-  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>> {
+  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>> {
     try {
-      return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request))
+      return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request))
     } catch (err) {
       return this.handleError(err)
     }
+  }
+
+  public getPermits(config: RequestConfig, request: GetPermitsRequest): Promise<PermitReportingResponse> {
+    return this.httpHandler<PermitReportingResponse>(
+      () => this.axios.get('/permits', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>> {
+    try {
+      return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
+  public getPermitSummaries(config: RequestConfig, request: PermitSearchRequest): Promise<PermitSummaryResponse[]> {
+    return this.httpHandler<PermitSummaryResponse[]>(
+      () => this.axios.post('/permits/search', request, this.generateRequestConfig(config))
+    )
+  }
+
+  public getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse> {
+    return this.httpHandler<ReinstatementReportingResponse>(
+      () => this.axios.get('/reinstatements', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public getSection81s(config: RequestConfig, request: GetSection81sRequest): Promise<Section81ReportingResponse> {
+    return this.httpHandler<Section81ReportingResponse>(
+      () => this.axios.get('/section-81s', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public status(): Promise<void> {
+    return this.httpHandler<void>(() => this.axios.get('/status'))
+  }
+
+  public getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse> {
+    return this.httpHandler<WorkstreamReportingResponse>(
+      () => this.axios.get('/workstreams', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]> {
+    return this.httpHandler<WorkUpdateResponse[]>(
+      () => this.axios.get('/works/updates', this.generateRequestConfig(config, request))
+    )
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
