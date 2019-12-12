@@ -259,3 +259,22 @@ export enum AdditionalSpecialDesignationCode {
   hgv_approved_routes = 29,
   emergency_services_routes = 30
 }
+
+export enum Section81Severity {
+  HIGH = 'HIGH',
+  LOW = 'LOW'
+}
+
+export enum Section81Status {
+  issued = 'issued',
+  acknowledged = 'acknowledged',
+  accepted = 'accepted',
+  accepted_fixed = 'accepted_fixed',
+  rejected = 'rejected',
+  resolved_by_ha = 'resolved_by_ha',
+  cancelled = 'cancelled'
+}
+
+export enum Section81SortColumn {
+  status_changed_date = 'status_changed_date'
+}
