@@ -11,8 +11,8 @@ export interface Section81SummaryResponse {
     location_description: string;
     street: string;
     area: string;
-    severity: Section81Severity;
+    section_81_severity: Section81Severity;
     made_safe_by_ha: boolean;
-    status: Section81Status;
+    section_81_status: Section81Status;
     status_changed_date: Date;
 }
