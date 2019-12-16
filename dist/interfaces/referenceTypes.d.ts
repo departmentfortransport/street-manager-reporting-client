@@ -230,8 +230,8 @@ export declare enum AdditionalSpecialDesignationCode {
     emergency_services_routes = 30
 }
 export declare enum Section81Severity {
-    HIGH = "HIGH",
-    LOW = "LOW"
+    high = "high",
+    low = "low"
 }
 export declare enum Section81Status {
     issued = "issued",

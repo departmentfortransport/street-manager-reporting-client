@@ -9,7 +9,7 @@ export interface ReinstatementSummaryResponse {
     promoter_organisation: string;
     highway_authority: string;
     street_name: string;
-    area_name: string;
+    area_name?: string;
     location_description: string;
     registration_date: Date;
     reinstatement_date: Date;

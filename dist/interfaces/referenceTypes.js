@@ -264,8 +264,8 @@ var AdditionalSpecialDesignationCode;
 })(AdditionalSpecialDesignationCode = exports.AdditionalSpecialDesignationCode || (exports.AdditionalSpecialDesignationCode = {}));
 var Section81Severity;
 (function (Section81Severity) {
-    Section81Severity["HIGH"] = "HIGH";
-    Section81Severity["LOW"] = "LOW";
+    Section81Severity["high"] = "high";
+    Section81Severity["low"] = "low";
 })(Section81Severity = exports.Section81Severity || (exports.Section81Severity = {}));
 var Section81Status;
 (function (Section81Status) {
