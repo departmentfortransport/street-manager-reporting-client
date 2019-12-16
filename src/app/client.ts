@@ -19,8 +19,10 @@ import { ReinstatementReportingResponse } from '../interfaces/reinstatementRepor
 import { GetReinstatementsRequest } from '../interfaces/getReinstatementsRequest'
 import { AlterationReportingResponse } from '../interfaces/alterationReportingResponse'
 import { GetAlterationsRequest } from '../interfaces/getAlterationsRequest'
+import { GetFeesRequest } from '../interfaces/getFeesRequest'
 import { GetForwardPlansRequest } from '../interfaces/getForwardPlansRequest'
 import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReportingResponse'
+import { Stream } from 'stream'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -57,6 +59,38 @@ export class StreetManagerReportingClient {
     return this.httpHandler<AlterationReportingResponse>(() => this.axios.get('/alterations', this.generateRequestConfig(config, request)))
   }
 
+  public async getInspectionsAsCSV(config: RequestConfig, request: GetInspectionsRequest): Promise<AxiosResponse<Stream>> {
+    try {
+      return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
+  public async getPermitsAsCSV(config: RequestConfig, request: GetPermitsRequest): Promise<AxiosResponse<Stream>> {
+    try {
+      return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
+  public async getFPNsAsCSV(config: RequestConfig, request: GetFPNsRequest): Promise<AxiosResponse<Stream>> {
+    try {
+      return await this.axios.get('/fixed-penalty-notices/csv', this.generateStreamRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
+  public async getForwardPlansAsCSV(config: RequestConfig, request: GetForwardPlansRequest): Promise<AxiosResponse<Stream>> {
+    try {
+      return await this.axios.get('/forward-plans/csv', this.generateStreamRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
+  }
+
   public getForwardPlans(config: RequestConfig, request: GetForwardPlansRequest): Promise<ForwardPlanReportingResponse> {
     return this.httpHandler<ForwardPlanReportingResponse>(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)))
   }
@@ -79,6 +113,14 @@ export class StreetManagerReportingClient {
 
   public getReinstatements(config: RequestConfig, request: GetReinstatementsRequest): Promise<ReinstatementReportingResponse> {
     return this.httpHandler<ReinstatementReportingResponse>(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)))
+  }
+
+  public async getFeesAsCSV(config: RequestConfig, request: GetFeesRequest): Promise<AxiosResponse<Stream>> {
+    try {
+      return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request))
+    } catch (err) {
+      return this.handleError(err)
+    }
   }
 
   private async httpHandler<T>(request: () => AxiosPromise<T>): Promise<T> {
@@ -123,5 +165,13 @@ export class StreetManagerReportingClient {
     }
 
     return requestConfig
+  }
+
+  private generateStreamRequestConfig(config: RequestConfig, request?: any): AxiosRequestConfig {
+    return {
+      ...this.generateRequestConfig(config, request),
+      responseType: 'stream',
+      transformResponse: data => data
+    }
   }
 }
