@@ -7,6 +7,7 @@ export interface Section81ReportingResponse extends ReportingResponse {
 
 export interface Section81SummaryResponse {
   issue_date: Date
+  work_reference_number: string
   section_81_reference_number: string
   promoter_organisation: string
   highway_authority: string
