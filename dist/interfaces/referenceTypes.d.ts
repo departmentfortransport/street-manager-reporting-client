@@ -229,3 +229,19 @@ export declare enum AdditionalSpecialDesignationCode {
     hgv_approved_routes = 29,
     emergency_services_routes = 30
 }
+export declare enum Section81Severity {
+    high = "high",
+    low = "low"
+}
+export declare enum Section81Status {
+    issued = "issued",
+    acknowledged = "acknowledged",
+    accepted = "accepted",
+    accepted_fixed = "accepted_fixed",
+    rejected = "rejected",
+    resolved_by_ha = "resolved_by_ha",
+    cancelled = "cancelled"
+}
+export declare enum Section81SortColumn {
+    status_changed_date = "status_changed_date"
+}
