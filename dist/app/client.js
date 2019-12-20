@@ -11,36 +11,22 @@ class StreetManagerReportingClient {
             timeout: this.config.timeout
         });
     }
-    status() {
-        return this.httpHandler(() => this.axios.get('/status'));
-    }
-    getPermits(config, request) {
-        return this.httpHandler(() => this.axios.get('/permits', this.generateRequestConfig(config, request)));
-    }
-    getPermitSummaries(config, request) {
-        return this.httpHandler(() => this.axios.post('/permits/search', request, this.generateRequestConfig(config)));
-    }
-    getInspections(config, request) {
-        return this.httpHandler(() => this.axios.get('/inspections', this.generateRequestConfig(config, request)));
-    }
     getAlterations(config, request) {
         return this.httpHandler(() => this.axios.get('/alterations', this.generateRequestConfig(config, request)));
     }
-    async getInspectionsAsCSV(config, request) {
+    getComments(config, request) {
+        return this.httpHandler(() => this.axios.get('/comments', this.generateRequestConfig(config, request)));
+    }
+    async getFeesAsCSV(config, request) {
         try {
-            return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request));
+            return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
         }
     }
-    async getPermitsAsCSV(config, request) {
-        try {
-            return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request));
-        }
-        catch (err) {
-            return this.handleError(err);
-        }
+    getFPNs(config, request) {
+        return this.httpHandler(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)));
     }
     async getFPNsAsCSV(config, request) {
         try {
@@ -50,6 +36,9 @@ class StreetManagerReportingClient {
             return this.handleError(err);
         }
     }
+    getForwardPlans(config, request) {
+        return this.httpHandler(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)));
+    }
     async getForwardPlansAsCSV(config, request) {
         try {
             return await this.axios.get('/forward-plans/csv', this.generateStreamRequestConfig(config, request));
@@ -58,31 +47,45 @@ class StreetManagerReportingClient {
             return this.handleError(err);
         }
     }
-    getForwardPlans(config, request) {
-        return this.httpHandler(() => this.axios.get('/forward-plans', this.generateRequestConfig(config, request)));
+    getInspections(config, request) {
+        return this.httpHandler(() => this.axios.get('/inspections', this.generateRequestConfig(config, request)));
     }
-    getFPNs(config, request) {
-        return this.httpHandler(() => this.axios.get('/fixed-penalty-notices', this.generateRequestConfig(config, request)));
-    }
-    getWorkstreams(config, request) {
-        return this.httpHandler(() => this.axios.get('/workstreams', this.generateRequestConfig(config, request)));
-    }
-    getComments(config, request) {
-        return this.httpHandler(() => this.axios.get('/comments', this.generateRequestConfig(config, request)));
-    }
-    getWorksUpdates(config, request) {
-        return this.httpHandler(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)));
-    }
-    getReinstatements(config, request) {
-        return this.httpHandler(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)));
-    }
-    async getFeesAsCSV(config, request) {
+    async getInspectionsAsCSV(config, request) {
         try {
-            return await this.axios.get('/fees/csv', this.generateStreamRequestConfig(config, request));
+            return await this.axios.get('/inspections/csv', this.generateStreamRequestConfig(config, request));
         }
         catch (err) {
             return this.handleError(err);
         }
+    }
+    getPermits(config, request) {
+        return this.httpHandler(() => this.axios.get('/permits', this.generateRequestConfig(config, request)));
+    }
+    async getPermitsAsCSV(config, request) {
+        try {
+            return await this.axios.get('/permits/csv', this.generateStreamRequestConfig(config, request));
+        }
+        catch (err) {
+            return this.handleError(err);
+        }
+    }
+    getPermitSummaries(config, request) {
+        return this.httpHandler(() => this.axios.post('/permits/search', request, this.generateRequestConfig(config)));
+    }
+    getReinstatements(config, request) {
+        return this.httpHandler(() => this.axios.get('/reinstatements', this.generateRequestConfig(config, request)));
+    }
+    getSection81s(config, request) {
+        return this.httpHandler(() => this.axios.get('/section-81s', this.generateRequestConfig(config, request)));
+    }
+    status() {
+        return this.httpHandler(() => this.axios.get('/status'));
+    }
+    getWorkstreams(config, request) {
+        return this.httpHandler(() => this.axios.get('/workstreams', this.generateRequestConfig(config, request)));
+    }
+    getWorksUpdates(config, request) {
+        return this.httpHandler(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)));
     }
     async httpHandler(request) {
         try {
