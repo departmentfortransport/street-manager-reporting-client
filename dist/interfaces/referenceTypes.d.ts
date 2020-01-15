@@ -245,3 +245,12 @@ export declare enum Section81Status {
 export declare enum Section81SortColumn {
     status_changed_date = "status_changed_date"
 }
+export declare enum UserGroup {
+    Planner = "Planner",
+    HighwayAuthority = "HighwayAuthority",
+    Admin = "Admin",
+    Contractor = "Contractor",
+    API = "API",
+    UI = "UI",
+    DataExport = "DataExport"
+}

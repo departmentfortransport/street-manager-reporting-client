@@ -25,6 +25,8 @@ import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReporting
 import { Stream } from 'stream'
 import { GetSection81sRequest } from '../interfaces/getSection81sRequest'
 import { Section81ReportingResponse } from '../interfaces/section81ReportingResponse'
+import { OrganisationUsersReportingResponse } from '../interfaces/organisationUsersResponse'
+import { GetOrganisationUsersRequest } from '../interfaces/getOrganisationUsersRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -148,6 +150,12 @@ export class StreetManagerReportingClient {
   public getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]> {
     return this.httpHandler<WorkUpdateResponse[]>(
       () => this.axios.get('/works/updates', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public async getOrganisationUsers(config: RequestConfig, request: GetOrganisationUsersRequest, organisationReference: string): Promise<OrganisationUsersReportingResponse> {
+    return this.httpHandler<OrganisationUsersReportingResponse>(
+      () => this.axios.get(`/organisations/${organisationReference}/users`, this.generateRequestConfig(config, request))
     )
   }
 

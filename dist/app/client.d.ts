@@ -23,6 +23,8 @@ import { ForwardPlanReportingResponse } from '../interfaces/forwardPlanReporting
 import { Stream } from 'stream';
 import { GetSection81sRequest } from '../interfaces/getSection81sRequest';
 import { Section81ReportingResponse } from '../interfaces/section81ReportingResponse';
+import { OrganisationUsersReportingResponse } from '../interfaces/organisationUsersResponse';
+import { GetOrganisationUsersRequest } from '../interfaces/getOrganisationUsersRequest';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -48,6 +50,7 @@ export declare class StreetManagerReportingClient {
     status(): Promise<void>;
     getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse>;
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
+    getOrganisationUsers(config: RequestConfig, request: GetOrganisationUsersRequest, organisationReference: string): Promise<OrganisationUsersReportingResponse>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;
