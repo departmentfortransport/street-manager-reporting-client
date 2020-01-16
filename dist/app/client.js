@@ -87,7 +87,7 @@ class StreetManagerReportingClient {
     getWorksUpdates(config, request) {
         return this.httpHandler(() => this.axios.get('/works/updates', this.generateRequestConfig(config, request)));
     }
-    async getOrganisationUsers(config, request, organisationReference) {
+    async getUsers(config, request, organisationReference) {
         return this.httpHandler(() => this.axios.get(`/organisations/${organisationReference}/users`, this.generateRequestConfig(config, request)));
     }
     async httpHandler(request) {
