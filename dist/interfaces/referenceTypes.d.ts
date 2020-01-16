@@ -245,7 +245,7 @@ export declare enum Section81Status {
 export declare enum Section81SortColumn {
     status_changed_date = "status_changed_date"
 }
-export declare enum UserGroup {
+export declare enum UserRole {
     Planner = "Planner",
     HighwayAuthority = "HighwayAuthority",
     Admin = "Admin",

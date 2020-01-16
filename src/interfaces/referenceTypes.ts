@@ -279,7 +279,7 @@ export enum Section81SortColumn {
   status_changed_date = 'status_changed_date'
 }
 
-export enum UserGroup {
+export enum UserRole {
   Planner = 'Planner',
   HighwayAuthority = 'HighwayAuthority',
   Admin = 'Admin',

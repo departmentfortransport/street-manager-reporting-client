@@ -281,13 +281,13 @@ var Section81SortColumn;
 (function (Section81SortColumn) {
     Section81SortColumn["status_changed_date"] = "status_changed_date";
 })(Section81SortColumn = exports.Section81SortColumn || (exports.Section81SortColumn = {}));
-var UserGroup;
-(function (UserGroup) {
-    UserGroup["Planner"] = "Planner";
-    UserGroup["HighwayAuthority"] = "HighwayAuthority";
-    UserGroup["Admin"] = "Admin";
-    UserGroup["Contractor"] = "Contractor";
-    UserGroup["API"] = "API";
-    UserGroup["UI"] = "UI";
-    UserGroup["DataExport"] = "DataExport";
-})(UserGroup = exports.UserGroup || (exports.UserGroup = {}));
+var UserRole;
+(function (UserRole) {
+    UserRole["Planner"] = "Planner";
+    UserRole["HighwayAuthority"] = "HighwayAuthority";
+    UserRole["Admin"] = "Admin";
+    UserRole["Contractor"] = "Contractor";
+    UserRole["API"] = "API";
+    UserRole["UI"] = "UI";
+    UserRole["DataExport"] = "DataExport";
+})(UserRole = exports.UserRole || (exports.UserRole = {}));
