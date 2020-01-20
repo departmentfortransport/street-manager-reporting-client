@@ -280,11 +280,11 @@ export enum Section81SortColumn {
 }
 
 export enum UserRole {
-  Planner = 'Planner',
-  HighwayAuthority = 'HighwayAuthority',
-  Admin = 'Admin',
-  Contractor = 'Contractor',
-  API = 'API',
-  UI = 'UI',
-  DataExport = 'DataExport'
+  planner = 'planner',
+  highway_authority = 'highway_authority',
+  admin = 'admin',
+  contractor = 'contractor',
+  api = 'api',
+  ui = 'ui',
+  data_export = 'data_export'
 }

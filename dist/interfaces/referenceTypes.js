@@ -283,11 +283,11 @@ var Section81SortColumn;
 })(Section81SortColumn = exports.Section81SortColumn || (exports.Section81SortColumn = {}));
 var UserRole;
 (function (UserRole) {
-    UserRole["Planner"] = "Planner";
-    UserRole["HighwayAuthority"] = "HighwayAuthority";
-    UserRole["Admin"] = "Admin";
-    UserRole["Contractor"] = "Contractor";
-    UserRole["API"] = "API";
-    UserRole["UI"] = "UI";
-    UserRole["DataExport"] = "DataExport";
+    UserRole["planner"] = "planner";
+    UserRole["highway_authority"] = "highway_authority";
+    UserRole["admin"] = "admin";
+    UserRole["contractor"] = "contractor";
+    UserRole["api"] = "api";
+    UserRole["ui"] = "ui";
+    UserRole["data_export"] = "data_export";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
