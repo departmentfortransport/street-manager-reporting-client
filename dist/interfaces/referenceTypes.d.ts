@@ -246,14 +246,14 @@ export declare enum Section81Status {
 export declare enum Section81SortColumn {
     status_changed_date = "status_changed_date"
 }
-export declare enum UserRole {
-    planner = "planner",
-    highway_authority = "highway_authority",
-    admin = "admin",
-    contractor = "contractor",
-    api = "api",
-    ui = "ui",
-    data_export = "data_export"
+export declare enum Role {
+    Planner = "Planner",
+    HighwayAuthority = "HighwayAuthority",
+    Admin = "Admin",
+    Contractor = "Contractor",
+    API = "API",
+    UI = "UI",
+    DataExport = "DataExport"
 }
 export declare enum CSVExportStatus {
     queued = "queued",
