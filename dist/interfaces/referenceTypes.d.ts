@@ -254,3 +254,9 @@ export declare enum UserRole {
     ui = "ui",
     data_export = "data_export"
 }
+export declare enum CSVExportStatus {
+    queued = "queued",
+    in_progress = "in_progress",
+    ready = "ready",
+    failed = "failed"
+}

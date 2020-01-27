@@ -90,6 +90,9 @@ class StreetManagerReportingClient {
     async getUsers(config, request, organisationReference) {
         return this.httpHandler(() => this.axios.get(`/organisations/${organisationReference}/users`, this.generateRequestConfig(config, request)));
     }
+    getCSVExports(config, request) {
+        return this.httpHandler(() => this.axios.get('/csv-exports', this.generateRequestConfig(config, request)));
+    }
     async httpHandler(request) {
         try {
             const response = await request();
