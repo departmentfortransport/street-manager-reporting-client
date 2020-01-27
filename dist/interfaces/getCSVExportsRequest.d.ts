@@ -1,3 +1,4 @@
-import { ReportingRequest } from './reportingRequest';
-export interface GetCSVExportsRequest extends ReportingRequest {
+export interface GetCSVExportsRequest {
+    offset?: number;
+    swa_code?: string;
 }

@@ -6,10 +6,9 @@ export interface CSVExportReportingResponse extends ReportingResponse {
 }
 
 export interface CSVExportSummaryResponse {
+  csv_export_id: number
   filename: string
-  s3_key: string
   date_created: Date
   csv_export_status: CSVExportStatus
   username: string
-  file_id: number
 }
