@@ -291,3 +291,8 @@ var UserRole;
     UserRole["ui"] = "ui";
     UserRole["data_export"] = "data_export";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
+var WorkstreamAccessLevel;
+(function (WorkstreamAccessLevel) {
+    WorkstreamAccessLevel["read_only"] = "read_only";
+    WorkstreamAccessLevel["full_write"] = "full_write";
+})(WorkstreamAccessLevel = exports.WorkstreamAccessLevel || (exports.WorkstreamAccessLevel = {}));

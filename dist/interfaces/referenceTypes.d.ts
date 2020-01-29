@@ -254,3 +254,7 @@ export declare enum UserRole {
     ui = "ui",
     data_export = "data_export"
 }
+export declare enum WorkstreamAccessLevel {
+    read_only = "read_only",
+    full_write = "full_write"
+}
