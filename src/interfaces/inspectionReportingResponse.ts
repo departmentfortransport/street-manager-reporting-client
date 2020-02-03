@@ -20,4 +20,5 @@ export interface InspectionSummaryResponse {
   highway_authority: string
   promoter_organisation: string
   made_safe_by_ha?: boolean
+  date_created: Date
 }
