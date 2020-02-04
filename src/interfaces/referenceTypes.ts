@@ -136,7 +136,8 @@ export enum WorkCategory {
   major = 'major',
   immediate_urgent = 'immediate_urgent',
   immediate_emergency = 'immediate_emergency',
-  paa = 'paa'
+  paa = 'paa',
+  hs2_highway = 'hs2_highway'
 }
 
 export enum TrafficManagementType {
