@@ -65,6 +65,7 @@ var PermitSortColumn;
     PermitSortColumn["deadline_date"] = "deadline_date";
     PermitSortColumn["end_date"] = "end_date";
     PermitSortColumn["start_date"] = "start_date";
+    PermitSortColumn["status_changed_date"] = "status_changed_date";
 })(PermitSortColumn = exports.PermitSortColumn || (exports.PermitSortColumn = {}));
 var PermitCsvExportPrefix;
 (function (PermitCsvExportPrefix) {

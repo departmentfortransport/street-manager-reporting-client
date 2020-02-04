@@ -53,7 +53,8 @@ export declare enum PermitSortColumn {
     date_created = "date_created",
     deadline_date = "deadline_date",
     end_date = "end_date",
-    start_date = "start_date"
+    start_date = "start_date",
+    status_changed_date = "status_changed_date"
 }
 export declare enum PermitCsvExportPrefix {
     PA = "PA",
