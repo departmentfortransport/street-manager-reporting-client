@@ -65,6 +65,7 @@ var PermitSortColumn;
     PermitSortColumn["deadline_date"] = "deadline_date";
     PermitSortColumn["end_date"] = "end_date";
     PermitSortColumn["start_date"] = "start_date";
+    PermitSortColumn["status_changed_date"] = "status_changed_date";
 })(PermitSortColumn = exports.PermitSortColumn || (exports.PermitSortColumn = {}));
 var PermitCsvExportPrefix;
 (function (PermitCsvExportPrefix) {
@@ -281,16 +282,16 @@ var Section81SortColumn;
 (function (Section81SortColumn) {
     Section81SortColumn["status_changed_date"] = "status_changed_date";
 })(Section81SortColumn = exports.Section81SortColumn || (exports.Section81SortColumn = {}));
-var UserRole;
-(function (UserRole) {
-    UserRole["planner"] = "planner";
-    UserRole["highway_authority"] = "highway_authority";
-    UserRole["admin"] = "admin";
-    UserRole["contractor"] = "contractor";
-    UserRole["api"] = "api";
-    UserRole["ui"] = "ui";
-    UserRole["data_export"] = "data_export";
-})(UserRole = exports.UserRole || (exports.UserRole = {}));
+var Role;
+(function (Role) {
+    Role["Planner"] = "Planner";
+    Role["HighwayAuthority"] = "HighwayAuthority";
+    Role["Admin"] = "Admin";
+    Role["Contractor"] = "Contractor";
+    Role["API"] = "API";
+    Role["UI"] = "UI";
+    Role["DataExport"] = "DataExport";
+})(Role = exports.Role || (exports.Role = {}));
 var WorkstreamAccessLevel;
 (function (WorkstreamAccessLevel) {
     WorkstreamAccessLevel["read_only"] = "read_only";

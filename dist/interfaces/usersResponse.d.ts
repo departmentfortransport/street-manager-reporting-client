@@ -1,5 +1,5 @@
 import { ReportingResponse } from './reportingResponse';
-import { UserRole, WorkstreamAccessLevel } from './referenceTypes';
+import { Role, WorkstreamAccessLevel } from './referenceTypes';
 export interface UsersReportingResponse extends ReportingResponse {
     rows: UsersSummaryResponse[];
 }
@@ -7,7 +7,7 @@ export interface UsersSummaryResponse {
     first_name?: string;
     last_name?: string;
     email: string;
-    roles?: UserRole[];
+    roles?: Role[];
     workstreams?: UserWorkstreamAccess[];
 }
 export interface UserWorkstreamAccess {
