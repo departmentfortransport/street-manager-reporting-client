@@ -25,6 +25,8 @@ import { GetSection81sRequest } from '../interfaces/getSection81sRequest';
 import { Section81ReportingResponse } from '../interfaces/section81ReportingResponse';
 import { UsersReportingResponse } from '../interfaces/usersResponse';
 import { GetUsersRequest } from '../interfaces/getUsersRequest';
+import { GetCSVExportsRequest } from '../interfaces/getCSVExportsRequest';
+import { CSVExportReportingResponse } from '../interfaces/csvExportReportingResponse';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -51,6 +53,7 @@ export declare class StreetManagerReportingClient {
     getWorkstreams(config: RequestConfig, request: GetWorkstreamsRequest): Promise<WorkstreamReportingResponse>;
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
     getUsers(config: RequestConfig, request: GetUsersRequest, organisationReference: string): Promise<UsersReportingResponse>;
+    getCSVExports(config: RequestConfig, request: GetCSVExportsRequest): Promise<CSVExportReportingResponse>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;

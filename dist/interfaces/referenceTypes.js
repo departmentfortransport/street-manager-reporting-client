@@ -297,3 +297,10 @@ var WorkstreamAccessLevel;
     WorkstreamAccessLevel["read_only"] = "read_only";
     WorkstreamAccessLevel["full_write"] = "full_write";
 })(WorkstreamAccessLevel = exports.WorkstreamAccessLevel || (exports.WorkstreamAccessLevel = {}));
+var CSVExportStatus;
+(function (CSVExportStatus) {
+    CSVExportStatus["queued"] = "queued";
+    CSVExportStatus["in_progress"] = "in_progress";
+    CSVExportStatus["ready"] = "ready";
+    CSVExportStatus["failed"] = "failed";
+})(CSVExportStatus = exports.CSVExportStatus || (exports.CSVExportStatus = {}));

@@ -27,6 +27,8 @@ import { GetSection81sRequest } from '../interfaces/getSection81sRequest'
 import { Section81ReportingResponse } from '../interfaces/section81ReportingResponse'
 import { UsersReportingResponse } from '../interfaces/usersResponse'
 import { GetUsersRequest } from '../interfaces/getUsersRequest'
+import { GetCSVExportsRequest } from '../interfaces/getCSVExportsRequest'
+import { CSVExportReportingResponse } from '../interfaces/csvExportReportingResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -156,6 +158,12 @@ export class StreetManagerReportingClient {
   public async getUsers(config: RequestConfig, request: GetUsersRequest, organisationReference: string): Promise<UsersReportingResponse> {
     return this.httpHandler<UsersReportingResponse>(
       () => this.axios.get(`/organisations/${organisationReference}/users`, this.generateRequestConfig(config, request))
+    )
+  }
+
+  public getCSVExports(config: RequestConfig, request: GetCSVExportsRequest): Promise<CSVExportReportingResponse> {
+    return this.httpHandler<CSVExportReportingResponse>(
+      () => this.axios.get('/csv-exports', this.generateRequestConfig(config, request))
     )
   }
 

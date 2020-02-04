@@ -259,3 +259,9 @@ export declare enum WorkstreamAccessLevel {
     read_only = "read_only",
     full_write = "full_write"
 }
+export declare enum CSVExportStatus {
+    queued = "queued",
+    in_progress = "in_progress",
+    ready = "ready",
+    failed = "failed"
+}

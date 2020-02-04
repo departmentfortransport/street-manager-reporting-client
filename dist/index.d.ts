@@ -30,3 +30,5 @@ export * from './interfaces/section81ReportingResponse';
 export * from './interfaces/getSection81sRequest';
 export * from './interfaces/getUsersRequest';
 export * from './interfaces/usersResponse';
+export * from './interfaces/getCSVExportsRequest';
+export * from './interfaces/csvExportReportingResponse';
