@@ -289,3 +289,10 @@ export enum UserRole {
   ui = 'ui',
   data_export = 'data_export'
 }
+
+export enum CSVExportStatus {
+  queued = 'queued',
+  in_progress = 'in_progress',
+  ready = 'ready',
+  failed = 'failed'
+}

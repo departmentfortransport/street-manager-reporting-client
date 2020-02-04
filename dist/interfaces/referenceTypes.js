@@ -292,3 +292,10 @@ var UserRole;
     UserRole["ui"] = "ui";
     UserRole["data_export"] = "data_export";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
+var CSVExportStatus;
+(function (CSVExportStatus) {
+    CSVExportStatus["queued"] = "queued";
+    CSVExportStatus["in_progress"] = "in_progress";
+    CSVExportStatus["ready"] = "ready";
+    CSVExportStatus["failed"] = "failed";
+})(CSVExportStatus = exports.CSVExportStatus || (exports.CSVExportStatus = {}));
