@@ -27,6 +27,7 @@ import { UsersReportingResponse } from '../interfaces/usersResponse';
 import { GetUsersRequest } from '../interfaces/getUsersRequest';
 import { GetCSVExportsRequest } from '../interfaces/getCSVExportsRequest';
 import { CSVExportReportingResponse } from '../interfaces/csvExportReportingResponse';
+import { GeographicalAreaResponse } from '../interfaces/geographicalAreaResponse';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -54,6 +55,7 @@ export declare class StreetManagerReportingClient {
     getWorksUpdates(config: RequestConfig, request: GetWorksUpdatesRequest): Promise<WorkUpdateResponse[]>;
     getUsers(config: RequestConfig, request: GetUsersRequest, organisationReference: string): Promise<UsersReportingResponse>;
     getCSVExports(config: RequestConfig, request: GetCSVExportsRequest): Promise<CSVExportReportingResponse>;
+    getGeographicalAreas(config: RequestConfig): Promise<GeographicalAreaResponse[]>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;

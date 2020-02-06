@@ -93,6 +93,9 @@ class StreetManagerReportingClient {
     getCSVExports(config, request) {
         return this.httpHandler(() => this.axios.get('/csv-exports', this.generateRequestConfig(config, request)));
     }
+    getGeographicalAreas(config) {
+        return this.httpHandler(() => this.axios.get('/geographical-areas', this.generateRequestConfig(config)));
+    }
     async httpHandler(request) {
         try {
             const response = await request();

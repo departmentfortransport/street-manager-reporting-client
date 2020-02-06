@@ -29,6 +29,7 @@ import { UsersReportingResponse } from '../interfaces/usersResponse'
 import { GetUsersRequest } from '../interfaces/getUsersRequest'
 import { GetCSVExportsRequest } from '../interfaces/getCSVExportsRequest'
 import { CSVExportReportingResponse } from '../interfaces/csvExportReportingResponse'
+import { GeographicalAreaResponse } from '../interfaces/geographicalAreaResponse'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -164,6 +165,12 @@ export class StreetManagerReportingClient {
   public getCSVExports(config: RequestConfig, request: GetCSVExportsRequest): Promise<CSVExportReportingResponse> {
     return this.httpHandler<CSVExportReportingResponse>(
       () => this.axios.get('/csv-exports', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public getGeographicalAreas(config: RequestConfig): Promise<GeographicalAreaResponse[]> {
+    return this.httpHandler<GeographicalAreaResponse[]>(
+      () => this.axios.get('/geographical-areas', this.generateRequestConfig(config))
     )
   }
 

@@ -32,3 +32,4 @@ export * from './interfaces/getUsersRequest';
 export * from './interfaces/usersResponse';
 export * from './interfaces/getCSVExportsRequest';
 export * from './interfaces/csvExportReportingResponse';
+export * from './interfaces/geographicalAreaResponse';
