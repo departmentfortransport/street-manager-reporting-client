@@ -290,6 +290,11 @@ export enum Role {
   DataExport = 'DataExport'
 }
 
+export enum WorkstreamAccessLevel {
+  read_only = 'read_only',
+  full_write = 'full_write'
+}
+
 export enum CSVExportStatus {
   queued = 'queued',
   in_progress = 'in_progress',

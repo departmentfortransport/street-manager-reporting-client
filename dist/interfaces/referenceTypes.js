@@ -292,6 +292,11 @@ var Role;
     Role["UI"] = "UI";
     Role["DataExport"] = "DataExport";
 })(Role = exports.Role || (exports.Role = {}));
+var WorkstreamAccessLevel;
+(function (WorkstreamAccessLevel) {
+    WorkstreamAccessLevel["read_only"] = "read_only";
+    WorkstreamAccessLevel["full_write"] = "full_write";
+})(WorkstreamAccessLevel = exports.WorkstreamAccessLevel || (exports.WorkstreamAccessLevel = {}));
 var CSVExportStatus;
 (function (CSVExportStatus) {
     CSVExportStatus["queued"] = "queued";
