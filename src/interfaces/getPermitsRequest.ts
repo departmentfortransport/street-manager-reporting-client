@@ -8,6 +8,10 @@ export interface GetPermitsRequest extends ReportingRequest {
   lane_rental_assessment_outcome?: LaneRentalAssessmentOutcome[]
   start_date?: Date
   end_date?: Date
+  work_start_date_from?: Date
+  work_start_date_to?: Date
+  work_end_date_from?: Date
+  work_end_date_to?: Date
   start_date_created?: Date
   end_date_created?: Date
   active_permit_only?: boolean
