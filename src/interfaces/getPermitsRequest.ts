@@ -22,4 +22,8 @@ export interface GetPermitsRequest extends ReportingRequest {
   lane_rental_charges_not_agreed?: boolean
   lane_rental_charges_potentially_apply?: boolean
   ever_modification_requested?: boolean
+  hs2_works_only?: boolean
+  consultation_works_only?: boolean
+  consent_works_only?: boolean
+  unacknowledged_by_ha_only?: boolean
 }
