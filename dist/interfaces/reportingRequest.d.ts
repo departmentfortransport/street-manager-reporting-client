@@ -4,4 +4,5 @@ export interface ReportingRequest {
     query?: string;
     sort_direction?: SortDirection;
     swa_code?: string;
+    geographical_area_reference_number?: string[];
 }
