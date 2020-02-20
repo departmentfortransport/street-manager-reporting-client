@@ -348,3 +348,22 @@ export declare enum AuditEventType {
     geographical_area_created = "geographical_area_created",
     workstream_access_updated = "workstream_access_updated"
 }
+export declare enum AuditObjectType {
+    PERMIT = "PERMIT",
+    REINSTATEMENT = "REINSTATEMENT",
+    INSPECTION = "INSPECTION",
+    FPN = "FPN",
+    PAA = "PAA",
+    WORKSTREAM = "WORKSTREAM",
+    WORK = "WORK",
+    ORGANISATION = "ORGANISATION",
+    ACTIVITY = "ACTIVITY",
+    FORWARD_PLAN = "FORWARD_PLAN",
+    COMMENT = "COMMENT",
+    SCHEDULED_INSPECTION = "SCHEDULED_INSPECTION",
+    SECTION_81 = "SECTION_81",
+    USER = "USER",
+    GEOGRAPHICAL_AREA = "GEOGRAPHICAL_AREA",
+    CHANGE_REQUEST = "CHANGE_REQUEST",
+    APPLICATION = "APPLICATION"
+}
