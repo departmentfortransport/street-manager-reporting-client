@@ -349,21 +349,21 @@ export declare enum AuditEventType {
     workstream_access_updated = "workstream_access_updated"
 }
 export declare enum AuditObjectType {
-    PERMIT = "PERMIT",
-    REINSTATEMENT = "REINSTATEMENT",
-    INSPECTION = "INSPECTION",
-    FPN = "FPN",
-    PAA = "PAA",
-    WORKSTREAM = "WORKSTREAM",
-    WORK = "WORK",
-    ORGANISATION = "ORGANISATION",
-    ACTIVITY = "ACTIVITY",
-    FORWARD_PLAN = "FORWARD_PLAN",
-    COMMENT = "COMMENT",
-    SCHEDULED_INSPECTION = "SCHEDULED_INSPECTION",
-    SECTION_81 = "SECTION_81",
-    USER = "USER",
-    GEOGRAPHICAL_AREA = "GEOGRAPHICAL_AREA",
-    CHANGE_REQUEST = "CHANGE_REQUEST",
-    APPLICATION = "APPLICATION"
+    PERMIT = "permit",
+    REINSTATEMENT = "reinstatement",
+    INSPECTION = "inspection",
+    FPN = "fpn",
+    PAA = "paa",
+    WORKSTREAM = "workstream",
+    WORK = "work",
+    ORGANISATION = "organisation",
+    ACTIVITY = "activity",
+    FORWARD_PLAN = "forward_plan",
+    COMMENT = "comment",
+    SCHEDULED_INSPECTION = "scheduled_inspection",
+    SECTION_81 = "section_81",
+    USER = "user",
+    GEOGRAPHICAL_AREA = "geographical_area",
+    CHANGE_REQUEST = "change_request",
+    APPLICATION = "application"
 }
