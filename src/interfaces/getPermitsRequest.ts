@@ -30,4 +30,5 @@ export interface GetPermitsRequest extends ReportingRequest {
   consultation_works_only?: boolean
   consent_works_only?: boolean
   unacknowledged_by_ha_only?: boolean
+  is_duration_challenged?: boolean
 }
