@@ -144,7 +144,10 @@ export declare enum AlterationStatus {
     auto_applied = "auto_applied"
 }
 export declare enum AlterationSortColumn {
-    date_created = "date_created"
+    date_created = "date_created",
+    proposed_start_date = "proposed_start_date",
+    proposed_end_date = "proposed_end_date",
+    status_changed_date = "status_changed_date"
 }
 export declare enum AlterationType {
     PROMOTER_IMPOSED_CHANGE = "PROMOTER_IMPOSED_CHANGE",

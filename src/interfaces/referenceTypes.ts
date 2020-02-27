@@ -166,7 +166,10 @@ export enum AlterationStatus {
 }
 
 export enum AlterationSortColumn {
-  date_created = 'date_created'
+  date_created = 'date_created',
+  proposed_start_date = 'proposed_start_date',
+  proposed_end_date = 'proposed_end_date',
+  status_changed_date = 'status_changed_date'
 }
 
 export enum AlterationType {

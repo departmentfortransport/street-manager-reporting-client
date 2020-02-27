@@ -170,6 +170,9 @@ var AlterationStatus;
 var AlterationSortColumn;
 (function (AlterationSortColumn) {
     AlterationSortColumn["date_created"] = "date_created";
+    AlterationSortColumn["proposed_start_date"] = "proposed_start_date";
+    AlterationSortColumn["proposed_end_date"] = "proposed_end_date";
+    AlterationSortColumn["status_changed_date"] = "status_changed_date";
 })(AlterationSortColumn = exports.AlterationSortColumn || (exports.AlterationSortColumn = {}));
 var AlterationType;
 (function (AlterationType) {
