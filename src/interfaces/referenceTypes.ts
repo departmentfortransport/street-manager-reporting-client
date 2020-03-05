@@ -386,7 +386,13 @@ export enum AuditEventType {
   user_name_updated = 'user_name_updated',
   permit_hs2_acknowledged =  'permit_hs2_acknowledged',
   geographical_area_created = 'geographical_area_created',
-  workstream_access_updated = 'workstream_access_updated'
+  workstream_access_updated = 'workstream_access_updated',
+  planned_works_record_created = 'planned_works_record_created',
+  in_progress_works_record_created = 'in_progress_works_record_created',
+  historic_works_record_created = 'historic_works_record_created',
+  non_notifiable_works_record_created = 'non_notifiable_works_record_created',
+  section_81_works_record_created = 's81_works_record_created',
+  unattributable_works_record_created = 'unattributable_works_record_created'
 }
 
 export enum AuditObjectType {

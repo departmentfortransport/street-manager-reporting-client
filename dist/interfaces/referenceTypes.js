@@ -390,6 +390,12 @@ var AuditEventType;
     AuditEventType["permit_hs2_acknowledged"] = "permit_hs2_acknowledged";
     AuditEventType["geographical_area_created"] = "geographical_area_created";
     AuditEventType["workstream_access_updated"] = "workstream_access_updated";
+    AuditEventType["planned_works_record_created"] = "planned_works_record_created";
+    AuditEventType["in_progress_works_record_created"] = "in_progress_works_record_created";
+    AuditEventType["historic_works_record_created"] = "historic_works_record_created";
+    AuditEventType["non_notifiable_works_record_created"] = "non_notifiable_works_record_created";
+    AuditEventType["section_81_works_record_created"] = "s81_works_record_created";
+    AuditEventType["unattributable_works_record_created"] = "unattributable_works_record_created";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
 var AuditObjectType;
 (function (AuditObjectType) {
