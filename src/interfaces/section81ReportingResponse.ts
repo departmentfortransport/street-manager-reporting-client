@@ -13,6 +13,7 @@ export interface Section81SummaryResponse {
   highway_authority: string
   location_description: string
   street: string
+  town?: string
   area?: string
   section_81_severity: Section81Severity
   made_safe_by_ha: boolean
