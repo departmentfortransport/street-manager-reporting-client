@@ -11,6 +11,7 @@ export interface ReinstatementSummaryResponse {
   promoter_organisation: string
   highway_authority: string
   street_name: string
+  town?: string
   area_name?: string
   location_description: string
   registration_date: Date

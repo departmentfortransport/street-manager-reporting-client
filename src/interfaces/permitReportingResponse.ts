@@ -15,6 +15,7 @@ export interface PermitSummaryResponse {
   works_coordinates: any
   location_description: string
   street: string
+  town: string
   area: string
   work_category: WorkCategory
   description_of_work: string

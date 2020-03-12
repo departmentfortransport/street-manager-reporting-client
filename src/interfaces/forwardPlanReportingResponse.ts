@@ -12,6 +12,7 @@ export interface ForwardPlanSummaryResponse {
   highway_authority: string
   location_description: string
   street: string
+  town: string
   area: string
   proposed_start_date: Date
   proposed_end_date: Date

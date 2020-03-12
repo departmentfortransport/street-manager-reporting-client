@@ -9,6 +9,7 @@ export interface InspectionSummaryResponse {
     work_reference_number: string;
     location_description: string;
     street: string;
+    town: string;
     area: string;
     inspection_reference_number?: string;
     inspection_type: InspectionType;

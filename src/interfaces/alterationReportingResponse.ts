@@ -10,6 +10,7 @@ export interface AlterationSummaryResponse {
   permit_reference_number: string
   alteration_reference_number: string
   street: string
+  town: string
   area: string
   location_description: string
   highway_authority: string
