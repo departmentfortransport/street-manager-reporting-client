@@ -67,12 +67,6 @@ var PermitSortColumn;
     PermitSortColumn["start_date"] = "start_date";
     PermitSortColumn["status_changed_date"] = "status_changed_date";
 })(PermitSortColumn = exports.PermitSortColumn || (exports.PermitSortColumn = {}));
-var PermitCsvExportPrefix;
-(function (PermitCsvExportPrefix) {
-    PermitCsvExportPrefix["PA"] = "PA";
-    PermitCsvExportPrefix["WR"] = "WR";
-    PermitCsvExportPrefix["PAA"] = "PAA";
-})(PermitCsvExportPrefix = exports.PermitCsvExportPrefix || (exports.PermitCsvExportPrefix = {}));
 var FPNSortColumn;
 (function (FPNSortColumn) {
     FPNSortColumn["issue_date_time"] = "issue_date_time";

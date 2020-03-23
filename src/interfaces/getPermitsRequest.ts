@@ -1,4 +1,4 @@
-import { PermitStatus, WorkStatus, WorkCategory, PermitSortColumn, PermitCsvExportPrefix, LaneRentalAssessmentOutcome } from './referenceTypes'
+import { PermitStatus, WorkStatus, WorkCategory, PermitSortColumn, LaneRentalAssessmentOutcome } from './referenceTypes'
 import { ReportingRequest } from './reportingRequest'
 
 export interface GetPermitsRequest extends ReportingRequest {
@@ -16,7 +16,6 @@ export interface GetPermitsRequest extends ReportingRequest {
   end_date_created?: Date
   active_permit_only?: boolean
   sort_column?: PermitSortColumn
-  csv_export_prefix?: PermitCsvExportPrefix
   is_traffic_sensitive?: boolean
   is_high_impact_traffic_management?: boolean
   has_no_final_registration?: boolean

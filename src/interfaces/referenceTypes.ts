@@ -65,12 +65,6 @@ export enum PermitSortColumn {
   status_changed_date = 'status_changed_date'
 }
 
-export enum PermitCsvExportPrefix {
-  PA = 'PA',
-  WR = 'WR',
-  PAA = 'PAA'
-}
-
 export enum FPNSortColumn {
   issue_date_time = 'issue_date_time'
 }
