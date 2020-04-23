@@ -392,6 +392,12 @@ var AuditEventType;
     AuditEventType["section_81_works_record_created"] = "s81_works_record_created";
     AuditEventType["unattributable_works_record_created"] = "unattributable_works_record_created";
     AuditEventType["upcoming_event"] = "upcoming_event";
+    AuditEventType["sample_inspection_target_created"] = "sample_inspection_target_created";
+    AuditEventType["sample_inspection_target_updated"] = "sample_inspection_target_updated";
+    AuditEventType["sample_inspection_created"] = "sample_inspection_created";
+    AuditEventType["sample_inspection_completed"] = "sample_inspection_completed";
+    AuditEventType["sample_inspection_removed"] = "sample_inspection_removed";
+    AuditEventType["sample_inspection_expired"] = "sample_inspection_expired";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
 var AuditObjectType;
 (function (AuditObjectType) {

@@ -352,7 +352,13 @@ export declare enum AuditEventType {
     non_notifiable_works_record_created = "non_notifiable_works_record_created",
     section_81_works_record_created = "s81_works_record_created",
     unattributable_works_record_created = "unattributable_works_record_created",
-    upcoming_event = "upcoming_event"
+    upcoming_event = "upcoming_event",
+    sample_inspection_target_created = "sample_inspection_target_created",
+    sample_inspection_target_updated = "sample_inspection_target_updated",
+    sample_inspection_created = "sample_inspection_created",
+    sample_inspection_completed = "sample_inspection_completed",
+    sample_inspection_removed = "sample_inspection_removed",
+    sample_inspection_expired = "sample_inspection_expired"
 }
 export declare enum AuditObjectType {
     PERMIT = "permit",
