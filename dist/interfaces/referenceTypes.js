@@ -398,6 +398,8 @@ var AuditEventType;
     AuditEventType["sample_inspection_completed"] = "sample_inspection_completed";
     AuditEventType["sample_inspection_removed"] = "sample_inspection_removed";
     AuditEventType["sample_inspection_expired"] = "sample_inspection_expired";
+    AuditEventType["internal_comment_submitted"] = "internal_comment_submitted";
+    AuditEventType["comment_read"] = "comment_read";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
 var AuditObjectType;
 (function (AuditObjectType) {
