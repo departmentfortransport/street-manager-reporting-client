@@ -11,4 +11,5 @@ export interface CommentSummaryResponse {
   author_email_address: string
   detail: string
   date_created: Date
+  comment_reference_number: string
 }
