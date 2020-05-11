@@ -195,7 +195,7 @@ export enum ForwardPlanStatus {
 
 export enum ForwardPlanSortColumn {
   start_date = 'start_date',
-  end_date = 'end_date',
+  end_date = 'end_date'
 }
 
 export enum PermitConditionType {
