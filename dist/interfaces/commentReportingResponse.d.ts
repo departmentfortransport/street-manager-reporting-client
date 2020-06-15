@@ -10,4 +10,8 @@ export interface CommentSummaryResponse {
     detail: string;
     date_created: Date;
     comment_reference_number: string;
+    is_read: boolean;
+    read_on?: Date;
+    read_by?: string;
+    is_internal: boolean;
 }

@@ -6,4 +6,7 @@ export interface GetCommentsRequest extends ReportingRequest {
   date_created_from?: Date
   date_created_to?: Date
   topic?: CommentTopic[]
+  is_internal?: boolean
+  is_read?: boolean
+  is_not_read?: boolean
 }
