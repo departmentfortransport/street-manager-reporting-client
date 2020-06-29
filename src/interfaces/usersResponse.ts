@@ -14,6 +14,6 @@ export interface UsersSummaryResponse {
 }
 
 export interface UserWorkstreamAccess {
-    workstream_prefix: string
-    access_level: WorkstreamAccessLevel
+  workstream_prefix: string
+  access_level: WorkstreamAccessLevel
 }
