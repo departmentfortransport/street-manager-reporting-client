@@ -33,3 +33,5 @@ export * from './interfaces/usersResponse';
 export * from './interfaces/getCSVExportsRequest';
 export * from './interfaces/csvExportReportingResponse';
 export * from './interfaces/geographicalAreaResponse';
+export * from './interfaces/getSampleInspectionTargetsRequest';
+export * from './interfaces/sampleInspectionTargetReportingResponse';

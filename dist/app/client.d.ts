@@ -25,6 +25,8 @@ import { GetUsersRequest } from '../interfaces/getUsersRequest';
 import { GetCSVExportsRequest } from '../interfaces/getCSVExportsRequest';
 import { CSVExportReportingResponse } from '../interfaces/csvExportReportingResponse';
 import { GeographicalAreaResponse } from '../interfaces/geographicalAreaResponse';
+import { GetSampleInspectionTargetsRequest } from '../interfaces/getSampleInspectionTargetsRequest';
+import { SampleInspectionTargetReportingResponse } from '../interfaces/sampleInspectionTargetReportingResponse';
 export interface StreetManagerReportingClientConfig {
     baseURL: string;
     timeout?: number;
@@ -48,6 +50,7 @@ export declare class StreetManagerReportingClient {
     getUsers(config: RequestConfig, request: GetUsersRequest, organisationReference: string): Promise<UsersReportingResponse>;
     getCSVExports(config: RequestConfig, request: GetCSVExportsRequest): Promise<CSVExportReportingResponse>;
     getGeographicalAreas(config: RequestConfig): Promise<GeographicalAreaResponse[]>;
+    getSampleInspectionTargets(config: RequestConfig, request: GetSampleInspectionTargetsRequest): Promise<SampleInspectionTargetReportingResponse>;
     private httpHandler;
     private handleError;
     private generateRequestConfig;

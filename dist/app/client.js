@@ -56,6 +56,9 @@ class StreetManagerReportingClient {
     getGeographicalAreas(config) {
         return this.httpHandler(() => this.axios.get('/geographical-areas', this.generateRequestConfig(config)));
     }
+    getSampleInspectionTargets(config, request) {
+        return this.httpHandler(() => this.axios.get('/sample-inspection-targets', this.generateRequestConfig(config, request)));
+    }
     async httpHandler(request) {
         try {
             const response = await request();
