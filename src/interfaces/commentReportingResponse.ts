@@ -9,6 +9,7 @@ export interface CommentSummaryResponse {
   work_reference_number: string
   topic: CommentTopic
   author_email_address: string
+  author_organisation_reference: string
   detail: string
   date_created: Date
   comment_reference_number: string
