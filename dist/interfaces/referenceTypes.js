@@ -405,6 +405,7 @@ var AuditEventType;
     AuditEventType["sample_inspection_expired"] = "sample_inspection_expired";
     AuditEventType["internal_comment_submitted"] = "internal_comment_submitted";
     AuditEventType["comment_read"] = "comment_read";
+    AuditEventType["excavation_carried_out_updated"] = "excavation_carried_out_updated";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
 var AuditObjectType;
 (function (AuditObjectType) {
