@@ -6,6 +6,7 @@ export interface CommentReportingResponse extends ReportingResponse {
 export interface CommentSummaryResponse {
     work_reference_number: string;
     topic: CommentTopic;
+    topic_string: string;
     author_email_address: string;
     author_organisation_reference: string;
     detail: string;

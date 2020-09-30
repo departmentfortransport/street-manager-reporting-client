@@ -5,5 +5,7 @@ export interface WorkUpdateResponse {
   update_date_time: Date
   update_id: number,
   event_type: AuditEventType,
+  event_type_string: string,
   object_type: AuditObjectType
+  object_type_string: string
 }

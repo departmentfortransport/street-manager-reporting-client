@@ -16,7 +16,9 @@ export interface Section81SummaryResponse {
   town?: string
   area?: string
   section_81_severity: Section81Severity
+  section_81_severity_string: string
   made_safe_by_ha: boolean
   section_81_status: Section81Status
+  section_81_status_string: string
   status_changed_date: Date
 }

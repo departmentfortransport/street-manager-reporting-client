@@ -8,5 +8,6 @@ export interface CSVExportSummaryResponse {
     filename: string;
     date_created: Date;
     csv_export_status: CSVExportStatus;
+    csv_export_status_string: string;
     username: string;
 }
