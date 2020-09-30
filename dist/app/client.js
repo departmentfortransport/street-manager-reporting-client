@@ -59,6 +59,9 @@ class StreetManagerReportingClient {
     getSampleInspectionTargets(config, request) {
         return this.httpHandler(() => this.axios.get('/sample-inspection-targets', this.generateRequestConfig(config, request)));
     }
+    getSampleInspections(config, request) {
+        return this.httpHandler(() => this.axios.get('/sample-inspections', this.generateRequestConfig(config, request)));
+    }
     async httpHandler(request) {
         try {
             const response = await request();

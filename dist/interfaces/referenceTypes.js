@@ -427,3 +427,7 @@ var AuditObjectType;
     AuditObjectType["CHANGE_REQUEST"] = "change_request";
     AuditObjectType["APPLICATION"] = "application";
 })(AuditObjectType = exports.AuditObjectType || (exports.AuditObjectType = {}));
+var SampleInspectionSortColumn;
+(function (SampleInspectionSortColumn) {
+    SampleInspectionSortColumn["inspection_expiry"] = "inspection_expiry";
+})(SampleInspectionSortColumn = exports.SampleInspectionSortColumn || (exports.SampleInspectionSortColumn = {}));

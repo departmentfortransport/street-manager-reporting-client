@@ -387,3 +387,6 @@ export declare enum AuditObjectType {
     CHANGE_REQUEST = "change_request",
     APPLICATION = "application"
 }
+export declare enum SampleInspectionSortColumn {
+    inspection_expiry = "inspection_expiry"
+}
