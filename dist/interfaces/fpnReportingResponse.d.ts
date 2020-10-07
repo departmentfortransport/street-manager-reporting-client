@@ -9,7 +9,9 @@ export interface FPNSummaryResponse {
     promoter: string;
     highway_authority: string;
     offence_code: OffenceCode;
+    offence_code_string: string;
     street_name: string;
     issue_date: Date;
     status: FPNStatus;
+    status_string: string;
 }

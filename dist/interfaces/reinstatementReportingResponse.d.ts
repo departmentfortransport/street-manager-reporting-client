@@ -15,6 +15,8 @@ export interface ReinstatementSummaryResponse {
     registration_date: Date;
     reinstatement_date: Date;
     reinstatement_type: ReinstatementType;
+    reinstatement_type_string: string;
     reinstatement_status: ReinstatementStatus;
+    reinstatement_status_string: string;
     end_date: Date;
 }

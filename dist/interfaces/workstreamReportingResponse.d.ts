@@ -8,5 +8,6 @@ export interface WorkstreamSummaryResponse {
     name: string;
     description?: string;
     status: WorkstreamStatus;
+    status_string: string;
     swa_code: string;
 }

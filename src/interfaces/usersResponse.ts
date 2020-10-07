@@ -10,10 +10,12 @@ export interface UsersSummaryResponse {
   last_name?: string
   email: string
   roles?: Role[]
+  roles_string?: string[]
   workstreams?: UserWorkstreamAccess[]
 }
 
 export interface UserWorkstreamAccess {
   workstream_prefix: string
   access_level: WorkstreamAccessLevel
+  access_level_string: string
 }

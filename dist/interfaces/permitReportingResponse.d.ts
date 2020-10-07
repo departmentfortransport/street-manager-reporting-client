@@ -16,9 +16,12 @@ export interface PermitSummaryResponse {
     town: string;
     area: string;
     work_category: WorkCategory;
+    work_category_string: string;
     description_of_work: string;
     traffic_management_type: TrafficManagementType;
+    traffic_management_type_string: string;
     assessment_status?: AssessmentStatus;
+    assessment_status_string?: string;
     proposed_start_date: Date;
     proposed_end_date: Date;
     proposed_start_time?: Date;
@@ -26,7 +29,9 @@ export interface PermitSummaryResponse {
     actual_start_date?: Date;
     actual_end_date?: Date;
     status: PermitStatus;
+    status_string: string;
     work_status: WorkStatus;
+    work_status_string: string;
     deadline_date: Date;
     date_created: Date;
     status_changed_date: Date;
@@ -42,6 +47,7 @@ export interface PermitSummaryResponse {
     is_high_impact_traffic_management: boolean;
     is_lane_rental: boolean;
     lane_rental_assessment_outcome?: LaneRentalAssessmentOutcome;
+    lane_rental_assessment_outcome_string?: string;
     lane_rental_charges_not_agreed: boolean;
     lane_rental_charges_potentially_apply: boolean;
 }
