@@ -30,6 +30,8 @@ import { CSVExportReportingResponse } from '../interfaces/csvExportReportingResp
 import { GeographicalAreaResponse } from '../interfaces/geographicalAreaResponse'
 import { GetSampleInspectionTargetsRequest } from '../interfaces/getSampleInspectionTargetsRequest'
 import { SampleInspectionTargetReportingResponse } from '../interfaces/sampleInspectionTargetReportingResponse'
+import { SampleInspectionReportingResponse } from '../interfaces/sampleInspectionReportingResponse'
+import { GetSampleInspectionsRequest } from '../interfaces/getSampleInspectionsRequest'
 
 export interface StreetManagerReportingClientConfig {
   baseURL: string,
@@ -137,6 +139,12 @@ export class StreetManagerReportingClient {
   public getSampleInspectionTargets(config: RequestConfig, request: GetSampleInspectionTargetsRequest): Promise<SampleInspectionTargetReportingResponse> {
     return this.httpHandler<SampleInspectionTargetReportingResponse>(
       () => this.axios.get('/sample-inspection-targets', this.generateRequestConfig(config, request))
+    )
+  }
+
+  public getSampleInspections(config: RequestConfig, request: GetSampleInspectionsRequest): Promise<SampleInspectionReportingResponse> {
+    return this.httpHandler<SampleInspectionReportingResponse>(
+      () => this.axios.get('/sample-inspections', this.generateRequestConfig(config, request))
     )
   }
 
