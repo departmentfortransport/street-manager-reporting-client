@@ -406,6 +406,9 @@ var AuditEventType;
     AuditEventType["internal_comment_submitted"] = "internal_comment_submitted";
     AuditEventType["comment_read"] = "comment_read";
     AuditEventType["excavation_carried_out_updated"] = "excavation_carried_out_updated";
+    AuditEventType["section_81_linked_to_permit"] = "section_81_linked_to_permit";
+    AuditEventType["section_81_unlinked_from_permit"] = "section_81_unlinked_from_permit";
+    AuditEventType["section_81_reassigned"] = "section_81_reassigned";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
 var AuditObjectType;
 (function (AuditObjectType) {
