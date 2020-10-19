@@ -1,6 +1,6 @@
-import { PermitConditionType } from './referenceTypes';
+import { PermitConditionTypeResponse } from './referenceTypes';
 export interface PermitCondition {
-    condition: PermitConditionType;
+    condition: PermitConditionTypeResponse;
     condition_string: string;
     comment?: string;
 }

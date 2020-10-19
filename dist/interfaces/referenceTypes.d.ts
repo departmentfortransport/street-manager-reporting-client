@@ -8,6 +8,17 @@ export declare enum PermitStatus {
     revoked = "revoked",
     progressed = "progressed"
 }
+export declare enum PermitStatusResponse {
+    submitted = "submitted",
+    granted = "granted",
+    permit_modification_request = "permit_modification_request",
+    refused = "refused",
+    closed = "closed",
+    cancelled = "cancelled",
+    revoked = "revoked",
+    progressed = "progressed",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum AssessmentStatus {
     granted = "granted",
     granted_auto = "granted_auto",
@@ -16,9 +27,23 @@ export declare enum AssessmentStatus {
     permit_modification_request = "permit_modification_request",
     revoked = "revoked"
 }
+export declare enum AssessmentStatusResponse {
+    granted = "granted",
+    granted_auto = "granted_auto",
+    refused = "refused",
+    refused_auto = "refused_auto",
+    permit_modification_request = "permit_modification_request",
+    revoked = "revoked",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum ReinstatementStatus {
     interim = "interim",
     permanent = "permanent"
+}
+export declare enum ReinstatementStatusResponse {
+    interim = "interim",
+    permanent = "permanent",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum FPNStatus {
     issued = "issued",
@@ -28,15 +53,36 @@ export declare enum FPNStatus {
     disputed = "disputed",
     withdrawn = "withdrawn"
 }
+export declare enum FPNStatusResponse {
+    issued = "issued",
+    accepted = "accepted",
+    paid = "paid",
+    paid_discounted = "paid_discounted",
+    disputed = "disputed",
+    withdrawn = "withdrawn",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum WorkstreamStatus {
     active = "active",
     deactivated = "deactivated"
+}
+export declare enum WorkstreamStatusResponse {
+    active = "active",
+    deactivated = "deactivated",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum OffenceCode {
     offence_code_05 = "offence_code_05",
     offence_code_06 = "offence_code_06",
     offence_code_08 = "offence_code_08",
     offence_code_09 = "offence_code_09"
+}
+export declare enum OffenceCodeResponse {
+    offence_code_05 = "offence_code_05",
+    offence_code_06 = "offence_code_06",
+    offence_code_08 = "offence_code_08",
+    offence_code_09 = "offence_code_09",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum CommentTopic {
     GENERAL = "GENERAL",
@@ -49,6 +95,19 @@ export declare enum CommentTopic {
     IMPOSED_VARIATION = "IMPOSED_VARIATION",
     DURATION_CHALLENGE = "DURATION_CHALLENGE",
     SECTION_81 = "SECTION_81"
+}
+export declare enum CommentTopicResponse {
+    GENERAL = "GENERAL",
+    SECTION_74 = "SECTION_74",
+    INSPECTION = "INSPECTION",
+    FPN = "FPN",
+    OVERRUN = "OVERRUN",
+    FORWARD_PLAN = "FORWARD_PLAN",
+    CHANGE_REQUEST = "CHANGE_REQUEST",
+    IMPOSED_VARIATION = "IMPOSED_VARIATION",
+    DURATION_CHALLENGE = "DURATION_CHALLENGE",
+    SECTION_81 = "SECTION_81",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum SortDirection {
     asc = "asc",
@@ -80,9 +139,21 @@ export declare enum InspectionType {
     non_compliance_follow_up = "non_compliance_follow_up",
     section_81 = "section_81"
 }
+export declare enum InspectionTypeResponse {
+    live_site = "live_site",
+    reinstatement = "reinstatement",
+    non_compliance_follow_up = "non_compliance_follow_up",
+    section_81 = "section_81",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum InspectionResponseType {
     inspection = "inspection",
     reinspection = "reinspection"
+}
+export declare enum InspectionResponseTypeResponse {
+    inspection = "inspection",
+    reinspection = "reinspection",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum InspectionCategory {
     a = "a",
@@ -95,6 +166,19 @@ export declare enum InspectionCategory {
     follow_up_completion = "follow_up_completion",
     site_occupancy = "site_occupancy",
     conditions = "conditions"
+}
+export declare enum InspectionCategoryResponse {
+    a = "a",
+    b = "b",
+    c = "c",
+    third_party = "third_party",
+    routine = "routine",
+    joint_site_visit = "joint_site_visit",
+    follow_up = "follow_up",
+    follow_up_completion = "follow_up_completion",
+    site_occupancy = "site_occupancy",
+    conditions = "conditions",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum InspectionOutcome {
     passed = "passed",
@@ -109,6 +193,20 @@ export declare enum InspectionOutcome {
     works_in_progress = "works_in_progress",
     works_stopped = "works_stopped"
 }
+export declare enum InspectionOutcomeResponse {
+    passed = "passed",
+    unable_to_complete_inspection = "unable_to_complete_inspection",
+    failed_low = "failed_low",
+    failed_high = "failed_high",
+    further_inspections_required = "further_inspections_required",
+    agreed_site_compliance = "agreed_site_compliance",
+    non_compliant_with_conditions = "non_compliant_with_conditions",
+    works_stopped_apparatus_remaining = "works_stopped_apparatus_remaining",
+    works_in_progress_no_carriageway_incursion = "works_in_progress_no_carriageway_incursion",
+    works_in_progress = "works_in_progress",
+    works_stopped = "works_stopped",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum InspectionSortColumn {
     inspection_date = "inspection_date"
 }
@@ -120,6 +218,16 @@ export declare enum WorkCategory {
     immediate_emergency = "immediate_emergency",
     paa = "paa",
     hs2_highway = "hs2_highway"
+}
+export declare enum WorkCategoryResponse {
+    minor = "minor",
+    standard = "standard",
+    major = "major",
+    immediate_urgent = "immediate_urgent",
+    immediate_emergency = "immediate_emergency",
+    paa = "paa",
+    hs2_highway = "hs2_highway",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum TrafficManagementType {
     road_closure = "road_closure",
@@ -134,6 +242,20 @@ export declare enum TrafficManagementType {
     some_carriageway_incursion = "some_carriageway_incursion",
     no_carriageway_incursion = "no_carriageway_incursion"
 }
+export declare enum TrafficManagementTypeResponse {
+    road_closure = "road_closure",
+    contra_flow = "contra_flow",
+    lane_closure = "lane_closure",
+    multi_way_signals = "multi_way_signals",
+    two_way_signals = "two_way_signals",
+    convoy_workings = "convoy_workings",
+    stop_go_boards = "stop_go_boards",
+    priority_working = "priority_working",
+    give_and_take = "give_and_take",
+    some_carriageway_incursion = "some_carriageway_incursion",
+    no_carriageway_incursion = "no_carriageway_incursion",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum AlterationStatus {
     submitted = "submitted",
     granted = "granted",
@@ -143,6 +265,17 @@ export declare enum AlterationStatus {
     cancelled = "cancelled",
     revoked = "revoked",
     auto_applied = "auto_applied"
+}
+export declare enum AlterationStatusResponse {
+    submitted = "submitted",
+    granted = "granted",
+    granted_with_duration_challenge = "granted_with_duration_challenge",
+    refused = "refused",
+    deemed = "deemed",
+    cancelled = "cancelled",
+    revoked = "revoked",
+    auto_applied = "auto_applied",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum AlterationSortColumn {
     date_created = "date_created",
@@ -159,6 +292,16 @@ export declare enum AlterationType {
     DURATION_CHALLENGE = "DURATION_CHALLENGE",
     MODIFIED_PERMIT = "MODIFIED_PERMIT"
 }
+export declare enum AlterationTypeResponse {
+    PROMOTER_IMPOSED_CHANGE = "PROMOTER_IMPOSED_CHANGE",
+    PROMOTER_CHANGE_REQUEST = "PROMOTER_CHANGE_REQUEST",
+    HA_CHANGE_REQUEST = "HA_CHANGE_REQUEST",
+    HA_IMPOSED_CHANGE = "HA_IMPOSED_CHANGE",
+    WORK_EXTENSION = "WORK_EXTENSION",
+    DURATION_CHALLENGE = "DURATION_CHALLENGE",
+    MODIFIED_PERMIT = "MODIFIED_PERMIT",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum WorkStatus {
     planned = "planned",
     in_progress = "in_progress",
@@ -169,16 +312,33 @@ export declare enum WorkStatus {
     non_notifiable = "non_notifiable",
     section_81 = "section_81"
 }
+export declare enum WorkStatusResponse {
+    planned = "planned",
+    in_progress = "in_progress",
+    completed = "completed",
+    cancelled = "cancelled",
+    unattributable = "unattributable",
+    historical = "historical",
+    non_notifiable = "non_notifiable",
+    section_81 = "section_81",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum ForwardPlanStatus {
     raised = "raised",
     cancelled = "cancelled",
     progressed = "progressed"
 }
+export declare enum ForwardPlanStatusResponse {
+    raised = "raised",
+    cancelled = "cancelled",
+    progressed = "progressed",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum ForwardPlanSortColumn {
     start_date = "start_date",
     end_date = "end_date"
 }
-export declare enum PermitConditionType {
+export declare enum PermitConditionTypeResponse {
     NCT01a = "NCT01a",
     NCT01b = "NCT01b",
     NCT02a = "NCT02a",
@@ -196,7 +356,8 @@ export declare enum PermitConditionType {
     NCT10a = "NCT10a",
     NCT11a = "NCT11a",
     NCT11b = "NCT11b",
-    NCT12a = "NCT12a"
+    NCT12a = "NCT12a",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum LaneRentalAssessmentOutcome {
     chargeable = "chargeable",
@@ -205,11 +366,20 @@ export declare enum LaneRentalAssessmentOutcome {
     exempt = "exempt",
     charges_not_applicable = "charges_not_applicable"
 }
-export declare enum ReinstatementType {
+export declare enum LaneRentalAssessmentOutcomeResponse {
+    chargeable = "chargeable",
+    potentially_chargeable = "potentially_chargeable",
+    charges_waived = "charges_waived",
+    exempt = "exempt",
+    charges_not_applicable = "charges_not_applicable",
+    upcoming_enum = "upcoming_enum"
+}
+export declare enum ReinstatementTypeResponse {
     excavation = "excavation",
     bar_holes = "bar_holes",
     core_holes = "core_holes",
-    pole_testing = "pole_testing"
+    pole_testing = "pole_testing",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum AdditionalSpecialDesignationCode {
     protected_street = 1,
@@ -241,6 +411,11 @@ export declare enum Section81Severity {
     high = "high",
     low = "low"
 }
+export declare enum Section81SeverityResponse {
+    high = "high",
+    low = "low",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum Section81Status {
     issued = "issued",
     acknowledged = "acknowledged",
@@ -250,27 +425,40 @@ export declare enum Section81Status {
     resolved_by_ha = "resolved_by_ha",
     cancelled = "cancelled"
 }
+export declare enum Section81StatusResponse {
+    issued = "issued",
+    acknowledged = "acknowledged",
+    accepted = "accepted",
+    accepted_fixed = "accepted_fixed",
+    rejected = "rejected",
+    resolved_by_ha = "resolved_by_ha",
+    cancelled = "cancelled",
+    upcoming_enum = "upcoming_enum"
+}
 export declare enum Section81SortColumn {
     status_changed_date = "status_changed_date"
 }
-export declare enum Role {
+export declare enum RoleResponse {
     Planner = "Planner",
     HighwayAuthority = "HighwayAuthority",
     Admin = "Admin",
     Contractor = "Contractor",
     API = "API",
     UI = "UI",
-    DataExport = "DataExport"
+    DataExport = "DataExport",
+    upcoming_enum = "upcoming_enum"
 }
-export declare enum WorkstreamAccessLevel {
+export declare enum WorkstreamAccessLevelResponse {
     read_only = "read_only",
-    full_write = "full_write"
+    full_write = "full_write",
+    upcoming_enum = "upcoming_enum"
 }
-export declare enum CSVExportStatus {
+export declare enum CSVExportStatusResponse {
     queued = "queued",
     in_progress = "in_progress",
     ready = "ready",
-    failed = "failed"
+    failed = "failed",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum AuditEventType {
     historic_action = "historic_action",
@@ -374,7 +562,7 @@ export declare enum AuditEventType {
     permit_granted_with_duration_challenge = "permit_granted_with_duration_challenge",
     inspection_withdrawn = "inspection_withdrawn"
 }
-export declare enum AuditObjectType {
+export declare enum AuditObjectTypeResponse {
     PERMIT = "permit",
     REINSTATEMENT = "reinstatement",
     INSPECTION = "inspection",
@@ -391,7 +579,8 @@ export declare enum AuditObjectType {
     USER = "user",
     GEOGRAPHICAL_AREA = "geographical_area",
     CHANGE_REQUEST = "change_request",
-    APPLICATION = "application"
+    APPLICATION = "application",
+    upcoming_enum = "upcoming_enum"
 }
 export declare enum SampleInspectionSortColumn {
     inspection_expiry = "inspection_expiry"

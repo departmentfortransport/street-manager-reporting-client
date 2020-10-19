@@ -1,4 +1,4 @@
-import { ForwardPlanStatus } from './referenceTypes'
+import { ForwardPlanStatusResponse } from './referenceTypes'
 import { ReportingResponse } from './reportingResponse'
 
 export interface ForwardPlanReportingResponse extends ReportingResponse {
@@ -16,7 +16,7 @@ export interface ForwardPlanSummaryResponse {
   area: string
   proposed_start_date: Date
   proposed_end_date: Date
-  forward_plan_status: ForwardPlanStatus
+  forward_plan_status: ForwardPlanStatusResponse
   forward_plan_status_string: string
   date_created: Date
 }

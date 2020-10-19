@@ -1,4 +1,4 @@
-import { ReinstatementStatus, ReinstatementType } from './referenceTypes'
+import { ReinstatementStatusResponse, ReinstatementTypeResponse } from './referenceTypes'
 import { ReportingResponse } from './reportingResponse'
 
 export interface ReinstatementReportingResponse extends ReportingResponse {
@@ -16,9 +16,9 @@ export interface ReinstatementSummaryResponse {
   location_description: string
   registration_date: Date
   reinstatement_date: Date
-  reinstatement_type: ReinstatementType
+  reinstatement_type: ReinstatementTypeResponse
   reinstatement_type_string: string
-  reinstatement_status: ReinstatementStatus
+  reinstatement_status: ReinstatementStatusResponse
   reinstatement_status_string: string
   end_date: Date
 }
