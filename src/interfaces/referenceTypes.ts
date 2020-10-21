@@ -71,7 +71,8 @@ export enum PermitSortColumn {
 }
 
 export enum FPNSortColumn {
-  issue_date_time = 'issue_date_time'
+  issue_date_time = 'issue_date_time',
+  status_changed_date = 'status_changed_date'
 }
 
 export enum CommentSortColumn {

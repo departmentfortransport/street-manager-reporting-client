@@ -75,6 +75,7 @@ var PermitSortColumn;
 var FPNSortColumn;
 (function (FPNSortColumn) {
     FPNSortColumn["issue_date_time"] = "issue_date_time";
+    FPNSortColumn["status_changed_date"] = "status_changed_date";
 })(FPNSortColumn = exports.FPNSortColumn || (exports.FPNSortColumn = {}));
 var CommentSortColumn;
 (function (CommentSortColumn) {

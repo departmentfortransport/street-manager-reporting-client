@@ -16,4 +16,5 @@ export interface FPNSummaryResponse {
   issue_date: Date
   status: FPNStatus
   status_string: string
+  status_changed_date: Date
 }
