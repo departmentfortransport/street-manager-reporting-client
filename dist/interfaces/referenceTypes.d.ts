@@ -371,7 +371,8 @@ export declare enum AuditEventType {
     section_81_linked_to_permit = "section_81_linked_to_permit",
     section_81_unlinked_from_permit = "section_81_unlinked_from_permit",
     section_81_reassigned = "section_81_reassigned",
-    permit_granted_with_duration_challenge = "permit_granted_with_duration_challenge"
+    permit_granted_with_duration_challenge = "permit_granted_with_duration_challenge",
+    inspection_withdrawn = "inspection_withdrawn"
 }
 export declare enum AuditObjectType {
     PERMIT = "permit",
@@ -394,4 +395,10 @@ export declare enum AuditObjectType {
 }
 export declare enum SampleInspectionSortColumn {
     inspection_expiry = "inspection_expiry"
+}
+export declare enum InspectionStatusResponse {
+    recorded = "recorded",
+    withdrawn = "withdrawn",
+    scheduled = "scheduled",
+    upcoming_enum = "upcoming_enum"
 }

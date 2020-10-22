@@ -1,5 +1,5 @@
 import { ReportingResponse } from './reportingResponse'
-import { InspectionResponseType, InspectionType, InspectionCategory, InspectionOutcome } from './referenceTypes'
+import { InspectionResponseType, InspectionType, InspectionCategory, InspectionOutcome, InspectionStatusResponse } from './referenceTypes'
 
 export interface InspectionReportingResponse extends ReportingResponse {
   rows: InspectionSummaryResponse[]
@@ -26,4 +26,7 @@ export interface InspectionSummaryResponse {
   promoter_organisation: string
   made_safe_by_ha?: boolean
   date_created: Date
+  inspection_status: InspectionStatusResponse
+  inspection_status_string: string
+  date_modified: Date
 }

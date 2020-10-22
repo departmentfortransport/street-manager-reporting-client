@@ -411,6 +411,7 @@ var AuditEventType;
     AuditEventType["section_81_unlinked_from_permit"] = "section_81_unlinked_from_permit";
     AuditEventType["section_81_reassigned"] = "section_81_reassigned";
     AuditEventType["permit_granted_with_duration_challenge"] = "permit_granted_with_duration_challenge";
+    AuditEventType["inspection_withdrawn"] = "inspection_withdrawn";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
 var AuditObjectType;
 (function (AuditObjectType) {
@@ -436,3 +437,10 @@ var SampleInspectionSortColumn;
 (function (SampleInspectionSortColumn) {
     SampleInspectionSortColumn["inspection_expiry"] = "inspection_expiry";
 })(SampleInspectionSortColumn = exports.SampleInspectionSortColumn || (exports.SampleInspectionSortColumn = {}));
+var InspectionStatusResponse;
+(function (InspectionStatusResponse) {
+    InspectionStatusResponse["recorded"] = "recorded";
+    InspectionStatusResponse["withdrawn"] = "withdrawn";
+    InspectionStatusResponse["scheduled"] = "scheduled";
+    InspectionStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(InspectionStatusResponse = exports.InspectionStatusResponse || (exports.InspectionStatusResponse = {}));

@@ -407,7 +407,8 @@ export enum AuditEventType {
   section_81_linked_to_permit = 'section_81_linked_to_permit',
   section_81_unlinked_from_permit = 'section_81_unlinked_from_permit',
   section_81_reassigned = 'section_81_reassigned',
-  permit_granted_with_duration_challenge = 'permit_granted_with_duration_challenge'
+  permit_granted_with_duration_challenge = 'permit_granted_with_duration_challenge',
+  inspection_withdrawn = 'inspection_withdrawn'
 }
 
 export enum AuditObjectType {
@@ -432,4 +433,11 @@ export enum AuditObjectType {
 
 export enum SampleInspectionSortColumn {
   inspection_expiry = 'inspection_expiry'
+}
+
+export enum InspectionStatusResponse {
+  recorded = 'recorded',
+  withdrawn = 'withdrawn',
+  scheduled = 'scheduled',
+  upcoming_enum = 'upcoming_enum'
 }
