@@ -1,4 +1,4 @@
-import { CommentTopic } from './referenceTypes'
+import { CommentTopicResponse } from './referenceTypes'
 import { ReportingResponse } from './reportingResponse'
 
 export interface CommentReportingResponse extends ReportingResponse {
@@ -7,7 +7,7 @@ export interface CommentReportingResponse extends ReportingResponse {
 
 export interface CommentSummaryResponse {
   work_reference_number: string
-  topic: CommentTopic
+  topic: CommentTopicResponse
   topic_string: string
   author_email_address: string
   author_organisation_reference: string

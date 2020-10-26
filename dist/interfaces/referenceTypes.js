@@ -11,6 +11,18 @@ var PermitStatus;
     PermitStatus["revoked"] = "revoked";
     PermitStatus["progressed"] = "progressed";
 })(PermitStatus = exports.PermitStatus || (exports.PermitStatus = {}));
+var PermitStatusResponse;
+(function (PermitStatusResponse) {
+    PermitStatusResponse["submitted"] = "submitted";
+    PermitStatusResponse["granted"] = "granted";
+    PermitStatusResponse["permit_modification_request"] = "permit_modification_request";
+    PermitStatusResponse["refused"] = "refused";
+    PermitStatusResponse["closed"] = "closed";
+    PermitStatusResponse["cancelled"] = "cancelled";
+    PermitStatusResponse["revoked"] = "revoked";
+    PermitStatusResponse["progressed"] = "progressed";
+    PermitStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(PermitStatusResponse = exports.PermitStatusResponse || (exports.PermitStatusResponse = {}));
 var AssessmentStatus;
 (function (AssessmentStatus) {
     AssessmentStatus["granted"] = "granted";
@@ -20,11 +32,27 @@ var AssessmentStatus;
     AssessmentStatus["permit_modification_request"] = "permit_modification_request";
     AssessmentStatus["revoked"] = "revoked";
 })(AssessmentStatus = exports.AssessmentStatus || (exports.AssessmentStatus = {}));
+var AssessmentStatusResponse;
+(function (AssessmentStatusResponse) {
+    AssessmentStatusResponse["granted"] = "granted";
+    AssessmentStatusResponse["granted_auto"] = "granted_auto";
+    AssessmentStatusResponse["refused"] = "refused";
+    AssessmentStatusResponse["refused_auto"] = "refused_auto";
+    AssessmentStatusResponse["permit_modification_request"] = "permit_modification_request";
+    AssessmentStatusResponse["revoked"] = "revoked";
+    AssessmentStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(AssessmentStatusResponse = exports.AssessmentStatusResponse || (exports.AssessmentStatusResponse = {}));
 var ReinstatementStatus;
 (function (ReinstatementStatus) {
     ReinstatementStatus["interim"] = "interim";
     ReinstatementStatus["permanent"] = "permanent";
 })(ReinstatementStatus = exports.ReinstatementStatus || (exports.ReinstatementStatus = {}));
+var ReinstatementStatusResponse;
+(function (ReinstatementStatusResponse) {
+    ReinstatementStatusResponse["interim"] = "interim";
+    ReinstatementStatusResponse["permanent"] = "permanent";
+    ReinstatementStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(ReinstatementStatusResponse = exports.ReinstatementStatusResponse || (exports.ReinstatementStatusResponse = {}));
 var FPNStatus;
 (function (FPNStatus) {
     FPNStatus["issued"] = "issued";
@@ -34,11 +62,27 @@ var FPNStatus;
     FPNStatus["disputed"] = "disputed";
     FPNStatus["withdrawn"] = "withdrawn";
 })(FPNStatus = exports.FPNStatus || (exports.FPNStatus = {}));
+var FPNStatusResponse;
+(function (FPNStatusResponse) {
+    FPNStatusResponse["issued"] = "issued";
+    FPNStatusResponse["accepted"] = "accepted";
+    FPNStatusResponse["paid"] = "paid";
+    FPNStatusResponse["paid_discounted"] = "paid_discounted";
+    FPNStatusResponse["disputed"] = "disputed";
+    FPNStatusResponse["withdrawn"] = "withdrawn";
+    FPNStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(FPNStatusResponse = exports.FPNStatusResponse || (exports.FPNStatusResponse = {}));
 var WorkstreamStatus;
 (function (WorkstreamStatus) {
     WorkstreamStatus["active"] = "active";
     WorkstreamStatus["deactivated"] = "deactivated";
 })(WorkstreamStatus = exports.WorkstreamStatus || (exports.WorkstreamStatus = {}));
+var WorkstreamStatusResponse;
+(function (WorkstreamStatusResponse) {
+    WorkstreamStatusResponse["active"] = "active";
+    WorkstreamStatusResponse["deactivated"] = "deactivated";
+    WorkstreamStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(WorkstreamStatusResponse = exports.WorkstreamStatusResponse || (exports.WorkstreamStatusResponse = {}));
 var OffenceCode;
 (function (OffenceCode) {
     OffenceCode["offence_code_05"] = "offence_code_05";
@@ -46,6 +90,14 @@ var OffenceCode;
     OffenceCode["offence_code_08"] = "offence_code_08";
     OffenceCode["offence_code_09"] = "offence_code_09";
 })(OffenceCode = exports.OffenceCode || (exports.OffenceCode = {}));
+var OffenceCodeResponse;
+(function (OffenceCodeResponse) {
+    OffenceCodeResponse["offence_code_05"] = "offence_code_05";
+    OffenceCodeResponse["offence_code_06"] = "offence_code_06";
+    OffenceCodeResponse["offence_code_08"] = "offence_code_08";
+    OffenceCodeResponse["offence_code_09"] = "offence_code_09";
+    OffenceCodeResponse["upcoming_enum"] = "upcoming_enum";
+})(OffenceCodeResponse = exports.OffenceCodeResponse || (exports.OffenceCodeResponse = {}));
 var CommentTopic;
 (function (CommentTopic) {
     CommentTopic["GENERAL"] = "GENERAL";
@@ -59,6 +111,20 @@ var CommentTopic;
     CommentTopic["DURATION_CHALLENGE"] = "DURATION_CHALLENGE";
     CommentTopic["SECTION_81"] = "SECTION_81";
 })(CommentTopic = exports.CommentTopic || (exports.CommentTopic = {}));
+var CommentTopicResponse;
+(function (CommentTopicResponse) {
+    CommentTopicResponse["GENERAL"] = "GENERAL";
+    CommentTopicResponse["SECTION_74"] = "SECTION_74";
+    CommentTopicResponse["INSPECTION"] = "INSPECTION";
+    CommentTopicResponse["FPN"] = "FPN";
+    CommentTopicResponse["OVERRUN"] = "OVERRUN";
+    CommentTopicResponse["FORWARD_PLAN"] = "FORWARD_PLAN";
+    CommentTopicResponse["CHANGE_REQUEST"] = "CHANGE_REQUEST";
+    CommentTopicResponse["IMPOSED_VARIATION"] = "IMPOSED_VARIATION";
+    CommentTopicResponse["DURATION_CHALLENGE"] = "DURATION_CHALLENGE";
+    CommentTopicResponse["SECTION_81"] = "SECTION_81";
+    CommentTopicResponse["upcoming_enum"] = "upcoming_enum";
+})(CommentTopicResponse = exports.CommentTopicResponse || (exports.CommentTopicResponse = {}));
 var SortDirection;
 (function (SortDirection) {
     SortDirection["asc"] = "asc";
@@ -96,11 +162,25 @@ var InspectionType;
     InspectionType["non_compliance_follow_up"] = "non_compliance_follow_up";
     InspectionType["section_81"] = "section_81";
 })(InspectionType = exports.InspectionType || (exports.InspectionType = {}));
+var InspectionTypeResponse;
+(function (InspectionTypeResponse) {
+    InspectionTypeResponse["live_site"] = "live_site";
+    InspectionTypeResponse["reinstatement"] = "reinstatement";
+    InspectionTypeResponse["non_compliance_follow_up"] = "non_compliance_follow_up";
+    InspectionTypeResponse["section_81"] = "section_81";
+    InspectionTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(InspectionTypeResponse = exports.InspectionTypeResponse || (exports.InspectionTypeResponse = {}));
 var InspectionResponseType;
 (function (InspectionResponseType) {
     InspectionResponseType["inspection"] = "inspection";
     InspectionResponseType["reinspection"] = "reinspection";
 })(InspectionResponseType = exports.InspectionResponseType || (exports.InspectionResponseType = {}));
+var InspectionResponseTypeResponse;
+(function (InspectionResponseTypeResponse) {
+    InspectionResponseTypeResponse["inspection"] = "inspection";
+    InspectionResponseTypeResponse["reinspection"] = "reinspection";
+    InspectionResponseTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(InspectionResponseTypeResponse = exports.InspectionResponseTypeResponse || (exports.InspectionResponseTypeResponse = {}));
 var InspectionCategory;
 (function (InspectionCategory) {
     InspectionCategory["a"] = "a";
@@ -114,6 +194,20 @@ var InspectionCategory;
     InspectionCategory["site_occupancy"] = "site_occupancy";
     InspectionCategory["conditions"] = "conditions";
 })(InspectionCategory = exports.InspectionCategory || (exports.InspectionCategory = {}));
+var InspectionCategoryResponse;
+(function (InspectionCategoryResponse) {
+    InspectionCategoryResponse["a"] = "a";
+    InspectionCategoryResponse["b"] = "b";
+    InspectionCategoryResponse["c"] = "c";
+    InspectionCategoryResponse["third_party"] = "third_party";
+    InspectionCategoryResponse["routine"] = "routine";
+    InspectionCategoryResponse["joint_site_visit"] = "joint_site_visit";
+    InspectionCategoryResponse["follow_up"] = "follow_up";
+    InspectionCategoryResponse["follow_up_completion"] = "follow_up_completion";
+    InspectionCategoryResponse["site_occupancy"] = "site_occupancy";
+    InspectionCategoryResponse["conditions"] = "conditions";
+    InspectionCategoryResponse["upcoming_enum"] = "upcoming_enum";
+})(InspectionCategoryResponse = exports.InspectionCategoryResponse || (exports.InspectionCategoryResponse = {}));
 var InspectionOutcome;
 (function (InspectionOutcome) {
     InspectionOutcome["passed"] = "passed";
@@ -128,6 +222,21 @@ var InspectionOutcome;
     InspectionOutcome["works_in_progress"] = "works_in_progress";
     InspectionOutcome["works_stopped"] = "works_stopped";
 })(InspectionOutcome = exports.InspectionOutcome || (exports.InspectionOutcome = {}));
+var InspectionOutcomeResponse;
+(function (InspectionOutcomeResponse) {
+    InspectionOutcomeResponse["passed"] = "passed";
+    InspectionOutcomeResponse["unable_to_complete_inspection"] = "unable_to_complete_inspection";
+    InspectionOutcomeResponse["failed_low"] = "failed_low";
+    InspectionOutcomeResponse["failed_high"] = "failed_high";
+    InspectionOutcomeResponse["further_inspections_required"] = "further_inspections_required";
+    InspectionOutcomeResponse["agreed_site_compliance"] = "agreed_site_compliance";
+    InspectionOutcomeResponse["non_compliant_with_conditions"] = "non_compliant_with_conditions";
+    InspectionOutcomeResponse["works_stopped_apparatus_remaining"] = "works_stopped_apparatus_remaining";
+    InspectionOutcomeResponse["works_in_progress_no_carriageway_incursion"] = "works_in_progress_no_carriageway_incursion";
+    InspectionOutcomeResponse["works_in_progress"] = "works_in_progress";
+    InspectionOutcomeResponse["works_stopped"] = "works_stopped";
+    InspectionOutcomeResponse["upcoming_enum"] = "upcoming_enum";
+})(InspectionOutcomeResponse = exports.InspectionOutcomeResponse || (exports.InspectionOutcomeResponse = {}));
 var InspectionSortColumn;
 (function (InspectionSortColumn) {
     InspectionSortColumn["inspection_date"] = "inspection_date";
@@ -142,6 +251,17 @@ var WorkCategory;
     WorkCategory["paa"] = "paa";
     WorkCategory["hs2_highway"] = "hs2_highway";
 })(WorkCategory = exports.WorkCategory || (exports.WorkCategory = {}));
+var WorkCategoryResponse;
+(function (WorkCategoryResponse) {
+    WorkCategoryResponse["minor"] = "minor";
+    WorkCategoryResponse["standard"] = "standard";
+    WorkCategoryResponse["major"] = "major";
+    WorkCategoryResponse["immediate_urgent"] = "immediate_urgent";
+    WorkCategoryResponse["immediate_emergency"] = "immediate_emergency";
+    WorkCategoryResponse["paa"] = "paa";
+    WorkCategoryResponse["hs2_highway"] = "hs2_highway";
+    WorkCategoryResponse["upcoming_enum"] = "upcoming_enum";
+})(WorkCategoryResponse = exports.WorkCategoryResponse || (exports.WorkCategoryResponse = {}));
 var TrafficManagementType;
 (function (TrafficManagementType) {
     TrafficManagementType["road_closure"] = "road_closure";
@@ -156,6 +276,21 @@ var TrafficManagementType;
     TrafficManagementType["some_carriageway_incursion"] = "some_carriageway_incursion";
     TrafficManagementType["no_carriageway_incursion"] = "no_carriageway_incursion";
 })(TrafficManagementType = exports.TrafficManagementType || (exports.TrafficManagementType = {}));
+var TrafficManagementTypeResponse;
+(function (TrafficManagementTypeResponse) {
+    TrafficManagementTypeResponse["road_closure"] = "road_closure";
+    TrafficManagementTypeResponse["contra_flow"] = "contra_flow";
+    TrafficManagementTypeResponse["lane_closure"] = "lane_closure";
+    TrafficManagementTypeResponse["multi_way_signals"] = "multi_way_signals";
+    TrafficManagementTypeResponse["two_way_signals"] = "two_way_signals";
+    TrafficManagementTypeResponse["convoy_workings"] = "convoy_workings";
+    TrafficManagementTypeResponse["stop_go_boards"] = "stop_go_boards";
+    TrafficManagementTypeResponse["priority_working"] = "priority_working";
+    TrafficManagementTypeResponse["give_and_take"] = "give_and_take";
+    TrafficManagementTypeResponse["some_carriageway_incursion"] = "some_carriageway_incursion";
+    TrafficManagementTypeResponse["no_carriageway_incursion"] = "no_carriageway_incursion";
+    TrafficManagementTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(TrafficManagementTypeResponse = exports.TrafficManagementTypeResponse || (exports.TrafficManagementTypeResponse = {}));
 var AlterationStatus;
 (function (AlterationStatus) {
     AlterationStatus["submitted"] = "submitted";
@@ -167,6 +302,18 @@ var AlterationStatus;
     AlterationStatus["revoked"] = "revoked";
     AlterationStatus["auto_applied"] = "auto_applied";
 })(AlterationStatus = exports.AlterationStatus || (exports.AlterationStatus = {}));
+var AlterationStatusResponse;
+(function (AlterationStatusResponse) {
+    AlterationStatusResponse["submitted"] = "submitted";
+    AlterationStatusResponse["granted"] = "granted";
+    AlterationStatusResponse["granted_with_duration_challenge"] = "granted_with_duration_challenge";
+    AlterationStatusResponse["refused"] = "refused";
+    AlterationStatusResponse["deemed"] = "deemed";
+    AlterationStatusResponse["cancelled"] = "cancelled";
+    AlterationStatusResponse["revoked"] = "revoked";
+    AlterationStatusResponse["auto_applied"] = "auto_applied";
+    AlterationStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(AlterationStatusResponse = exports.AlterationStatusResponse || (exports.AlterationStatusResponse = {}));
 var AlterationSortColumn;
 (function (AlterationSortColumn) {
     AlterationSortColumn["date_created"] = "date_created";
@@ -184,6 +331,17 @@ var AlterationType;
     AlterationType["DURATION_CHALLENGE"] = "DURATION_CHALLENGE";
     AlterationType["MODIFIED_PERMIT"] = "MODIFIED_PERMIT";
 })(AlterationType = exports.AlterationType || (exports.AlterationType = {}));
+var AlterationTypeResponse;
+(function (AlterationTypeResponse) {
+    AlterationTypeResponse["PROMOTER_IMPOSED_CHANGE"] = "PROMOTER_IMPOSED_CHANGE";
+    AlterationTypeResponse["PROMOTER_CHANGE_REQUEST"] = "PROMOTER_CHANGE_REQUEST";
+    AlterationTypeResponse["HA_CHANGE_REQUEST"] = "HA_CHANGE_REQUEST";
+    AlterationTypeResponse["HA_IMPOSED_CHANGE"] = "HA_IMPOSED_CHANGE";
+    AlterationTypeResponse["WORK_EXTENSION"] = "WORK_EXTENSION";
+    AlterationTypeResponse["DURATION_CHALLENGE"] = "DURATION_CHALLENGE";
+    AlterationTypeResponse["MODIFIED_PERMIT"] = "MODIFIED_PERMIT";
+    AlterationTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(AlterationTypeResponse = exports.AlterationTypeResponse || (exports.AlterationTypeResponse = {}));
 var WorkStatus;
 (function (WorkStatus) {
     WorkStatus["planned"] = "planned";
@@ -195,38 +353,58 @@ var WorkStatus;
     WorkStatus["non_notifiable"] = "non_notifiable";
     WorkStatus["section_81"] = "section_81";
 })(WorkStatus = exports.WorkStatus || (exports.WorkStatus = {}));
+var WorkStatusResponse;
+(function (WorkStatusResponse) {
+    WorkStatusResponse["planned"] = "planned";
+    WorkStatusResponse["in_progress"] = "in_progress";
+    WorkStatusResponse["completed"] = "completed";
+    WorkStatusResponse["cancelled"] = "cancelled";
+    WorkStatusResponse["unattributable"] = "unattributable";
+    WorkStatusResponse["historical"] = "historical";
+    WorkStatusResponse["non_notifiable"] = "non_notifiable";
+    WorkStatusResponse["section_81"] = "section_81";
+    WorkStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(WorkStatusResponse = exports.WorkStatusResponse || (exports.WorkStatusResponse = {}));
 var ForwardPlanStatus;
 (function (ForwardPlanStatus) {
     ForwardPlanStatus["raised"] = "raised";
     ForwardPlanStatus["cancelled"] = "cancelled";
     ForwardPlanStatus["progressed"] = "progressed";
 })(ForwardPlanStatus = exports.ForwardPlanStatus || (exports.ForwardPlanStatus = {}));
+var ForwardPlanStatusResponse;
+(function (ForwardPlanStatusResponse) {
+    ForwardPlanStatusResponse["raised"] = "raised";
+    ForwardPlanStatusResponse["cancelled"] = "cancelled";
+    ForwardPlanStatusResponse["progressed"] = "progressed";
+    ForwardPlanStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(ForwardPlanStatusResponse = exports.ForwardPlanStatusResponse || (exports.ForwardPlanStatusResponse = {}));
 var ForwardPlanSortColumn;
 (function (ForwardPlanSortColumn) {
     ForwardPlanSortColumn["start_date"] = "start_date";
     ForwardPlanSortColumn["end_date"] = "end_date";
 })(ForwardPlanSortColumn = exports.ForwardPlanSortColumn || (exports.ForwardPlanSortColumn = {}));
-var PermitConditionType;
-(function (PermitConditionType) {
-    PermitConditionType["NCT01a"] = "NCT01a";
-    PermitConditionType["NCT01b"] = "NCT01b";
-    PermitConditionType["NCT02a"] = "NCT02a";
-    PermitConditionType["NCT02b"] = "NCT02b";
-    PermitConditionType["NCT04a"] = "NCT04a";
-    PermitConditionType["NCT04b"] = "NCT04b";
-    PermitConditionType["NCT05a"] = "NCT05a";
-    PermitConditionType["NCT06a"] = "NCT06a";
-    PermitConditionType["NCT07a"] = "NCT07a";
-    PermitConditionType["NCT08a"] = "NCT08a";
-    PermitConditionType["NCT08b"] = "NCT08b";
-    PermitConditionType["NCT09a"] = "NCT09a";
-    PermitConditionType["NCT09b"] = "NCT09b";
-    PermitConditionType["NCT09c"] = "NCT09c";
-    PermitConditionType["NCT10a"] = "NCT10a";
-    PermitConditionType["NCT11a"] = "NCT11a";
-    PermitConditionType["NCT11b"] = "NCT11b";
-    PermitConditionType["NCT12a"] = "NCT12a";
-})(PermitConditionType = exports.PermitConditionType || (exports.PermitConditionType = {}));
+var PermitConditionTypeResponse;
+(function (PermitConditionTypeResponse) {
+    PermitConditionTypeResponse["NCT01a"] = "NCT01a";
+    PermitConditionTypeResponse["NCT01b"] = "NCT01b";
+    PermitConditionTypeResponse["NCT02a"] = "NCT02a";
+    PermitConditionTypeResponse["NCT02b"] = "NCT02b";
+    PermitConditionTypeResponse["NCT04a"] = "NCT04a";
+    PermitConditionTypeResponse["NCT04b"] = "NCT04b";
+    PermitConditionTypeResponse["NCT05a"] = "NCT05a";
+    PermitConditionTypeResponse["NCT06a"] = "NCT06a";
+    PermitConditionTypeResponse["NCT07a"] = "NCT07a";
+    PermitConditionTypeResponse["NCT08a"] = "NCT08a";
+    PermitConditionTypeResponse["NCT08b"] = "NCT08b";
+    PermitConditionTypeResponse["NCT09a"] = "NCT09a";
+    PermitConditionTypeResponse["NCT09b"] = "NCT09b";
+    PermitConditionTypeResponse["NCT09c"] = "NCT09c";
+    PermitConditionTypeResponse["NCT10a"] = "NCT10a";
+    PermitConditionTypeResponse["NCT11a"] = "NCT11a";
+    PermitConditionTypeResponse["NCT11b"] = "NCT11b";
+    PermitConditionTypeResponse["NCT12a"] = "NCT12a";
+    PermitConditionTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(PermitConditionTypeResponse = exports.PermitConditionTypeResponse || (exports.PermitConditionTypeResponse = {}));
 var LaneRentalAssessmentOutcome;
 (function (LaneRentalAssessmentOutcome) {
     LaneRentalAssessmentOutcome["chargeable"] = "chargeable";
@@ -235,13 +413,23 @@ var LaneRentalAssessmentOutcome;
     LaneRentalAssessmentOutcome["exempt"] = "exempt";
     LaneRentalAssessmentOutcome["charges_not_applicable"] = "charges_not_applicable";
 })(LaneRentalAssessmentOutcome = exports.LaneRentalAssessmentOutcome || (exports.LaneRentalAssessmentOutcome = {}));
-var ReinstatementType;
-(function (ReinstatementType) {
-    ReinstatementType["excavation"] = "excavation";
-    ReinstatementType["bar_holes"] = "bar_holes";
-    ReinstatementType["core_holes"] = "core_holes";
-    ReinstatementType["pole_testing"] = "pole_testing";
-})(ReinstatementType = exports.ReinstatementType || (exports.ReinstatementType = {}));
+var LaneRentalAssessmentOutcomeResponse;
+(function (LaneRentalAssessmentOutcomeResponse) {
+    LaneRentalAssessmentOutcomeResponse["chargeable"] = "chargeable";
+    LaneRentalAssessmentOutcomeResponse["potentially_chargeable"] = "potentially_chargeable";
+    LaneRentalAssessmentOutcomeResponse["charges_waived"] = "charges_waived";
+    LaneRentalAssessmentOutcomeResponse["exempt"] = "exempt";
+    LaneRentalAssessmentOutcomeResponse["charges_not_applicable"] = "charges_not_applicable";
+    LaneRentalAssessmentOutcomeResponse["upcoming_enum"] = "upcoming_enum";
+})(LaneRentalAssessmentOutcomeResponse = exports.LaneRentalAssessmentOutcomeResponse || (exports.LaneRentalAssessmentOutcomeResponse = {}));
+var ReinstatementTypeResponse;
+(function (ReinstatementTypeResponse) {
+    ReinstatementTypeResponse["excavation"] = "excavation";
+    ReinstatementTypeResponse["bar_holes"] = "bar_holes";
+    ReinstatementTypeResponse["core_holes"] = "core_holes";
+    ReinstatementTypeResponse["pole_testing"] = "pole_testing";
+    ReinstatementTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(ReinstatementTypeResponse = exports.ReinstatementTypeResponse || (exports.ReinstatementTypeResponse = {}));
 var AdditionalSpecialDesignationCode;
 (function (AdditionalSpecialDesignationCode) {
     AdditionalSpecialDesignationCode[AdditionalSpecialDesignationCode["protected_street"] = 1] = "protected_street";
@@ -274,6 +462,12 @@ var Section81Severity;
     Section81Severity["high"] = "high";
     Section81Severity["low"] = "low";
 })(Section81Severity = exports.Section81Severity || (exports.Section81Severity = {}));
+var Section81SeverityResponse;
+(function (Section81SeverityResponse) {
+    Section81SeverityResponse["high"] = "high";
+    Section81SeverityResponse["low"] = "low";
+    Section81SeverityResponse["upcoming_enum"] = "upcoming_enum";
+})(Section81SeverityResponse = exports.Section81SeverityResponse || (exports.Section81SeverityResponse = {}));
 var Section81Status;
 (function (Section81Status) {
     Section81Status["issued"] = "issued";
@@ -284,32 +478,46 @@ var Section81Status;
     Section81Status["resolved_by_ha"] = "resolved_by_ha";
     Section81Status["cancelled"] = "cancelled";
 })(Section81Status = exports.Section81Status || (exports.Section81Status = {}));
+var Section81StatusResponse;
+(function (Section81StatusResponse) {
+    Section81StatusResponse["issued"] = "issued";
+    Section81StatusResponse["acknowledged"] = "acknowledged";
+    Section81StatusResponse["accepted"] = "accepted";
+    Section81StatusResponse["accepted_fixed"] = "accepted_fixed";
+    Section81StatusResponse["rejected"] = "rejected";
+    Section81StatusResponse["resolved_by_ha"] = "resolved_by_ha";
+    Section81StatusResponse["cancelled"] = "cancelled";
+    Section81StatusResponse["upcoming_enum"] = "upcoming_enum";
+})(Section81StatusResponse = exports.Section81StatusResponse || (exports.Section81StatusResponse = {}));
 var Section81SortColumn;
 (function (Section81SortColumn) {
     Section81SortColumn["status_changed_date"] = "status_changed_date";
 })(Section81SortColumn = exports.Section81SortColumn || (exports.Section81SortColumn = {}));
-var Role;
-(function (Role) {
-    Role["Planner"] = "Planner";
-    Role["HighwayAuthority"] = "HighwayAuthority";
-    Role["Admin"] = "Admin";
-    Role["Contractor"] = "Contractor";
-    Role["API"] = "API";
-    Role["UI"] = "UI";
-    Role["DataExport"] = "DataExport";
-})(Role = exports.Role || (exports.Role = {}));
-var WorkstreamAccessLevel;
-(function (WorkstreamAccessLevel) {
-    WorkstreamAccessLevel["read_only"] = "read_only";
-    WorkstreamAccessLevel["full_write"] = "full_write";
-})(WorkstreamAccessLevel = exports.WorkstreamAccessLevel || (exports.WorkstreamAccessLevel = {}));
-var CSVExportStatus;
-(function (CSVExportStatus) {
-    CSVExportStatus["queued"] = "queued";
-    CSVExportStatus["in_progress"] = "in_progress";
-    CSVExportStatus["ready"] = "ready";
-    CSVExportStatus["failed"] = "failed";
-})(CSVExportStatus = exports.CSVExportStatus || (exports.CSVExportStatus = {}));
+var RoleResponse;
+(function (RoleResponse) {
+    RoleResponse["Planner"] = "Planner";
+    RoleResponse["HighwayAuthority"] = "HighwayAuthority";
+    RoleResponse["Admin"] = "Admin";
+    RoleResponse["Contractor"] = "Contractor";
+    RoleResponse["API"] = "API";
+    RoleResponse["UI"] = "UI";
+    RoleResponse["DataExport"] = "DataExport";
+    RoleResponse["upcoming_enum"] = "upcoming_enum";
+})(RoleResponse = exports.RoleResponse || (exports.RoleResponse = {}));
+var WorkstreamAccessLevelResponse;
+(function (WorkstreamAccessLevelResponse) {
+    WorkstreamAccessLevelResponse["read_only"] = "read_only";
+    WorkstreamAccessLevelResponse["full_write"] = "full_write";
+    WorkstreamAccessLevelResponse["upcoming_enum"] = "upcoming_enum";
+})(WorkstreamAccessLevelResponse = exports.WorkstreamAccessLevelResponse || (exports.WorkstreamAccessLevelResponse = {}));
+var CSVExportStatusResponse;
+(function (CSVExportStatusResponse) {
+    CSVExportStatusResponse["queued"] = "queued";
+    CSVExportStatusResponse["in_progress"] = "in_progress";
+    CSVExportStatusResponse["ready"] = "ready";
+    CSVExportStatusResponse["failed"] = "failed";
+    CSVExportStatusResponse["upcoming_enum"] = "upcoming_enum";
+})(CSVExportStatusResponse = exports.CSVExportStatusResponse || (exports.CSVExportStatusResponse = {}));
 var AuditEventType;
 (function (AuditEventType) {
     AuditEventType["historic_action"] = "historic_action";
@@ -413,26 +621,27 @@ var AuditEventType;
     AuditEventType["permit_granted_with_duration_challenge"] = "permit_granted_with_duration_challenge";
     AuditEventType["inspection_withdrawn"] = "inspection_withdrawn";
 })(AuditEventType = exports.AuditEventType || (exports.AuditEventType = {}));
-var AuditObjectType;
-(function (AuditObjectType) {
-    AuditObjectType["PERMIT"] = "permit";
-    AuditObjectType["REINSTATEMENT"] = "reinstatement";
-    AuditObjectType["INSPECTION"] = "inspection";
-    AuditObjectType["FPN"] = "fpn";
-    AuditObjectType["PAA"] = "paa";
-    AuditObjectType["WORKSTREAM"] = "workstream";
-    AuditObjectType["WORK"] = "work";
-    AuditObjectType["ORGANISATION"] = "organisation";
-    AuditObjectType["ACTIVITY"] = "activity";
-    AuditObjectType["FORWARD_PLAN"] = "forward_plan";
-    AuditObjectType["COMMENT"] = "comment";
-    AuditObjectType["SCHEDULED_INSPECTION"] = "scheduled_inspection";
-    AuditObjectType["SECTION_81"] = "section_81";
-    AuditObjectType["USER"] = "user";
-    AuditObjectType["GEOGRAPHICAL_AREA"] = "geographical_area";
-    AuditObjectType["CHANGE_REQUEST"] = "change_request";
-    AuditObjectType["APPLICATION"] = "application";
-})(AuditObjectType = exports.AuditObjectType || (exports.AuditObjectType = {}));
+var AuditObjectTypeResponse;
+(function (AuditObjectTypeResponse) {
+    AuditObjectTypeResponse["PERMIT"] = "permit";
+    AuditObjectTypeResponse["REINSTATEMENT"] = "reinstatement";
+    AuditObjectTypeResponse["INSPECTION"] = "inspection";
+    AuditObjectTypeResponse["FPN"] = "fpn";
+    AuditObjectTypeResponse["PAA"] = "paa";
+    AuditObjectTypeResponse["WORKSTREAM"] = "workstream";
+    AuditObjectTypeResponse["WORK"] = "work";
+    AuditObjectTypeResponse["ORGANISATION"] = "organisation";
+    AuditObjectTypeResponse["ACTIVITY"] = "activity";
+    AuditObjectTypeResponse["FORWARD_PLAN"] = "forward_plan";
+    AuditObjectTypeResponse["COMMENT"] = "comment";
+    AuditObjectTypeResponse["SCHEDULED_INSPECTION"] = "scheduled_inspection";
+    AuditObjectTypeResponse["SECTION_81"] = "section_81";
+    AuditObjectTypeResponse["USER"] = "user";
+    AuditObjectTypeResponse["GEOGRAPHICAL_AREA"] = "geographical_area";
+    AuditObjectTypeResponse["CHANGE_REQUEST"] = "change_request";
+    AuditObjectTypeResponse["APPLICATION"] = "application";
+    AuditObjectTypeResponse["upcoming_enum"] = "upcoming_enum";
+})(AuditObjectTypeResponse = exports.AuditObjectTypeResponse || (exports.AuditObjectTypeResponse = {}));
 var SampleInspectionSortColumn;
 (function (SampleInspectionSortColumn) {
     SampleInspectionSortColumn["inspection_expiry"] = "inspection_expiry";
