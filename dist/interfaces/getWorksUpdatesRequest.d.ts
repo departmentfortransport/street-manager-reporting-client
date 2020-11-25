@@ -4,4 +4,6 @@ export interface GetWorksUpdatesRequest {
     previous_minutes?: number;
     exclude_events_from?: string;
     swa_code?: string;
+    workstream_prefix?: string[];
+    update_id?: number;
 }
